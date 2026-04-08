@@ -102,38 +102,71 @@
 
         <div class="space-y-12">
             <!-- Listing 1: Northshore Estates -->
-            <div
-                class="bg-surface-container-low rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+            <div class="bg-surface-container-low rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
                 <div class="relative min-h-[400px] overflow-hidden">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/northshore.png"
                         alt="Northshore Estates" />
-                    <div
-                        class="absolute top-6 left-6 bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">
-                        Premium Listing</div>
+                    <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Premium Listing</div>
                 </div>
                 <div class="p-12 flex flex-col justify-center">
-                    <h3 class="font-headline text-4xl font-bold mb-4 group-hover:text-primary transition-colors">
-                        Northshore Estates: Premium Land in East End</h3>
-                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Elevated terrain offering natural
-                        cooling breezes and stunning ocean vistas. Perfect for those seeking tranquility without
-                        sacrificing accessibility.</p>
+                    <h3 class="font-headline text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Northshore Estates: Premium Land in East End</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Elevated terrain offering natural cooling breezes and stunning ocean vistas. Perfect for those seeking tranquility without sacrificing accessibility.</p>
                     <div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-10">
-                        <div class="flex items-center gap-3"><span
-                                class="material-symbols-outlined text-secondary">location_on</span><span
-                                class="font-medium text-sm">East End, CI</span></div>
-                        <div class="flex items-center gap-3"><span
-                                class="material-symbols-outlined text-secondary">foundation</span><span
-                                class="font-medium text-sm">Ready to Build</span></div>
-                        <div class="flex items-center gap-3"><span
-                                class="material-symbols-outlined text-secondary">verified_user</span><span
-                                class="font-medium text-sm">Safe Investment</span></div>
-                        <div class="flex items-center gap-3"><span
-                                class="material-symbols-outlined text-secondary">percent</span><span
-                                class="font-medium text-sm">Fixed 9% interest</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">location_on</span><span class="font-medium text-sm text-on-surface">Prime Location</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">foundation</span><span class="font-medium text-sm text-on-surface">Ready to Build</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">verified_user</span><span class="font-medium text-sm text-on-surface">Safe Investment</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">percent</span><span class="font-medium text-sm text-on-surface">Fixed 9% interest</span></div>
                     </div>
-                    <button
-                        class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300">
+                    <button class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
+                        Request Full Prospectus
+                        <span class="material-symbols-outlined">description</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Listing 2: Frank Sound Estates -->
+            <div class="bg-surface-container-low rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative min-h-[400px] overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/franksound.png"
+                        alt="Frank Sound Estates" />
+                    <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">New Release</div>
+                </div>
+                <div class="p-12 flex flex-col justify-center">
+                    <h3 class="font-headline text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Frank Sound Estates: Central Convenience</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">A growing community strategically located for easy access to both ends of the island. Ideal for families and long-term capital appreciation.</p>
+                    <div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-10">
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">location_on</span><span class="font-medium text-sm text-on-surface">Central Location</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">landscape</span><span class="font-medium text-sm text-on-surface">Level Ground</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">bolt</span><span class="font-medium text-sm text-on-surface">Utilities Ready</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">percent</span><span class="font-medium text-sm text-on-surface">Flexible Terms</span></div>
+                    </div>
+                    <button class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
+                        Request Full Prospectus
+                        <span class="material-symbols-outlined">description</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Listing 3: Elena Estates -->
+            <div class="bg-surface-container-low rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative min-h-[400px] overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/elena.png"
+                        alt="Elena Estates" />
+                    <div class="absolute top-6 left-6 bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Luxury Paradise</div>
+                </div>
+                <div class="p-12 flex flex-col justify-center">
+                    <h3 class="font-headline text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Elena Estates: Serenity in Little Cayman</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Exclusive oceanfront and near-shore parcels in the most peaceful of the Three Sisters. Experience true island living at its finest.</p>
+                    <div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-10">
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">waves</span><span class="font-medium text-sm text-on-surface">Beach Access</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">eco</span><span class="font-medium text-sm text-on-surface">Eco-Friendly Area</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">security</span><span class="font-medium text-sm text-on-surface">Private Living</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">percent</span><span class="font-medium text-sm text-on-surface">9% Financing</span></div>
+                    </div>
+                    <button class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
                         Request Full Prospectus
                         <span class="material-symbols-outlined">description</span>
                     </button>
