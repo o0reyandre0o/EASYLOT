@@ -1,43 +1,47 @@
 <?php get_header(); ?>
 
 <!-- Hero Section -->
-<section class="relative min-h-[921px] flex items-center px-8 md:px-20 overflow-hidden">
+<section class="relative min-h-[85vh] flex items-center px-8 md:px-20 overflow-hidden bg-surface">
+    <!-- Background Image -->
     <div class="absolute inset-0 z-0">
-        <!-- Re-integrating the video background within the Stitch layout structure -->
-        <video autoplay muted loop playsinline class="w-full h-full object-cover">
-            <source src="https://easylot.ky/wp-content/uploads/2023/08/Background-video-for-hero-with-mask.mp4"
-                type="video/mp4">
-        </video>
-        <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+        <img class="w-full h-full object-cover" 
+             src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" 
+             alt="Cayman Islands Aerial View">
+        <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
     </div>
-
-    <div class="relative z-10 max-w-2x1">
-        <h1
-            class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight text-on-surface mb-6">
-            Buy Land in Cayman: <span class="text-primary italic">Local Owner Financing</span>
+    
+    <div class="relative z-10 max-w-4xl pt-20">
+        <h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
+            Buy Land in <br/>Cayman: <span class="text-[#FB3122]">Local<br/>Owner Financing</span>
         </h1>
-        <div class="flex flex-col gap-4 mb-8">
+        
+        <!-- Checklist -->
+        <div class="flex flex-col gap-4 mb-10">
             <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary"
-                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="font-label uppercase tracking-widest text-sm font-bold">NO BANKS REQUIRED</span>
+                <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+                </div>
+                <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">NO BANKS REQUIRED</span>
             </div>
             <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary"
-                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="font-label uppercase tracking-widest text-sm font-bold">Fast Approval</span>
+                <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+                </div>
+                <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">Fast Approval</span>
             </div>
             <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary"
-                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                <span class="font-label uppercase tracking-widest text-sm font-bold">Fixed Interest Rates</span>
+                <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+                </div>
+                <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">Fixed Interest Rates</span>
             </div>
         </div>
-        <button
-            class="bg-[#bc0002] text-white px-10 py-5 rounded-xl text-lg font-bold editorial-shadow hover:bg-primary-container transition-all flex items-center gap-3">
+        
+        <!-- CTA -->
+        <a href="#calculator" class="inline-flex items-center gap-3 bg-[#bc0002] text-white px-8 py-4 rounded-xl text-lg font-bold editorial-shadow hover:scale-[1.02] active:scale-95 transition-all">
             Explore Available Lots
             <span class="material-symbols-outlined">arrow_forward</span>
-        </button>
+        </a>
     </div>
 </section>
 
