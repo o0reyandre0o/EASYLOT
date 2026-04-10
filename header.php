@@ -60,4 +60,4 @@
         </button>
     </nav>
 
-    <main class="pt-20">
+    <main>
