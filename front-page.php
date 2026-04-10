@@ -10,7 +10,7 @@
         <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
     </div>
     
-    <div class="relative z-10 max-w-4xl pt-20">
+    <div class="relative z-10 max-w-4xl pt-20 pb-12">
         <h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
             Buy Land in <br/>Cayman: <span class="text-[#FB3122]">Local<br/>Owner Financing</span>
         </h1>
