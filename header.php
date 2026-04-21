@@ -5,20 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     
     <!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
-    <title>Affordable Land for Sale in Cayman: Owner Financing Program</title>
-    <meta name="description" content="Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today."/>
+    <?php
+    $site_name = get_bloginfo('name');
+    $default_description = "Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval.";
+    
+    // Allow templates to override these
+    $current_title = isset($seo_title) ? $seo_title : get_the_title() . " | " . $site_name;
+    $current_description = isset($seo_description) ? $seo_description : $default_description;
+    $current_url = home_url(add_query_arg(array(), $wp->request));
+    $current_og_image = isset($seo_image) ? $seo_image : "https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg";
+    ?>
+    <title><?php echo esc_html($current_title); ?></title>
+    <meta name="description" content="<?php echo esc_attr($current_description); ?>"/>
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
-    <link rel="canonical" href="https://easylot.ky/" />
+    <link rel="canonical" href="<?php echo esc_url($current_url); ?>" />
+    
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Affordable Land for Sale in Cayman: Owner Financing Program" />
-    <meta property="og:description" content="Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today." />
-    <meta property="og:url" content="https://easylot.ky/" />
-    <meta property="og:site_name" content="Easy Lot" />
-    <meta property="og:updated_time" content="2026-02-02T09:31:17-05:00" />
+    <meta property="og:title" content="<?php echo esc_attr($current_title); ?>" />
+    <meta property="og:description" content="<?php echo esc_attr($current_description); ?>" />
+    <meta property="og:url" content="<?php echo esc_url($current_url); ?>" />
+    <meta property="og:site_name" content="<?php echo esc_attr($site_name); ?>" />
+    <meta property="og:image" content="<?php echo esc_url($current_og_image); ?>" />
+    
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Affordable Land for Sale in Cayman: Owner Financing Program" />
-    <meta name="twitter:description" content="Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today." />
+    <meta name="twitter:title" content="<?php echo esc_attr($current_title); ?>" />
+    <meta name="twitter:description" content="<?php echo esc_attr($current_description); ?>" />
+    <meta name="twitter:image" content="<?php echo esc_url($current_og_image); ?>" />
     
     <!-- Schema Markup Consolidated -->
     <script type="application/ld+json">
