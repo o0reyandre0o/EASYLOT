@@ -52,7 +52,7 @@ get_header();
                 Got Questions?
             </div>
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-on-surface mb-8 leading-[1.1]">
-                FAQ: Buying <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic tracking-normal">Land in Cayman</span>
+                FAQ: Buying <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic tracking-normal pr-4">Land in Cayman</span>
             </h1>
             <p class="text-xl text-on-surface/70 leading-relaxed font-light mb-12">
                 Everything you need to know about buying land in the Cayman Islands, owner financing, and building your future with Easy Lot.

@@ -45,7 +45,7 @@ get_header();
                 Our Mission
             </div>
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-on-surface mb-8 leading-[1.1]">
-                About <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic">Easy Lot</span>: Affordable Land in Cayman
+                About <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic pr-4">Easy Lot</span>: Affordable Land in Cayman
             </h1>
             <p class="text-xl md:text-2xl text-on-surface/70 leading-relaxed max-w-2xl mb-10 font-light">
                 Our mission is to <span class="text-on-surface font-semibold underline decoration-primary/30 decoration-2 underline-offset-4">empower individuals</span> and families to achieve their dreams of land ownership within the Cayman Islands.

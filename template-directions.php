@@ -61,7 +61,7 @@ get_header();
                 On the Way to Paradise
             </div>
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-on-surface mb-8 leading-[1.1]">
-                Directions to <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic text-6xl">Paradise</span>
+                Directions to <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic text-6xl pr-4">Paradise</span>
             </h1>
             <p class="text-xl text-on-surface/70 leading-relaxed font-light mb-0">
                 Finding Easy Lot is the first step toward your investment. Below are the directions to our main developments, strategically located near landmarks like <strong>Health City</strong>.
