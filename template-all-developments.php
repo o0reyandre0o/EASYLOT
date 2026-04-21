@@ -153,7 +153,7 @@ get_header();
                     <!-- Content -->
                     <div class="p-8 flex-1 flex flex-col">
                         <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2"><?php echo $dev['tag']; ?></span>
-                        <h3 class="text-2xl font-serif font-bold text-on-surface mb-2"><?php echo $dev['title']; ?></h3>
+                        <h2 class="text-2xl font-serif font-bold text-on-surface mb-2"><?php echo $dev['title']; ?></h2>
                         <p class="text-on-surface/50 text-sm mb-6 flex items-center gap-2">
                             <span class="material-symbols-outlined text-sm">location_on</span>
                             <?php echo $dev['location']; ?>
