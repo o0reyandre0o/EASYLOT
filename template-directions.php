@@ -81,7 +81,7 @@ get_header();
                     <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</div>
                     <h2 class="text-3xl font-serif font-bold mb-4">The Route</h2>
                     <p class="text-on-surface/70 leading-relaxed font-light">
-                        Coming from town you will want to head toward **Health City**. If you are not familiar with Health City, you can put it into Google maps and the directions will lead you to it from anywhere on the island.
+                        Coming from town you will want to head toward <strong>Health City</strong>. If you are not familiar with Health City, you can put it into Google maps and the directions will lead you to it from anywhere on the island.
                     </p>
                 </div>
 
@@ -89,14 +89,14 @@ get_header();
                     <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">2</div>
                     <h2 class="text-3xl font-serif font-bold mb-4">Turn onto High Rock</h2>
                     <p class="text-on-surface/70 leading-relaxed font-light">
-                        After passing Health City, the next left you can make is called **High Rock Drive**. You will see our sign on the main road. Turn left here.
+                        After passing Health City, the next left you can make is called <strong>High Rock Drive</strong>. You will see our sign on the main road. Turn left here.
                     </p>
                 </div>
 
                 <div class="relative pl-12 border-l-2 border-primary/20">
                     <h2 class="text-3xl font-serif font-bold mb-4">Arrival</h2>
                     <p class="text-on-surface/70 leading-relaxed font-light">
-                        You will see a set of new townhomes on the corner just behind our sign. Continue down High Rock Dr for **½ mile**. Look for our second sign on the right. 
+                        You will see a set of new townhomes on the corner just behind our sign. Continue down High Rock Dr for <strong>½ mile</strong>. Look for our second sign on the right. 
                         <br><br>
                         This marks the beginning of the development. The development will be on the right side of High Rock Dr if you are coming from the ocean.
                     </p>
