@@ -54,7 +54,7 @@ get_header();
 <!-- Hero Section -->
 <section class="relative pt-32 pb-16 overflow-hidden bg-surface">
     <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-primary/5 to-transparent pointer-events-none"></div>
-    <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-7xl mx-auto px-8 md:px-20 relative z-10">
         <div class="max-w-3xl">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase mb-6">
                 <span class="material-symbols-outlined text-sm">near_me</span>
