@@ -1,11 +1,16 @@
-<?php get_header(); ?>
+<?php 
+$seo_title = "Affordable Land for Sale in Cayman: Owner Financing Program";
+$seo_description = "Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today.";
+$seo_image = "https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg";
+get_header(); 
+?>
 
 <!-- Hero Section -->
 <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
         <img class="w-full h-full object-cover" 
-             src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.png" 
+             src="https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg" 
              alt="Cayman Islands Aerial View">
         <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
     </div>
@@ -19,22 +24,16 @@
             <!-- Checklist -->
             <div class="flex flex-col gap-4 mb-10">
                 <div class="flex items-center gap-3">
-                    <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
-                    </div>
-                    <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">NO BANKS REQUIRED</span>
+                    <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                    <span class="text-on-surface font-bold">NO BANKS REQUIRED</span>
                 </div>
                 <div class="flex items-center gap-3">
-                    <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
-                    </div>
-                    <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">Fast Approval</span>
+                    <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                    <span class="text-on-surface font-bold">Fast Approval</span>
                 </div>
                 <div class="flex items-center gap-3">
-                    <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
-                    </div>
-                    <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">Fixed Interest Rates</span>
+                    <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                    <span class="text-on-surface font-bold">Fixed Interest Rates</span>
                 </div>
             </div>
             
