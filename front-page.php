@@ -45,134 +45,163 @@
     </div>
 </section>
 
-<!-- Why Choose Easy Lot -->
+<!-- The Smart Way to Buy Land -->
 <section class="py-24 px-8 md:px-20 bg-surface-container">
     <div class="max-w-7xl mx-auto">
-        <div class="mb-16">
-            <h2
-                class="font-headline text-4xl font-bold tracking-tight mb-4 hover:translate-x-1 transition-transform cursor-default">
-                Why Choose Easy Lot</h2>
+        <div class="mb-16 max-w-3xl">
+            <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                The Smart Way to Buy Land in the Cayman Islands
+            </h2>
+            <p class="text-on-surface-variant text-lg leading-relaxed mb-6 font-light">
+                We believe everyone deserves the opportunity to own a piece of paradise. At Easy Lot, we remove the traditional barriers to real estate so you can start building your legacy today.
+            </p>
             <div class="w-24 h-1 bg-primary rounded-full"></div>
         </div>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div
-                class="bg-surface p-8 rounded-xl editorial-shadow hover:translate-y-[-8px] hover:shadow-2xl transition-all duration-300 group">
-                <span
-                    class="material-symbols-outlined text-secondary text-4xl mb-6 group-hover:scale-110 transition-transform">payments</span>
-                <h3 class="font-headline text-xl font-bold mb-3">Land for many budgets</h3>
-                <p class="text-on-surface-variant text-sm leading-relaxed">Grand Cayman from CI $72,000<br>Little Cayman
-                    from CI $45,000</p>
+            <div class="bg-surface p-8 rounded-xl editorial-shadow hover:translate-y-[-8px] hover:shadow-2xl transition-all duration-300 group">
+                <span class="text-4xl mb-6 block group-hover:scale-110 transition-transform">💰</span>
+                <h3 class="font-headline text-xl font-bold mb-3">Lots for Every Budget</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Secure your future starting from just $13/day.</p>
             </div>
-            <div
-                class="bg-surface p-8 rounded-xl editorial-shadow hover:translate-y-[-8px] hover:shadow-2xl transition-all duration-300 group">
-                <span
-                    class="material-symbols-outlined text-secondary text-4xl mb-6 group-hover:scale-110 transition-transform">account_balance_wallet</span>
-                <h3 class="font-headline text-xl font-bold mb-3">Flexible down payments</h3>
-                <p class="text-on-surface-variant text-sm leading-relaxed">Grand Cayman from $2,500<br>Little Cayman
-                    from $1,575</p>
+            
+            <div class="bg-surface p-8 rounded-xl editorial-shadow hover:translate-y-[-8px] hover:shadow-2xl transition-all duration-300 group">
+                <span class="text-4xl mb-6 block group-hover:scale-110 transition-transform">🌴</span>
+                <h3 class="font-headline text-xl font-bold mb-3">Prime Locations</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Beautiful properties available across Grand Cayman and Little Cayman.</p>
             </div>
-            <div
-                class="bg-surface p-8 rounded-xl editorial-shadow hover:translate-y-[-8px] hover:shadow-2xl transition-all duration-300 group">
-                <span
-                    class="material-symbols-outlined text-secondary text-4xl mb-6 group-hover:scale-110 transition-transform">handshake</span>
-                <h3 class="font-headline text-xl font-bold mb-3">No bank required</h3>
-                <p class="text-on-surface-variant text-sm leading-relaxed">Direct owner financing bypasses lengthy
-                    traditional banking hurdles.</p>
+            
+            <div class="bg-surface p-8 rounded-xl editorial-shadow hover:translate-y-[-8px] hover:shadow-2xl transition-all duration-300 group">
+                <span class="text-4xl mb-6 block group-hover:scale-110 transition-transform">📉</span>
+                <h3 class="font-headline text-xl font-bold mb-3">Flexible Down Payments</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed">Start with just 5% down. Want a lower monthly payment? Simply increase your initial deposit to fit your budget!</p>
             </div>
-            <div
-                class="bg-surface p-8 rounded-xl editorial-shadow hover:translate-y-[-8px] hover:shadow-2xl transition-all duration-300 group">
-                <span
-                    class="material-symbols-outlined text-secondary text-4xl mb-6 group-hover:scale-110 transition-transform">calendar_month</span>
-                <h3 class="font-headline text-xl font-bold mb-3">Flexible monthly payments</h3>
-                <p class="text-on-surface-variant text-sm leading-relaxed">Grand Cayman from $560<br>Little Cayman from
-                    $380</p>
+            
+            <div class="bg-surface p-8 rounded-xl editorial-shadow hover:translate-y-[-8px] hover:shadow-2xl transition-all duration-300 group">
+                <span class="text-4xl mb-6 block group-hover:scale-110 transition-transform">🤝</span>
+                <h3 class="font-headline text-xl font-bold mb-3">Direct Owner Financing</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed">No banks involved, fast approval, and minimal paperwork.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Featured Estates -->
+<!-- Find Your Perfect Lot -->
 <section class="py-24 px-8 md:px-20 bg-surface">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-                <span class="font-label text-primary font-bold tracking-[0.2em] text-sm uppercase">Curated
-                    Opportunities</span>
-                <h2 class="font-headline text-5xl font-bold tracking-tight mt-2">Featured Estates</h2>
+            <div class="max-w-3xl">
+                <span class="font-label text-primary font-bold tracking-[0.2em] text-sm uppercase">Exclusive Opportunities</span>
+                <h2 class="font-headline text-5xl font-bold tracking-tight mt-2 mb-6">Find Your Perfect Lot</h2>
+                <p class="text-on-surface-variant text-lg leading-relaxed font-light">
+                    Browse our exclusive communities to see real-time availability, lot sizes, and pricing. Explore our interactive maps to find the exact location that fits your lifestyle and budget, and lock it in today.
+                </p>
             </div>
-            <a class="text-secondary font-bold flex items-center gap-2 hover:underline" href="#">View All Locations
-                <span class="material-symbols-outlined">east</span></a>
+            <a class="text-secondary font-bold flex items-center gap-2 hover:underline pb-2" href="#">
+                View Interactive Map
+                <span class="material-symbols-outlined">map</span>
+            </a>
         </div>
 
         <div class="space-y-12">
             <!-- Listing 1: Northshore Estates -->
-            <div class="bg-surface-container-low rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
-                <div class="relative min-h-[400px] overflow-hidden">
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative min-h-[450px] overflow-hidden">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/northshore.png"
                         alt="Northshore Estates" />
-                    <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Premium Listing</div>
+                    <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Grand Cayman</div>
                 </div>
                 <div class="p-12 flex flex-col justify-center">
-                    <h3 class="font-headline text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Northshore Estates: Premium Land in East End</h3>
-                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Elevated terrain offering natural cooling breezes and stunning ocean vistas. Perfect for those seeking tranquility without sacrificing accessibility.</p>
-                    <div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-10">
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">location_on</span><span class="font-medium text-sm text-on-surface">Prime Location</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">foundation</span><span class="font-medium text-sm text-on-surface">Ready to Build</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">verified_user</span><span class="font-medium text-sm text-on-surface">Safe Investment</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">percent</span><span class="font-medium text-sm text-on-surface">Fixed 9% interest</span></div>
+                    <h3 class="font-headline text-4xl font-bold mb-6 group-hover:text-primary transition-colors">Northshore Estates</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Enjoy elevated terrain offering natural ocean breezes, located very close to the beach and just 5 minutes from the iconic Rum Point. The perfect spot for your future coastal retreat.</p>
+                    
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📉</span>
+                            <span class="font-medium text-sm text-on-surface">Flexible Down Payment (Start from 5%)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">🤝</span>
+                            <span class="font-medium text-sm text-on-surface">Owner Financing Available (No Bank)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📝</span>
+                            <span class="font-medium text-sm text-on-surface">Minimum Paperwork (Fast Approval)</span>
+                        </div>
                     </div>
+                    
                     <button class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
-                        Request Full Prospectus
-                        <span class="material-symbols-outlined">description</span>
+                        Explore Availability
+                        <span class="material-symbols-outlined">explore</span>
                     </button>
                 </div>
             </div>
 
-            <!-- Listing 2: Frank Sound Estates -->
-            <div class="bg-surface-container-low rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
-                <div class="relative min-h-[400px] overflow-hidden">
-                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/franksound.png"
-                        alt="Frank Sound Estates" />
-                    <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">New Release</div>
-                </div>
-                <div class="p-12 flex flex-col justify-center">
-                    <h3 class="font-headline text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Frank Sound Estates: Central Convenience</h3>
-                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">A growing community strategically located for easy access to both ends of the island. Ideal for families and long-term capital appreciation.</p>
-                    <div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-10">
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">location_on</span><span class="font-medium text-sm text-on-surface">Central Location</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">landscape</span><span class="font-medium text-sm text-on-surface">Level Ground</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">bolt</span><span class="font-medium text-sm text-on-surface">Utilities Ready</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">percent</span><span class="font-medium text-sm text-on-surface">Flexible Terms</span></div>
-                    </div>
-                    <button class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
-                        Request Full Prospectus
-                        <span class="material-symbols-outlined">description</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Listing 3: Elena Estates -->
-            <div class="bg-surface-container-low rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
-                <div class="relative min-h-[400px] overflow-hidden">
+            <!-- Listing 2: Elena Estates -->
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative min-h-[450px] overflow-hidden lg:order-2">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/elena.png"
                         alt="Elena Estates" />
-                    <div class="absolute top-6 left-6 bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Luxury Paradise</div>
+                    <div class="absolute top-6 right-6 bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Little Cayman</div>
+                </div>
+                <div class="p-12 flex flex-col justify-center lg:order-1">
+                    <h3 class="font-headline text-4xl font-bold mb-6 group-hover:text-primary transition-colors">Elena Estates (Little Cayman)</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Discover near-shore parcels in the most peaceful of the Three Sisters. Experience true island living at its finest, perfectly situated just 5 minutes from the future port of Little Cayman.</p>
+                    
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📉</span>
+                            <span class="font-medium text-sm text-on-surface">Flexible Down Payment (Start from 5%)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">🤝</span>
+                            <span class="font-medium text-sm text-on-surface">Owner Financing Available (No Bank)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📝</span>
+                            <span class="font-medium text-sm text-on-surface">Minimum Paperwork (Fast Approval)</span>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
+                        Explore Availability
+                        <span class="material-symbols-outlined">explore</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Listing 3: Frank Sound Estates -->
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative min-h-[450px] overflow-hidden">
+                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/images/franksound.png"
+                        alt="Frank Sound Estates" />
+                    <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Frank Sound</div>
                 </div>
                 <div class="p-12 flex flex-col justify-center">
-                    <h3 class="font-headline text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Elena Estates: Serenity in Little Cayman</h3>
-                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Exclusive oceanfront and near-shore parcels in the most peaceful of the Three Sisters. Experience true island living at its finest.</p>
-                    <div class="grid grid-cols-2 gap-y-6 gap-x-4 mb-10">
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">waves</span><span class="font-medium text-sm text-on-surface">Beach Access</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">eco</span><span class="font-medium text-sm text-on-surface">Eco-Friendly Area</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">security</span><span class="font-medium text-sm text-on-surface">Private Living</span></div>
-                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">percent</span><span class="font-medium text-sm text-on-surface">9% Financing</span></div>
+                    <h3 class="font-headline text-4xl font-bold mb-6 group-hover:text-primary transition-colors">Frank Sound Estates</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">A stunning location in Frank Sound, strategically positioned right next to the future East-West Arterial Road. Enjoy incredible convenience, just 5 minutes from Clifton Hunter High School and the local Fire Station.</p>
+                    
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📉</span>
+                            <span class="font-medium text-sm text-on-surface">Flexible Down Payment (Start from 5%)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">🤝</span>
+                            <span class="font-medium text-sm text-on-surface">Owner Financing Available (No Bank)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📝</span>
+                            <span class="font-medium text-sm text-on-surface">Minimum Paperwork (Fast Approval)</span>
+                        </div>
                     </div>
+                    
                     <button class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
-                        Request Full Prospectus
-                        <span class="material-symbols-outlined">description</span>
+                        Explore Availability
+                        <span class="material-symbols-outlined">explore</span>
                     </button>
                 </div>
             </div>
@@ -180,119 +209,136 @@
     </div>
 </section>
 
-<!-- 3-Step Process -->
-<section class="py-24 px-8 md:px-20 bg-secondary text-surface">
+<!-- The 3-Step Ownership Process -->
+<section class="py-24 px-8 md:px-20 bg-[#1d1b1a] text-surface">
     <div class="max-w-7xl mx-auto text-center">
-        <h2 class="font-headline text-4xl font-bold mb-4">The 3-Step Process</h2>
-        <p class="opacity-80 max-w-xl mx-auto mb-20 italic font-light">Join over 100 families who have secured their
-            future with Easy Lot.</p>
+        <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6">The 3-Step Ownership Process</h2>
+        <p class="opacity-80 max-w-2xl mx-auto mb-20 text-lg font-light">Join over 100 families who have secured their future with Easy Lot.</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
-            <div class="hidden md:block absolute top-12 left-0 w-full h-[1px] bg-surface/20 z-0"></div>
-            <div class="relative z-10 flex flex-col items-center">
-                <div
-                    class="w-24 h-24 rounded-full bg-surface text-secondary flex items-center justify-center mb-8 shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl">map</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+            <!-- Connecting Line -->
+            <div class="hidden md:block absolute top-16 left-0 w-full h-[1px] bg-surface/10 z-0"></div>
+            
+            <!-- Step 1 -->
+            <div class="relative z-10 flex flex-col items-center group">
+                <div class="w-32 h-32 rounded-full bg-surface/5 border border-surface/10 text-primary flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <span class="material-symbols-outlined text-5xl">map</span>
                 </div>
-                <h3 class="font-headline text-xl font-bold mb-4">1. Choose your lot via Map</h3>
-                <p class="opacity-70 text-sm leading-relaxed">Explore high-resolution surveys and virtual site visits
-                    online.</p>
+                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold absolute top-0 right-1/4 md:right-1/3 shadow-lg">1</div>
+                <h3 class="font-headline text-2xl font-bold mb-4">Choose Your Lot</h3>
+                <p class="opacity-70 leading-relaxed text-balance">Use our Interactive Map to explore available properties, view real-time prices, and find your perfect spot from the comfort of your home.</p>
             </div>
-            <div class="relative z-10 flex flex-col items-center">
-                <div
-                    class="w-24 h-24 rounded-full bg-surface text-secondary flex items-center justify-center mb-8 shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl">calculate</span>
+
+            <!-- Step 2 -->
+            <div class="relative z-10 flex flex-col items-center group">
+                <div class="w-32 h-32 rounded-full bg-surface/5 border border-surface/10 text-primary flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <span class="material-symbols-outlined text-5xl">tune</span>
                 </div>
-                <h3 class="font-headline text-xl font-bold mb-4">2. Calculate Payments</h3>
-                <p class="opacity-70 text-sm leading-relaxed">Adjust your down payment to find a plan that fits your
-                    lifestyle.</p>
+                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold absolute top-0 right-1/4 md:right-1/3 shadow-lg">2</div>
+                <h3 class="font-headline text-2xl font-bold mb-4">Customize Your Payments</h3>
+                <p class="opacity-70 leading-relaxed text-balance">Take control of your budget. Use our online slider to adjust your down payment (starting at just 5%) and find a monthly installment that fits your lifestyle.</p>
             </div>
-            <div class="relative z-10 flex flex-col items-center">
-                <div
-                    class="w-24 h-24 rounded-full bg-primary text-white flex items-center justify-center mb-8 shadow-2xl">
-                    <span class="material-symbols-outlined text-4xl">assignment_turned_in</span>
+
+            <!-- Step 3 -->
+            <div class="relative z-10 flex flex-col items-center group">
+                <div class="w-32 h-32 rounded-full bg-surface/5 border border-surface/10 text-primary flex items-center justify-center mb-8 shadow-2xl backdrop-blur-sm group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <span class="material-symbols-outlined text-5xl">verified</span>
                 </div>
-                <h3 class="font-headline text-xl font-bold mb-4">3. Submit Pre-Approval</h3>
-                <p class="opacity-70 text-sm leading-relaxed">Fast-track your ownership with our 24-hour response
-                    guarantee.</p>
+                <div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold absolute top-0 right-1/4 md:right-1/3 shadow-lg">3</div>
+                <h3 class="font-headline text-2xl font-bold mb-4">Submit Pre-Approval</h3>
+                <p class="opacity-70 leading-relaxed text-balance">Skip the bank and the endless paperwork. Complete our simple online form and receive your approval response within 24 to 48 hours once your documents are verified.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Mortgage Calculator Section -->
+<!-- Interactive Payment Calculator Section -->
 <section class="py-24 px-8 md:px-20 bg-surface-container" id="calculator">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div>
-            <h2 class="font-headline text-4xl font-bold mb-6 italic">Transparent Financing,<br />No Surprises</h2>
-            <p class="text-on-surface-variant text-lg mb-8 leading-relaxed font-light">We believe in complete
-                transparency. Use our mortgage widget to model your investment in real-time. No credit check required.
+            <h2 class="font-headline text-5xl font-bold mb-8 leading-tight">Interactive Payment Calculator</h2>
+            <p class="text-on-surface-variant text-xl mb-10 leading-relaxed font-light">
+                Use our interactive calculator to find a monthly payment that fits your lifestyle. Adjust the purchase price, choose your down payment (starting at just 5%), and select your term length. No surprises—just a straightforward 9% fixed interest rate.
             </p>
-            <div class="space-y-4">
-                <div class="flex items-center gap-4 p-4 bg-surface rounded-lg editorial-shadow">
-                    <div
-                        class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
-                        <span class="material-symbols-outlined">lock</span>
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-5 p-6 bg-surface rounded-2xl editorial-shadow border border-black/5">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">percent</span>
                     </div>
                     <div>
-                        <h4 class="font-bold text-sm">Fixed Interest Rates</h4>
-                        <p class="text-xs text-on-surface-variant">Your rate never changes during the term.</p>
+                        <h4 class="font-bold text-lg mb-1">9% Fixed Interest Rate</h4>
+                        <p class="text-sm text-on-surface-variant">Your rate is locked in for the entire term of the loan.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-5 p-6 bg-surface rounded-2xl editorial-shadow border border-black/5">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <span class="material-symbols-outlined text-2xl">verified_user</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">Fast Pre-Approval</h4>
+                        <p class="text-sm text-on-surface-variant">Get approved in as little as 24-48 hours once documents are verified.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="bg-surface p-10 rounded-3xl editorial-shadow border border-outline-variant/10">
+        <div class="bg-surface p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-black/5 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
+            
             <!-- Purchase Price -->
-            <div class="mb-8">
-                <label
-                    class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 block">Purchase
-                    Price (KYD)</label>
-                <input
-                    class="w-full h-1.5 bg-surface-container-highest appearance-none rounded-lg cursor-pointer accent-[#FB3122]"
-                    id="price-range" max="250000" min="30000" type="range" value="125000" />
-                <div class="mt-4 font-headline text-2xl font-bold text-on-surface">$<span id="price-val">125,000</span>
+            <div class="mb-10">
+                <div class="flex justify-between items-center mb-6">
+                    <label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Purchase Price (KYD)</label>
+                    <div class="font-headline text-3xl font-bold text-on-surface">$<span id="price-val">125,000</span></div>
+                </div>
+                <input class="w-full h-2 bg-surface-container-highest appearance-none rounded-full cursor-pointer accent-primary"
+                    id="price-range" max="250000" min="30000" step="1000" type="range" value="125000" />
+                <div class="flex justify-between mt-2 text-[10px] font-bold text-on-surface-variant/40 uppercase tracking-tighter">
+                    <span>$30k</span>
+                    <span>$250k</span>
                 </div>
             </div>
 
             <!-- Down Payment -->
-            <div class="mb-8">
-                <label
-                    class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 block">Down
-                    Payment (%)</label>
-                <input
-                    class="w-full h-1.5 bg-surface-container-highest appearance-none rounded-lg cursor-pointer accent-[#FB3122]"
-                    id="down-range" max="50" min="5" type="range" value="10" />
-                <div class="mt-4 font-headline text-2xl font-bold text-on-surface"><span id="down-pct">10</span>%
-                    ($<span id="down-val">12,500</span>)</div>
+            <div class="mb-10">
+                <div class="flex justify-between items-center mb-6">
+                    <label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Down Payment (<span id="down-pct">10</span>%)</label>
+                    <div class="font-headline text-3xl font-bold text-on-surface">$<span id="down-val">12,500</span></div>
+                </div>
+                <input class="w-full h-2 bg-surface-container-highest appearance-none rounded-full cursor-pointer accent-primary"
+                    id="down-range" max="50" min="5" step="1" type="range" value="10" />
+                <div class="flex justify-between mt-2 text-[10px] font-bold text-on-surface-variant/40 uppercase tracking-tighter">
+                    <span>Min 5%</span>
+                    <span>Max 50%</span>
+                </div>
             </div>
 
             <!-- Term Length -->
-            <div class="mb-10">
-                <label
-                    class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4 block">Term
-                    Length (Years)</label>
-                <div class="grid grid-cols-3 gap-3" id="term-selector">
-                    <button
-                        class="py-3 px-4 border-2 border-primary rounded-xl font-bold text-primary hover:bg-primary/5 transition-all outline-none"
+            <div class="mb-12">
+                <label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-6 block text-center">Select Loan Term</label>
+                <div class="grid grid-cols-3 gap-4" id="term-selector">
+                    <button class="py-4 px-2 border-2 border-outline-variant rounded-2xl font-bold text-on-surface-variant hover:border-primary transition-all outline-none text-sm"
                         data-years="5">5 Years</button>
-                    <button
-                        class="py-3 px-4 border-2 border-primary bg-primary rounded-xl font-bold text-white shadow-lg shadow-primary/20 transition-all outline-none"
+                    <button class="py-4 px-2 border-2 border-primary bg-primary rounded-2xl font-bold text-white shadow-xl shadow-primary/20 transition-all outline-none text-sm"
                         data-years="10">10 Years</button>
-                    <button
-                        class="py-3 px-4 border-2 border-outline-variant rounded-xl font-bold text-on-surface-variant hover:border-primary transition-all outline-none"
+                    <button class="py-4 px-2 border-2 border-outline-variant rounded-2xl font-bold text-on-surface-variant hover:border-primary transition-all outline-none text-sm"
                         data-years="15">15 Years</button>
                 </div>
             </div>
 
-            <!-- Result -->
-            <div class="p-10 bg-surface-container/50 rounded-2xl text-center border border-black/5">
-                <span
-                    class="font-label text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-2 block">Estimated
-                    Monthly Payment</span>
-                <div class="text-6xl font-headline font-extrabold text-[#FB3122] mb-3">$<span
-                        id="monthly-payment">1,425.80</span></div>
-                <p class="text-xs text-on-surface-variant font-medium">Based on 9% fixed interest rate</p>
+            <!-- Result Box -->
+            <div class="p-8 bg-surface-container rounded-3xl text-center border border-black/5 relative overflow-hidden group">
+                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/[0.02] transition-colors duration-500"></div>
+                <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4 block relative z-10">Monthly Investment</span>
+                <div class="text-6xl font-headline font-extrabold text-primary mb-4 relative z-10">
+                    $<span id="monthly-payment">1,425.80</span>
+                </div>
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full text-[10px] font-bold text-primary uppercase tracking-widest relative z-10">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                    9% Fixed Interest Rate
+                </div>
             </div>
         </div>
     </div>
