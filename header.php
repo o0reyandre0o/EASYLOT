@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> class="light overflow-x-hidden">
+<html <?php language_attributes(); ?> itemscope itemtype="https://schema.org/WebPage" class="light overflow-x-hidden">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -27,6 +27,7 @@
     <meta property="og:url" content="<?php echo esc_url($current_url); ?>" />
     <meta property="og:site_name" content="<?php echo esc_attr($site_name); ?>" />
     <meta property="og:image" content="<?php echo esc_url($current_og_image); ?>" />
+    <link rel="image_src" href="<?php echo esc_url($current_og_image); ?>" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="<?php echo esc_attr($current_title); ?>" />

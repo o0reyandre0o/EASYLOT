@@ -9,7 +9,7 @@ get_header();
 <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
-        <img class="w-full h-full object-cover" 
+        <img itemprop="image" class="w-full h-full object-cover" 
              src="https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg" 
              alt="Cayman Islands Aerial View">
         <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
