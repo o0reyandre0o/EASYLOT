@@ -35,7 +35,7 @@ get_header();
                 The Heart of Easy Lot
             </div>
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-on-surface mb-8 leading-[1.1]">
-                Meet our <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic">Cayman Experts</span>
+                Meet our <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic pr-4">Cayman Experts</span>
             </h1>
             <p class="text-xl text-on-surface/70 leading-relaxed font-light mb-0">
                 Get acquainted with the exceptional individuals whose skills, dedication, and passion propel us forward in making land ownership accessible in the Cayman Islands.
