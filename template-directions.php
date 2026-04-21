@@ -103,7 +103,7 @@ get_header();
                 </div>
 
                 <div class="pt-6">
-                    <a href="https://maps.app.goo.gl/YourActualGoogleMapsLink" target="_blank" class="inline-flex items-center gap-3 bg-on-surface text-white px-8 py-4 rounded-xl font-bold hover:bg-primary transition-all duration-300 shadow-xl">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Easylot+Cayman+Islands" target="_blank" class="inline-flex items-center gap-3 bg-on-surface text-white px-8 py-4 rounded-xl font-bold hover:bg-primary transition-all duration-300 shadow-xl">
                         Open in Google Maps
                         <span class="material-symbols-outlined">map</span>
                     </a>
