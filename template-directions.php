@@ -116,10 +116,6 @@ get_header();
                     <img src="https://easylot.ky/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2024-04-03-at-4.18.16-PM-qmimzwkno6vd19z61gt3fq7ny0erzsg9z9lz9bmnao.jpeg" alt="Directions to Easy Lot land development in East End Grand Cayman" class="w-full h-auto object-cover group-hover:scale-105 transition-all duration-1000">
                     <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500"></div>
                 </div>
-
-                <div class="bg-surface p-2 rounded-[32px] overflow-hidden shadow-2xl h-[450px]">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9279.667735726985!2d-81.14573590119319!3d19.300117087870635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f25f4e22e584cd3%3A0xb5a55ae208d1ceb6!2sEast%20End%2C%20Cayman%20Islands!5e1!3m2!1sen!2suk!4v1712774308170!5m2!1sen!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-[28px]"></iframe>
-                </div>
             </div>
 
         </div>
