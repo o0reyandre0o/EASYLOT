@@ -89,8 +89,8 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <a href="#find-my-lot" class="hidden md:block bg-primary text-white px-6 py-2.5 rounded-xl font-medium tracking-tight hover:scale-95 transition-all duration-200 shadow-lg shadow-primary/20">
-                Find My Lot
+            <a href="<?php echo esc_url(home_url('/all-our-developments/')); ?>" class="hidden md:block bg-primary text-white px-6 py-2.5 rounded-xl font-medium tracking-tight hover:scale-95 transition-all duration-200 shadow-lg shadow-primary/20">
+                Explore Developments
             </a>
             
             <!-- Mobile Menu Toggle -->
@@ -117,6 +117,8 @@
             <div class="space-y-4">
                 <h4 class="font-serif text-sm uppercase tracking-widest text-primary font-bold">Our Developments</h4>
                 <div class="grid gap-4 pl-4 border-l border-primary/10">
+                    <a href="<?php echo esc_url(home_url('/all-our-developments/')); ?>" class="text-xl font-bold text-primary">View All Developments</a>
+                    <div class="h-px bg-black/5 my-2"></div>
                     <a href="https://easylot.ky/project/high-rock-estates/" class="text-xl font-medium text-on-surface/80">High Rock Estates</a>
                     <a href="https://easylot.ky/project/little-cayman/" class="text-xl font-medium text-on-surface/80">Elena Estates (Little Cayman)</a>
                     <a href="https://easylot.ky/project/rum-point-land/" class="text-xl font-medium text-on-surface/80">Northshore Estates</a>
@@ -137,8 +139,8 @@
             <a href="https://easylot.ky/faq/" class="block font-serif text-3xl font-bold text-on-surface">FAQs</a>
             
             <div class="pt-10">
-                <a href="#find-my-lot" class="block w-full bg-primary text-white text-center py-5 rounded-2xl font-bold text-xl shadow-xl shadow-primary/20">
-                    Find My Lot
+                <a href="<?php echo esc_url(home_url('/all-our-developments/')); ?>" class="block w-full bg-primary text-white text-center py-5 rounded-2xl font-bold text-xl shadow-xl shadow-primary/20">
+                    Explore Developments
                 </a>
             </div>
         </div>
