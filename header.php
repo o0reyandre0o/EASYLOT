@@ -77,6 +77,27 @@
             "@type": "SearchAction",
             "target": "https://easylot.ky/?s={search_term_string}",
             "query-input": "required name=search_term_string"
+          },
+          "creator": {
+            "@type": "Organization",
+            "name": "Toc Toc Marketing",
+            "url": "https://toctoc.ky/",
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Daniel Garrido",
+                "jobTitle": "CEO",
+                "sameAs": "https://www.linkedin.com/in/danielgarridoo/"
+              }
+            ],
+            "employee": [
+              {
+                "@type": "Person",
+                "name": "Andre Gutierrez",
+                "jobTitle": "Developer",
+                "sameAs": "https://www.linkedin.com/in/andre-g-9b373a97/"
+              }
+            ]
           }
         },
         {
