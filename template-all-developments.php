@@ -56,12 +56,8 @@ get_header();
             </p>
         </div>
     </div>
-    <!-- Shape Divider -->
-    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-[calc(100%+1.3px)] h-[60px] fill-white">
-            <path d="M321.39,56.44c11.02,125.75,213.62,11.2,254.49,36.19l248.88,29.37V0H0V113.84C0,113.84,310.37-69.31,321.39,56.44Z"></path>
-        </svg>
-    </div>
+    <!-- Bottom Polish -->
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"></div>
 </section>
 
 <!-- Developments Grid -->
