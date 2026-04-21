@@ -110,7 +110,7 @@
             <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
                 <div class="relative min-h-[450px] overflow-hidden">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/northshore.png"
+                        src="https://easylot.ky/wp-content/uploads/2024/09/Northshore-Estates-Rum-Point-Land-Sitemap-Satellite.jpg"
                         alt="Aerial view of land for sale at Northshore Estates, Grand Cayman" />
                     <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Grand Cayman</div>
                 </div>
@@ -144,7 +144,7 @@
             <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
                 <div class="relative min-h-[450px] overflow-hidden lg:order-2">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/elena.png"
+                        src="https://easylot.ky/wp-content/uploads/2024/03/Elena-Estates-Little-Cayman-Easy-Lot.jpg"
                         alt="Investment property for sale at Elena Estates, Little Cayman" />
                     <div class="absolute top-6 right-6 bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Little Cayman</div>
                 </div>
@@ -178,7 +178,7 @@
             <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
                 <div class="relative min-h-[450px] overflow-hidden">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/franksound.png"
+                        src="https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg"
                         alt="Elevated lots for sale at Frank Sound Estates near East-West Arterial" />
                     <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Frank Sound</div>
                 </div>

@@ -74,7 +74,7 @@ get_header();
                 [
                     'title' => 'High Rock Estates',
                     'location' => 'East End, Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/High-Rock-Estates.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/High-Rock-Estates-Easy-Lot.jpg',
                     'status' => 'Available',
                     'tag' => 'Best Seller',
                     'link' => 'https://easylot.ky/project/high-rock-estates/',
@@ -84,7 +84,7 @@ get_header();
                 [
                     'title' => 'Elena Estates',
                     'location' => 'Little Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2024/03/elena-estates-little-cayman-1.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2024/03/Elena-Estates-Little-Cayman-Easy-Lot.jpg',
                     'status' => 'Limited Availability',
                     'tag' => 'Investment Pick',
                     'link' => 'https://easylot.ky/project/little-cayman/',
@@ -94,7 +94,7 @@ get_header();
                 [
                     'title' => 'Northshore Estates',
                     'location' => 'Rum Point, Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2024/09/rum-point-land-sitemap-satellite-extra-lot-1024x553.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2024/09/Northshore-Estates-Rum-Point-Land-Sitemap-Satellite.jpg',
                     'status' => 'Presale',
                     'tag' => 'Prime Location',
                     'link' => 'https://easylot.ky/project/rum-point-land/',
@@ -104,7 +104,7 @@ get_header();
                 [
                     'title' => 'Ocean Breeze North',
                     'location' => 'East End, Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Ocean-Breeze.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Ocean-Breeze-North-Easy-Lot.jpg',
                     'status' => 'Available',
                     'tag' => 'High Elevation',
                     'link' => 'https://easylot.ky/project/ocean-breeze-north/',
@@ -114,7 +114,7 @@ get_header();
                 [
                     'title' => 'Frank Sound',
                     'location' => 'Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/ocean-breeze-north-drone.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg',
                     'status' => 'Available',
                     'tag' => 'New Release',
                     'link' => 'https://easylot.ky/project/frank-sound/',
@@ -124,7 +124,7 @@ get_header();
                 [
                     'title' => 'Ocean Breeze East',
                     'location' => 'Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Screenshot-2023-08-30-at-10.42.06-AM-qmimzy2p51e5yphn60shs5r1330w748348z7k7f26g.png',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Ocean-Breeze-Easy-Lot.jpg',
                     'status' => 'Sold Out',
                     'tag' => 'Fully Occupied',
                     'link' => 'https://easylot.ky/project/ocean-breeze/',
