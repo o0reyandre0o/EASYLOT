@@ -38,7 +38,7 @@ get_header();
         <!-- Header -->
         <div class="mb-16">
             <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter text-on-surface mb-6">
-                Get in <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic">Touch</span>
+                Get in <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic pr-4">Touch</span>
             </h1>
             <p class="text-on-surface-variant text-xl max-w-2xl leading-relaxed">
                 We're here to help you secure your piece of paradise. Whether you have questions about financing or want to schedule a site visit, our team is ready.

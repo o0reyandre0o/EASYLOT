@@ -58,8 +58,6 @@ get_header();
             </p>
         </div>
     </div>
-    <!-- Bottom Polish -->
-    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"></div>
 </section>
 
 <!-- Developments Grid -->
