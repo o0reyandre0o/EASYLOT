@@ -38,7 +38,7 @@ get_header();
     <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
     <div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-7xl mx-auto px-8 md:px-20 relative z-10">
         <div class="max-w-4xl">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase mb-6 animate-fade-in">
                 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>

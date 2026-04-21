@@ -47,7 +47,7 @@ get_header();
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
         <img src="https://easylot.ky/wp-content/uploads/2023/08/icon-3D-easy-lot.svg" class="w-full max-w-2xl animate-pulse" alt="Easy Lot Icon">
     </div>
-    <div class="container mx-auto px-6 relative z-10 text-center">
+    <div class="max-w-7xl mx-auto px-8 md:px-20 relative z-10 text-center">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-white mb-8 leading-[1.1]">
                 Land for Sale in the <span class="italic text-white/90">Cayman Islands</span>

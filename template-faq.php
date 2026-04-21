@@ -45,7 +45,7 @@ get_header();
 <!-- Hero Section -->
 <section class="relative pt-32 pb-16 overflow-hidden bg-surface">
     <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
-    <div class="container mx-auto px-6 relative z-10 text-center">
+    <div class="max-w-7xl mx-auto px-8 md:px-20 relative z-10 text-center">
         <div class="max-w-3xl mx-auto">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase mb-8">
                 <span class="material-symbols-outlined text-sm">quiz</span>
