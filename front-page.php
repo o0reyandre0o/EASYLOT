@@ -167,7 +167,7 @@
                         </div>
                     </div>
                     
-                    <a href="https://easylot.ky/project/rum-point-land/" class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
+                    <a href="https://easylot.ky/project/little-cayman/" class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
                         Explore Availability
                         <span class="material-symbols-outlined">explore</span>
                     </a>
@@ -205,7 +205,7 @@
                         </div>
                     </div>
                     
-                    <a href="https://easylot.ky/project/rum-point-land/" class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
+                    <a href="https://easylot.ky/project/frank-sound/" class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
                         Explore Availability
                         <span class="material-symbols-outlined">explore</span>
                     </a>
