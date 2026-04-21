@@ -4,29 +4,81 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     
-    <!-- SEO Metadata -->
+    <!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
     <title>Affordable Land for Sale in Cayman: Owner Financing Program</title>
     <meta name="description" content="Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today."/>
+    <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+    <link rel="canonical" href="https://easylot.ky/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Affordable Land for Sale in Cayman: Owner Financing Program" />
+    <meta property="og:description" content="Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today." />
+    <meta property="og:url" content="https://easylot.ky/" />
+    <meta property="og:site_name" content="Easy Lot" />
+    <meta property="og:updated_time" content="2026-02-02T09:31:17-05:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Affordable Land for Sale in Cayman: Owner Financing Program" />
+    <meta name="twitter:description" content="Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today." />
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NCWF3CG4');</script>
+    <!-- Schema Markup -->
+    <script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["RealEstateAgent","Organization"],"@id":"https://easylot.ky/#organization","name":"Easy Lot Cayman","url":"https://easylot.ky","logo":{"@type":"ImageObject","@id":"https://easylot.ky/#logo","url":"https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg","contentUrl":"https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg","caption":"Easy Lot","inLanguage":"en-US","width":"365","height":"104"},"openingHours":["Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"],"image":{"@id":"https://easylot.ky/#logo"}},{"@type":"WebSite","@id":"https://easylot.ky/#website","url":"https://easylot.ky","name":"Easy Lot","alternateName":"Easy Lot","publisher":{"@id":"https://easylot.ky/#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"https://easylot.ky/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg","url":"https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg","width":"200","height":"200","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://easylot.ky/#webpage","url":"https://easylot.ky/","name":"Affordable Land for Sale in Cayman: Owner Financing Program","datePublished":"2023-08-23T11:05:23-05:00","dateModified":"2026-02-02T09:31:17-05:00","about":{"@id":"https://easylot.ky/#organization"},"isPartOf":{"@id":"https://easylot.ky/#website"},"primaryImageOfPage":{"@id":"https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://easylot.ky/author/tommy/","name":"Tommy Sofield","url":"https://easylot.ky/author/tommy/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/3b724fb6477b72d20a75cad9a112eafd6f105c1fdc79cbf141cf8835b50048c1?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/3b724fb6477b72d20a75cad9a112eafd6f105c1fdc79cbf141cf8835b50048c1?s=96&amp;d=mm&amp;r=g","caption":"Tommy Sofield","inLanguage":"en-US"},"sameAs":["https://easylot.ky"],"worksFor":{"@id":"https://easylot.ky/#organization"}},{"@type":"Article","headline":"Affordable Land for Sale in Cayman: Owner Financing Program","keywords":"Land","datePublished":"2023-08-23T11:05:23-05:00","dateModified":"2026-02-02T09:31:17-05:00","author":{"@id":"https://easylot.ky/author/tommy/","name":"Tommy Sofield"},"publisher":{"@id":"https://easylot.ky/#organization"},"description":"Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today.","name":"Affordable Land for Sale in Cayman: Owner Financing Program","@id":"https://easylot.ky/#richSnippet","isPartOf":{"@id":"https://easylot.ky/#webpage"},"image":{"@id":"https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://easylot.ky/#webpage"}}]}</script>
 
-    <!-- Facebook Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '989478169027556');
-      fbq('track', 'PageView');
+    <!-- Additional Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "RealEstateAgent",
+          "@id": "https://easylot.ky/#organization",
+          "name": "Easy Lot",
+          "alternateName": "Easy Lot Cayman",
+          "url": "https://easylot.ky/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg"
+          },
+          "image": "https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg", 
+          "description": "Easy Lot makes buying land in the Cayman Islands simple. We provide direct Owner Financing with NO bank involvement needed, flexible down payments, and fixed 9% interest rates.",
+          "telephone": "+1-345-936-2660",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "207 Sparky Dr. Suite 6",
+            "addressLocality": "George Town",
+            "addressRegion": "Grand Cayman",
+            "postalCode": "KY1-1205",
+            "addressCountry": "KY"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 19.2965, 
+            "longitude": -81.3609
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "17:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "08:00",
+              "closes": "13:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/easylotky",
+            "https://www.instagram.com/easylotky/",
+            "https://www.youtube.com/@EasyLotKy",
+            "https://www.tiktok.com/@easylot"
+          ],
+          "priceRange": "$$$",
+          "areaServed": ["Grand Cayman", "Little Cayman", "East End", "North Side"]
+        }
+      ]
+    }
     </script>
     
     <?php wp_head(); ?>
@@ -43,7 +95,7 @@
         <div class="font-serif text-2xl font-bold tracking-tighter text-[#1d1b1a]">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="block h-10">
                 <div class="w-[140px] h-auto">
-                    <img alt="Easy Lot Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugDCC3TWZqka4WoFgALpD7d1r2RJYq_6wGYArzxjiBuxx3fVDyLFLzQ8npsIK1c-Mu4pd7xjHP8KFcpayTiU04epttufoQWIjVM2TdPYZVUyjPgxF6k7yTISxiW1F6TX12QiNju_oSyE16DZoSXnXrSeVXHGP9RQM-nQYoh7MYW_nHoPbq3Q6NnxlG2q0XVbotle-W2h3PeZ3Xr9K7c_PuMxkKvXvGiFWUm-FaYDsOEuAu2ENDN0kPHyKWJf5rdEBRoPTCruf7rxw"/>
+                    <img alt="Easy Lot Logo" class="h-10 w-auto object-contain" src="https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg"/>
                 </div>
             </a>
         </div>
@@ -104,7 +156,7 @@
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col">
         <div class="flex justify-between items-center px-8 py-4 border-b border-black/5">
             <div class="h-8">
-                <img alt="Easy Lot Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugDCC3TWZqka4WoFgALpD7d1r2RJYq_6wGYArzxjiBuxx3fVDyLFLzQ8npsIK1c-Mu4pd7xjHP8KFcpayTiU04epttufoQWIjVM2TdPYZVUyjPgxF6k7yTISxiW1F6TX12QiNju_oSyE16DZoSXnXrSeVXHGP9RQM-nQYoh7MYW_nHoPbq3Q6NnxlG2q0XVbotle-W2h3PeZ3Xr9K7c_PuMxkKvXvGiFWUm-FaYDsOEuAu2ENDN0kPHyKWJf5rdEBRoPTCruf7rxw"/>
+                <img alt="Easy Lot Logo" class="h-8 w-auto object-contain" src="https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg"/>
             </div>
             <button id="mobile-menu-close" class="text-on-surface">
                 <span class="material-symbols-outlined text-3xl">close</span>
