@@ -98,7 +98,7 @@ get_header();
                     Browse our exclusive communities to see real-time availability, lot sizes, and pricing. Explore our interactive maps to find the exact location that fits your lifestyle and budget, and lock it in today.
                 </p>
             </div>
-            <a class="text-secondary font-bold flex items-center gap-2 hover:underline pb-2" href="#">
+            <a class="text-secondary font-bold flex items-center gap-2 hover:underline pb-2" href="<?php echo esc_url(home_url('/all-our-developments/')); ?>">
                 View Interactive Map
                 <span class="material-symbols-outlined">map</span>
             </a>
