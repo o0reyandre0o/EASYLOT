@@ -178,6 +178,11 @@
                     FAQs
                     <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
+
+                <a href="https://easylot.ky/contact-us/" class="text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300 relative group">
+                    Contact
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
             </div>
 
             <div class="flex items-center gap-4">
@@ -230,6 +235,7 @@
             </div>
 
             <a href="https://easylot.ky/faq/" class="block font-serif text-3xl font-bold text-on-surface">FAQs</a>
+            <a href="https://easylot.ky/contact-us/" class="block font-serif text-3xl font-bold text-on-surface">Contact</a>
             
             <div class="pt-10">
                 <a href="<?php echo esc_url(home_url('/all-our-developments/')); ?>" class="block w-full bg-primary text-white text-center py-5 rounded-2xl font-bold text-xl shadow-xl shadow-primary/20">
