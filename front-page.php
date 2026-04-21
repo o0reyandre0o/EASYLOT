@@ -374,6 +374,7 @@ get_header();
     <div class="max-w-3xl mx-auto">
         <h2 class="font-headline text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
         <div class="space-y-6">
+            <!-- FAQ Item 1 -->
             <div class="p-6 bg-surface rounded-xl editorial-shadow group cursor-pointer"
                 onclick="this.classList.toggle('active')">
                 <div class="flex justify-between items-center">
@@ -383,6 +384,45 @@ get_header();
                 <div
                     class="max-h-0 overflow-hidden transition-all duration-300 group-[.active]:max-h-24 pt-0 group-[.active]:pt-4 text-on-surface-variant text-sm">
                     No. Our financing is based on your down payment and ability to pay, not your credit score.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="p-6 bg-surface rounded-xl editorial-shadow group cursor-pointer"
+                onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg">Can anyone buy land in the Cayman Islands?</h3>
+                    <span class="material-symbols-outlined transition-transform group-[.active]:rotate-45">add</span>
+                </div>
+                <div
+                    class="max-h-0 overflow-hidden transition-all duration-300 group-[.active]:max-h-24 pt-0 group-[.active]:pt-4 text-on-surface-variant text-sm">
+                    Yes! The Cayman Islands has no restrictions on foreign land ownership. There are no annual property taxes, no capital gains taxes, and no inheritance taxes.
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="p-6 bg-surface rounded-xl editorial-shadow group cursor-pointer"
+                onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg">How does Direct Owner Financing work?</h3>
+                    <span class="material-symbols-outlined transition-transform group-[.active]:rotate-45">add</span>
+                </div>
+                <div
+                    class="max-h-0 overflow-hidden transition-all duration-300 group-[.active]:max-h-24 pt-0 group-[.active]:pt-4 text-on-surface-variant text-sm">
+                    We act as the bank. You don't need to visit a traditional financial institution. We offer fast approval with minimal paperwork.
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="p-6 bg-surface rounded-xl editorial-shadow group cursor-pointer"
+                onclick="this.classList.toggle('active')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-lg">Is there a deadline to build on my lot?</h3>
+                    <span class="material-symbols-outlined transition-transform group-[.active]:rotate-45">add</span>
+                </div>
+                <div
+                    class="max-h-0 overflow-hidden transition-all duration-300 group-[.active]:max-h-24 pt-0 group-[.active]:pt-4 text-on-surface-variant text-sm">
+                    No. At Easy Lot, we believe in flexibility. Once you purchase your land, you can hold it as an investment for as long as you like.
                 </div>
             </div>
         </div>

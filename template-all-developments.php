@@ -138,7 +138,7 @@ get_header();
                         <div class="absolute top-6 left-6 px-4 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-on-surface text-xs font-bold uppercase tracking-wider">
                             <?php echo $dev['status']; ?>
                         </div>
-                        <?php if ($dev['sold_percent'] > 0): ?>
+                        <?php if (($dev['title'] === 'Ocean Breeze East' || $dev['title'] === 'Ocean Breeze North') && $dev['sold_percent'] > 0): ?>
                             <div class="absolute bottom-6 left-6 right-6">
                                 <div class="flex justify-between items-end mb-2">
                                     <span class="text-white text-xs font-bold uppercase tracking-widest"><?php echo $dev['sold_percent']; ?>% Sold</span>

@@ -68,61 +68,19 @@ get_header();
                         </p>
                     </div>
                 </div>
-
-                <!-- Google Map -->
-                <div class="rounded-3xl overflow-hidden shadow-2xl shadow-black/5 border border-black/5 h-[400px]">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1874.1220999999997!2d-81.3662291!3d19.3061251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f25870057c0dbb7%3A0xcf75d052742720b8!2sEasylot!5e0!3m2!1sen!2sky!4v1713700000000!5m2!1sen!2sky" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
             </div>
 
-            <!-- Right Side: Form -->
-            <div class="bg-white p-10 md:p-16 rounded-[40px] shadow-2xl shadow-black/5 border border-black/5 relative overflow-hidden group">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 transition-transform duration-700 group-hover:scale-150"></div>
-                
-                <h2 class="font-headline text-3xl font-bold mb-8">Send a Message</h2>
-                <form id="contact-form" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="text-sm font-bold text-on-surface/60 uppercase tracking-widest ml-1">Full Name</label>
-                            <input type="text" name="your-name" placeholder="John Doe" required 
-                                class="w-full bg-surface-container-low border-0 rounded-2xl p-4 focus:ring-2 focus:ring-primary/20 transition-all">
-                        </div>
-                        <div class="space-y-2">
-                            <label class="text-sm font-bold text-on-surface/60 uppercase tracking-widest ml-1">Email Address</label>
-                            <input type="email" name="your-email" placeholder="john@example.com" required 
-                                class="w-full bg-surface-container-low border-0 rounded-2xl p-4 focus:ring-2 focus:ring-primary/20 transition-all">
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-2">
-                        <label class="text-sm font-bold text-on-surface/60 uppercase tracking-widest ml-1">Phone Number</label>
-                        <input type="tel" name="your-tel" placeholder="+1 (345) 000-0000" 
-                            class="w-full bg-surface-container-low border-0 rounded-2xl p-4 focus:ring-2 focus:ring-primary/20 transition-all">
-                    </div>
-
-                    <div class="space-y-2">
-                        <label class="text-sm font-bold text-on-surface/60 uppercase tracking-widest ml-1">Your Message</label>
-                        <textarea name="your-message" rows="5" placeholder="Tell us about the property you're interested in..." required 
-                            class="w-full bg-surface-container-low border-0 rounded-2xl p-4 focus:ring-2 focus:ring-primary/20 transition-all resize-none"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-on-surface text-surface py-5 rounded-2xl font-bold text-lg hover:bg-primary transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-3">
-                        Submit Inquiry
-                        <span class="material-symbols-outlined">send</span>
-                    </button>
-                    
-                    <p class="text-xs text-on-surface-variant text-center mt-4">
-                        By submitting this form, you agree to our <a href="/privacy-policy" class="underline">Privacy Policy</a>.
-                    </p>
-                </form>
+            <!-- Right Side: Map Interactivo -->
+            <div class="rounded-[40px] shadow-2xl shadow-black/5 border border-black/5 overflow-hidden h-[600px]">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1874.1220999999997!2d-81.3662291!3d19.3061251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f25870057c0dbb7%3A0xcf75d052742720b8!2sEasylot!5e0!3m2!1sen!2sky!4v1713700000000!5m2!1sen!2sky" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </div>
