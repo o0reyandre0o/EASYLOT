@@ -47,7 +47,7 @@ get_header();
         <div class="max-w-3xl mx-auto">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase mb-8">
                 <span class="material-symbols-outlined text-sm">quiz</span>
-                Got Questions? 我们有答案
+                Got Questions?
             </div>
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-on-surface mb-8 leading-[1.1]">
                 FAQ: Buying <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic tracking-normal">Land in Cayman</span>
