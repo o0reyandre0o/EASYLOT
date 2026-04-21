@@ -1,9 +1,11 @@
-<?php
+<?php 
 /**
  * Template Name: About Us Modern
  */
-
-get_header();
+$seo_title = "About Easy Lot Cayman | Our Mission & Financing Story";
+$seo_description = "Learn how Easy Lot empowers families to achieve land ownership in the Cayman Islands with guaranteed owner financing and high-elevation plots.";
+$seo_image = "https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg";
+get_header(); 
 ?>
 
 <!-- Schema Markup: About Page -->
