@@ -50,25 +50,13 @@ get_header();
         <!-- Leadership -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
             <!-- Tommy Sofield -->
-            <div class="group relative overflow-hidden rounded-[40px] bg-surface h-[500px]">
+            <div class="group relative overflow-hidden rounded-[40px] bg-surface h-[500px] md:col-span-2 max-w-2xl mx-auto w-full">
                 <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-27-12-48-09-e1693489329947.jpg" alt="Tommy Sofield, Director & Project Manager at Easy Lot Grand Cayman" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 text-white">
                     <h3 class="text-3xl font-serif font-bold mb-1">Tommy Sofield</h3>
                     <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Director & Project Manager</p>
                     <div class="h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden transition-all duration-500">
                         <p class="text-sm leading-relaxed text-white/80 font-light mb-4">Drives strategic oversight and ensures every facet of development aligns with perfection. <br><br><span class="italic text-primary font-semibold">Fun Fact: Don't eat yellow snow.</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Terence McGlashan -->
-            <div class="group relative overflow-hidden rounded-[40px] bg-surface h-[500px]">
-                <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-25-14-41-20-e1693489729379.jpg" alt="Terence McGlashan, Sales & Marketing Consultant at Easy Lot Cayman" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 text-white">
-                    <h3 class="text-3xl font-serif font-bold mb-1">Terence McGlashan</h3>
-                    <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Sales & Marketing Consultant</p>
-                    <div class="h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden transition-all duration-500">
-                        <p class="text-sm leading-relaxed text-white/80 font-light mb-4">The creative vision behind Easy Lot, mastering relationship management and guiding buyers. <br><br><span class="italic text-primary font-semibold">Fun Fact: Loves to fish and dreams of landing a Blue Marlin.</span></p>
                     </div>
                 </div>
             </div>
@@ -84,26 +72,6 @@ get_header();
                 <h3 class="text-xl font-serif font-bold mb-1">Kim Andrada</h3>
                 <p class="text-primary text-xs font-bold tracking-widest uppercase mb-4">Admin & Finance Coordinator</p>
                 <p class="text-sm text-on-surface/60 font-light leading-relaxed">Essential oversight of financial activities and government closing processes.</p>
-            </div>
-
-            <!-- Ian Davis -->
-            <div class="group bg-surface rounded-[32px] p-8 border border-black/5 hover:border-primary/20 transition-all duration-500">
-                <div class="aspect-square rounded-2xl overflow-hidden mb-6">
-                    <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-27-13-35-02-e1693490057970.jpg" alt="Ian Davis" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                </div>
-                <h3 class="text-xl font-serif font-bold mb-1">Ian Davis</h3>
-                <p class="text-primary text-xs font-bold tracking-widest uppercase mb-4">Site Foreman</p>
-                <p class="text-sm text-on-surface/60 font-light leading-relaxed">Overseeing project execution and maintaining the highest efficiency on job sites.</p>
-            </div>
-
-            <!-- Courtney Bennett -->
-            <div class="group bg-surface rounded-[32px] p-8 border border-black/5 hover:border-primary/20 transition-all duration-500">
-                <div class="aspect-square rounded-2xl overflow-hidden mb-6">
-                    <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-26-18-34-04-1024x1024.jpg" alt="Courtney Bennett" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                </div>
-                <h3 class="text-xl font-serif font-bold mb-1">Courtney Bennett</h3>
-                <p class="text-primary text-xs font-bold tracking-widest uppercase mb-4">Heavy Equipment Operator</p>
-                <p class="text-sm text-on-surface/60 font-light leading-relaxed">Proficient operator ensuring development tasks are executed with precision.</p>
             </div>
 
             <!-- Patrick Brown -->
