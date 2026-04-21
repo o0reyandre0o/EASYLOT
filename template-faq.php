@@ -96,7 +96,7 @@ get_header();
                     foreach ($faqs_legal as $index => $faq): ?>
                         <div class="faq-item border border-black/5 rounded-3xl bg-surface/30 hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-300">
                             <button class="faq-trigger w-full text-left px-8 py-6 flex items-center justify-between gap-4 group">
-                                <span class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></span>
+                                <h3 class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></h3>
                                 <span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
                             </button>
                             <div class="faq-content hidden px-8 pb-8">
@@ -137,7 +137,7 @@ get_header();
                     foreach ($faqs_finance as $index => $faq): ?>
                         <div class="faq-item border border-black/5 rounded-3xl bg-surface/30 hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-300">
                             <button class="faq-trigger w-full text-left px-8 py-6 flex items-center justify-between gap-4 group">
-                                <span class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></span>
+                                <h3 class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></h3>
                                 <span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
                             </button>
                             <div class="faq-content hidden px-8 pb-8">
@@ -174,7 +174,7 @@ get_header();
                     foreach ($faqs_infra as $index => $faq): ?>
                         <div class="faq-item border border-black/5 rounded-3xl bg-surface/30 hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-300">
                             <button class="faq-trigger w-full text-left px-8 py-6 flex items-center justify-between gap-4 group">
-                                <span class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></span>
+                                <h3 class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></h3>
                                 <span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
                             </button>
                             <div class="faq-content hidden px-8 pb-8">

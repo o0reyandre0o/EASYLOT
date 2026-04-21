@@ -272,7 +272,7 @@ get_header();
                         <span class="material-symbols-outlined text-2xl">percent</span>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">9% Fixed Interest Rate</h4>
+                        <h3 class="font-bold text-lg mb-1">9% Fixed Interest Rate</h3>
                         <p class="text-sm text-on-surface-variant">Your rate is locked in for the entire term of the loan.</p>
                     </div>
                 </div>
@@ -282,7 +282,7 @@ get_header();
                         <span class="material-symbols-outlined text-2xl">verified_user</span>
                     </div>
                     <div>
-                        <h4 class="font-bold text-lg mb-1">Fast Pre-Approval</h4>
+                        <h3 class="font-bold text-lg mb-1">Fast Pre-Approval</h3>
                         <p class="text-sm text-on-surface-variant">Get approved in as little as 24-48 hours once documents are verified.</p>
                     </div>
                 </div>
@@ -377,7 +377,7 @@ get_header();
             <div class="p-6 bg-surface rounded-xl editorial-shadow group cursor-pointer"
                 onclick="this.classList.toggle('active')">
                 <div class="flex justify-between items-center">
-                    <h4 class="font-bold text-lg">Do I need a credit check?</h4>
+                    <h3 class="font-bold text-lg">Do I need a credit check?</h3>
                     <span class="material-symbols-outlined transition-transform group-[.active]:rotate-45">add</span>
                 </div>
                 <div
