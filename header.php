@@ -88,9 +88,94 @@
             </a>
         </div>
 
-        <a href="#find-my-lot" class="bg-primary text-white px-6 py-2.5 rounded-xl font-medium tracking-tight hover:scale-95 transition-all duration-200 shadow-lg shadow-primary/20 block">
-            Find My Lot
-        </a>
+        <div class="flex items-center gap-4">
+            <a href="#find-my-lot" class="hidden md:block bg-primary text-white px-6 py-2.5 rounded-xl font-medium tracking-tight hover:scale-95 transition-all duration-200 shadow-lg shadow-primary/20">
+                Find My Lot
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 text-on-surface">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
     </nav>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col">
+        <div class="flex justify-between items-center px-8 py-4 border-b border-black/5">
+            <div class="h-8">
+                <img alt="Easy Lot Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugDCC3TWZqka4WoFgALpD7d1r2RJYq_6wGYArzxjiBuxx3fVDyLFLzQ8npsIK1c-Mu4pd7xjHP8KFcpayTiU04epttufoQWIjVM2TdPYZVUyjPgxF6k7yTISxiW1F6TX12QiNju_oSyE16DZoSXnXrSeVXHGP9RQM-nQYoh7MYW_nHoPbq3Q6NnxlG2q0XVbotle-W2h3PeZ3Xr9K7c_PuMxkKvXvGiFWUm-FaYDsOEuAu2ENDN0kPHyKWJf5rdEBRoPTCruf7rxw"/>
+            </div>
+            <button id="mobile-menu-close" class="text-on-surface">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto px-8 py-10 space-y-8">
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="block font-serif text-3xl font-bold text-on-surface">Home</a>
+            
+            <div class="space-y-4">
+                <h4 class="font-serif text-sm uppercase tracking-widest text-primary font-bold">Our Developments</h4>
+                <div class="grid gap-4 pl-4 border-l border-primary/10">
+                    <a href="https://easylot.ky/project/high-rock-estates/" class="text-xl font-medium text-on-surface/80">High Rock Estates</a>
+                    <a href="https://easylot.ky/project/little-cayman/" class="text-xl font-medium text-on-surface/80">Elena Estates (Little Cayman)</a>
+                    <a href="https://easylot.ky/project/rum-point-land/" class="text-xl font-medium text-on-surface/80">Northshore Estates</a>
+                    <a href="https://easylot.ky/project/ocean-breeze-north/" class="text-xl font-medium text-on-surface/80">Ocean Breeze North</a>
+                    <a href="https://easylot.ky/project/ocean-breeze/" class="text-xl font-medium text-on-surface/80">Ocean Breeze East</a>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-serif text-sm uppercase tracking-widest text-primary font-bold">About Us</h4>
+                <div class="grid gap-4 pl-4 border-l border-primary/10">
+                    <a href="https://easylot.ky/about-us/" class="text-xl font-medium text-on-surface/80">Our Story</a>
+                    <a href="https://easylot.ky/team-members/" class="text-xl font-medium text-on-surface/80">Our Team</a>
+                    <a href="https://easylot.ky/directions/" class="text-xl font-medium text-on-surface/80">Directions</a>
+                </div>
+            </div>
+
+            <a href="https://easylot.ky/faq/" class="block font-serif text-3xl font-bold text-on-surface">FAQs</a>
+            
+            <div class="pt-10">
+                <a href="#find-my-lot" class="block w-full bg-primary text-white text-center py-5 rounded-2xl font-bold text-xl shadow-xl shadow-primary/20">
+                    Find My Lot
+                </a>
+            </div>
+        </div>
+        
+        <div class="p-8 bg-surface border-t border-black/5 text-center">
+            <p class="text-sm text-on-surface/50 font-medium">© <?php echo date('Y'); ?> Easy Lot Cayman</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.getElementById('mobile-menu-toggle');
+            const close = document.getElementById('mobile-menu-close');
+            const menu = document.getElementById('mobile-menu');
+            
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    menu.classList.remove('translate-x-full');
+                    document.body.classList.add('overflow-hidden');
+                });
+            }
+            
+            if (close && menu) {
+                close.addEventListener('click', () => {
+                    menu.classList.add('translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            }
+
+            // Close on link click
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('translate-x-full');
+                    document.body.classList.remove('overflow-hidden');
+                });
+            });
+        });
+    </script>
 
     <main>
