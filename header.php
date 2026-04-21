@@ -234,7 +234,7 @@
             <a href="<?php echo esc_url(home_url('/')); ?>" class="block font-serif text-3xl font-bold text-on-surface">Home</a>
             
             <div class="space-y-4">
-                <h4 class="font-serif text-sm uppercase tracking-widest text-primary font-bold">Our Developments</h4>
+                <span class="block font-serif text-sm uppercase tracking-widest text-primary font-bold mb-4">Our Developments</span>
                 <div class="grid gap-4 pl-4 border-l border-primary/10">
                     <a href="<?php echo esc_url(home_url('/all-our-developments/')); ?>" class="text-xl font-bold text-primary">View All Developments</a>
                     <div class="h-px bg-black/5 my-2"></div>
@@ -247,7 +247,7 @@
             </div>
 
             <div class="space-y-4">
-                <h4 class="font-serif text-sm uppercase tracking-widest text-primary font-bold">About Us</h4>
+                <span class="block font-serif text-sm uppercase tracking-widest text-primary font-bold mb-4">About Us</span>
                 <div class="grid gap-4 pl-4 border-l border-primary/10">
                     <a href="https://easylot.ky/about-us/" class="text-xl font-medium text-on-surface/80">Our Story</a>
                     <a href="https://easylot.ky/team-members/" class="text-xl font-medium text-on-surface/80">Our Team</a>
