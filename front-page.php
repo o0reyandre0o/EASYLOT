@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Hero Section -->
-<section class="relative min-h-[85vh] flex items-center px-8 md:px-20 overflow-hidden bg-surface">
+<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
         <img class="w-full h-full object-cover" 
@@ -10,38 +10,40 @@
         <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
     </div>
     
-    <div class="relative z-10 max-w-4xl pt-20 pb-12">
-        <h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
-            Buy Land in <br/>Cayman: <span class="text-[#FB3122]">Local<br/>Owner Financing</span>
-        </h1>
-        
-        <!-- Checklist -->
-        <div class="flex flex-col gap-4 mb-10">
-            <div class="flex items-center gap-3">
-                <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-20 pt-20 pb-12">
+        <div class="max-w-4xl">
+            <h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
+                Buy Land in <br/>Cayman: <span class="text-[#FB3122]">Local<br/>Owner Financing</span>
+            </h1>
+            
+            <!-- Checklist -->
+            <div class="flex flex-col gap-4 mb-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+                    </div>
+                    <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">NO BANKS REQUIRED</span>
                 </div>
-                <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">NO BANKS REQUIRED</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+                <div class="flex items-center gap-3">
+                    <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+                    </div>
+                    <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">Fast Approval</span>
                 </div>
-                <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">Fast Approval</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
-                    <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+                <div class="flex items-center gap-3">
+                    <div class="w-5 h-5 rounded-full bg-[#FB3122] flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-xs font-bold leading-none">check</span>
+                    </div>
+                    <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">Fixed Interest Rates</span>
                 </div>
-                <span class="font-label uppercase tracking-widest text-xs font-bold opacity-80">Fixed Interest Rates</span>
             </div>
+            
+            <!-- CTA -->
+            <a href="#calculator" class="inline-flex items-center gap-3 bg-[#bc0002] text-white px-8 py-4 rounded-xl text-lg font-bold editorial-shadow hover:scale-[1.02] active:scale-95 transition-all">
+                Explore Available Lots
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
         </div>
-        
-        <!-- CTA -->
-        <a href="#calculator" class="inline-flex items-center gap-3 bg-[#bc0002] text-white px-8 py-4 rounded-xl text-lg font-bold editorial-shadow hover:scale-[1.02] active:scale-95 transition-all">
-            Explore Available Lots
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
     </div>
 </section>
 
