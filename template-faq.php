@@ -205,7 +205,7 @@ get_header();
                     Contact Us
                 </a>
                 <a href="https://wa.me/+13459362660" class="bg-primary-dark text-white border border-white/20 px-10 py-5 rounded-2xl font-bold hover:bg-white/10 transition-colors flex items-center gap-3">
-                    <img src="https://easylot.ky/wp-content/uploads/2023/08/whatsapp-svgrepo-com.svg" class="w-6 h-6 invert" alt="WhatsApp">
+                    <img src="https://easylot.ky/wp-content/uploads/2023/08/whatsapp-svgrepo-com.svg" class="w-6 h-6" alt="WhatsApp">
                     Chat on WhatsApp
                 </a>
             </div>
