@@ -53,7 +53,7 @@ get_header();
             <div class="group relative overflow-hidden rounded-[40px] bg-surface h-[550px]">
                 <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-27-12-48-09-e1693489329947.jpg" alt="Tommy Sofield" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 text-white">
-                    <h3 class="text-3xl font-serif font-bold mb-1">Tommy Sofield</h3>
+                    <h2 class="text-3xl font-serif font-bold mb-1">Tommy Sofield</h2>
                     <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Director & Project Manager</p>
                     <div class="h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden transition-all duration-500">
                         <p class="text-sm leading-relaxed text-white/80 font-light mb-4 text-pretty">Drives strategic oversight and ensures every facet of development aligns with perfection. <br><br><span class="italic text-primary font-semibold">Fun Fact: Don't eat yellow snow.</span></p>
@@ -65,7 +65,7 @@ get_header();
             <div class="group relative overflow-hidden rounded-[40px] bg-surface h-[550px]">
                 <img src="https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Kim-Andrada-e1693489960525-1024x1024.jpeg" alt="Kim Andrada" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 text-white">
-                    <h3 class="text-3xl font-serif font-bold mb-1">Kim Andrada</h3>
+                    <h2 class="text-3xl font-serif font-bold mb-1">Kim Andrada</h2>
                     <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Admin & Finance Coordinator</p>
                     <div class="h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden transition-all duration-500">
                         <p class="text-sm leading-relaxed text-white/80 font-light mb-4 text-pretty">Essential oversight of financial activities and government closing processes, ensuring seamless operations.</p>
@@ -77,7 +77,7 @@ get_header();
             <div class="group relative overflow-hidden rounded-[40px] bg-surface h-[550px]">
                 <img src="https://easylot.ky/wp-content/uploads/2023/08/Richard-Easy-Lot.jpg" alt="Patrick Brown" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 text-white">
-                    <h3 class="text-3xl font-serif font-bold mb-1">Patrick Brown</h3>
+                    <h2 class="text-3xl font-serif font-bold mb-1">Patrick Brown</h2>
                     <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Site Operations Support</p>
                     <div class="h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden transition-all duration-500">
                         <p class="text-sm leading-relaxed text-white/80 font-light mb-4 text-pretty">The backbone of our operations, ensuring every project phase runs smoothly on the ground.</p>
@@ -90,7 +90,7 @@ get_header();
                 <img src="https://easylot.ky/wp-content/uploads/2023/08/Bentley-The-Dog.jpg" alt="Bentley The Dog" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 text-white">
                     <div class="absolute top-8 right-8 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter shadow-lg">Good Boy</div>
-                    <h3 class="text-3xl font-serif font-bold mb-1">Bentley <span class="italic text-primary-light">"The Dog"</span></h3>
+                    <h2 class="text-3xl font-serif font-bold mb-1">Bentley <span class="italic text-primary-light">"The Dog"</span></h2>
                     <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Chief Morale Officer</p>
                     <div class="h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden transition-all duration-500">
                         <p class="text-sm leading-relaxed text-white/80 font-light mb-4 text-pretty">Bringing joy and stress relief to our team and clients alike with his gentle nature. <br><br><span class="italic text-primary font-semibold">Fun Fact: Loves water jumps.</span></p>

@@ -52,7 +52,7 @@ get_header();
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div class="bg-surface-container-low p-8 rounded-3xl border border-black/5">
                         <span class="material-symbols-outlined text-primary text-4xl mb-4">location_on</span>
-                        <h3 class="font-headline text-xl font-bold mb-2">Our Office</h3>
+                        <h2 class="font-headline text-xl font-bold mb-2">Our Office</h2>
                         <p class="text-on-surface-variant leading-relaxed">
                             207 Sparky Dr. Suite 6<br/>
                             George Town, Grand Cayman<br/>
@@ -61,7 +61,7 @@ get_header();
                     </div>
                     <div class="bg-surface-container-low p-8 rounded-3xl border border-black/5">
                         <span class="material-symbols-outlined text-primary text-4xl mb-4">support_agent</span>
-                        <h3 class="font-headline text-xl font-bold mb-2">Sales & Support</h3>
+                        <h2 class="font-headline text-xl font-bold mb-2">Sales & Support</h2>
                         <p class="text-on-surface-variant leading-relaxed">
                             <a href="tel:+13459362660" class="hover:text-primary transition-colors">+1 (345) 936-2660</a><br/>
                             <a href="mailto:admin@easylot.ky" class="hover:text-primary transition-colors">admin@easylot.ky</a>

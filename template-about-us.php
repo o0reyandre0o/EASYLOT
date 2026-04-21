@@ -72,7 +72,7 @@ get_header();
                         <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
                             <span class="material-symbols-outlined">verified</span>
                         </div>
-                        <h4 class="font-serif font-bold text-lg">Cayman Expertise</h4>
+                        <h3 class="font-serif font-bold text-lg">Cayman Expertise</h3>
                     </div>
                     <p class="text-sm text-on-surface/60 font-light leading-relaxed">
                         Backed by Cayman Development Group, a leader in land development with decades of local experience.
