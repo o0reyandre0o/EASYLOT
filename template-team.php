@@ -17,7 +17,7 @@ get_header();
                 The Heart of Easy Lot
             </div>
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-on-surface mb-8 leading-[1.1]">
-                Meet Our <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic">Experts</span>
+                Meet our <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic">Cayman Experts</span>
             </h1>
             <p class="text-xl text-on-surface/70 leading-relaxed font-light mb-0">
                 Get acquainted with the exceptional individuals whose skills, dedication, and passion propel us forward in making land ownership accessible in the Cayman Islands.
@@ -33,7 +33,7 @@ get_header();
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
             <!-- Tommy Sofield -->
             <div class="group relative overflow-hidden rounded-[40px] bg-surface h-[500px]">
-                <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-27-12-48-09-e1693489329947.jpg" alt="Tommy Sofield" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+                <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-27-12-48-09-e1693489329947.jpg" alt="Tommy Sofield, Director & Project Manager at Easy Lot Grand Cayman" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 text-white">
                     <h3 class="text-3xl font-serif font-bold mb-1">Tommy Sofield</h3>
                     <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Director & Project Manager</p>
@@ -45,7 +45,7 @@ get_header();
 
             <!-- Terence McGlashan -->
             <div class="group relative overflow-hidden rounded-[40px] bg-surface h-[500px]">
-                <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-25-14-41-20-e1693489729379.jpg" alt="Terence McGlashan" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+                <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-25-14-41-20-e1693489729379.jpg" alt="Terence McGlashan, Sales & Marketing Consultant at Easy Lot Cayman" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-10 text-white">
                     <h3 class="text-3xl font-serif font-bold mb-1">Terence McGlashan</h3>
                     <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Sales & Marketing Consultant</p>
@@ -63,7 +63,7 @@ get_header();
                 <div class="aspect-square rounded-2xl overflow-hidden mb-6">
                     <img src="https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Kim-Andrada-e1693489960525-1024x1024.jpeg" alt="Kim Andrada" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                 </div>
-                <h4 class="text-xl font-serif font-bold mb-1">Kim Andrada</h4>
+                <h3 class="text-xl font-serif font-bold mb-1">Kim Andrada</h3>
                 <p class="text-primary text-xs font-bold tracking-widest uppercase mb-4">Admin & Finance Coordinator</p>
                 <p class="text-sm text-on-surface/60 font-light leading-relaxed">Essential oversight of financial activities and government closing processes.</p>
             </div>
@@ -73,7 +73,7 @@ get_header();
                 <div class="aspect-square rounded-2xl overflow-hidden mb-6">
                     <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-27-13-35-02-e1693490057970.jpg" alt="Ian Davis" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                 </div>
-                <h4 class="text-xl font-serif font-bold mb-1">Ian Davis</h4>
+                <h3 class="text-xl font-serif font-bold mb-1">Ian Davis</h3>
                 <p class="text-primary text-xs font-bold tracking-widest uppercase mb-4">Site Foreman</p>
                 <p class="text-sm text-on-surface/60 font-light leading-relaxed">Overseeing project execution and maintaining the highest efficiency on job sites.</p>
             </div>
@@ -83,7 +83,7 @@ get_header();
                 <div class="aspect-square rounded-2xl overflow-hidden mb-6">
                     <img src="https://easylot.ky/wp-content/uploads/2023/08/PHOTO-2023-08-26-18-34-04-1024x1024.jpg" alt="Courtney Bennett" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                 </div>
-                <h4 class="text-xl font-serif font-bold mb-1">Courtney Bennett</h4>
+                <h3 class="text-xl font-serif font-bold mb-1">Courtney Bennett</h3>
                 <p class="text-primary text-xs font-bold tracking-widest uppercase mb-4">Heavy Equipment Operator</p>
                 <p class="text-sm text-on-surface/60 font-light leading-relaxed">Proficient operator ensuring development tasks are executed with precision.</p>
             </div>
@@ -93,7 +93,7 @@ get_header();
                 <div class="aspect-square rounded-2xl overflow-hidden mb-6">
                     <img src="https://easylot.ky/wp-content/uploads/2023/08/Richard-Easy-Lot.jpg" alt="Patrick Brown" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
                 </div>
-                <h4 class="text-xl font-serif font-bold mb-1">Patrick Brown</h4>
+                <h3 class="text-xl font-serif font-bold mb-1">Patrick Brown</h3>
                 <p class="text-primary text-xs font-bold tracking-widest uppercase mb-4">Site Operations Support</p>
                 <p class="text-sm text-on-surface/60 font-light leading-relaxed">The backbone of our operations, ensuring every project phase runs smoothly.</p>
             </div>

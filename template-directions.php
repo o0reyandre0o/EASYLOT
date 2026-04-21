@@ -16,10 +16,10 @@ get_header();
                 On the Way to Paradise
             </div>
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-on-surface mb-8 leading-[1.1]">
-                Find Your <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic text-6xl">New Home</span>
+                Directions to <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic text-6xl">Paradise</span>
             </h1>
             <p class="text-xl text-on-surface/70 leading-relaxed font-light mb-0">
-                Finding Easy Lot is the first step toward your investment. Below are the directions to our main developments and office locations.
+                Finding Easy Lot is the first step toward your investment. Below are the directions to our main developments, strategically located near landmarks like <strong>Health City</strong>.
             </p>
         </div>
     </div>
@@ -34,7 +34,7 @@ get_header();
             <div class="lg:col-span-5 space-y-10">
                 <div class="relative pl-12">
                     <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</div>
-                    <h3 class="text-2xl font-serif font-bold mb-4">The Route</h3>
+                    <h2 class="text-3xl font-serif font-bold mb-4">The Route</h2>
                     <p class="text-on-surface/70 leading-relaxed font-light">
                         Coming from town you will want to head toward **Health City**. If you are not familiar with Health City, you can put it into Google maps and the directions will lead you to it from anywhere on the island.
                     </p>
@@ -42,14 +42,14 @@ get_header();
 
                 <div class="relative pl-12">
                     <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">2</div>
-                    <h3 class="text-2xl font-serif font-bold mb-4">Turn onto High Rock</h3>
+                    <h2 class="text-3xl font-serif font-bold mb-4">Turn onto High Rock</h2>
                     <p class="text-on-surface/70 leading-relaxed font-light">
                         After passing Health City, the next left you can make is called **High Rock Drive**. You will see our sign on the main road. Turn left here.
                     </p>
                 </div>
 
                 <div class="relative pl-12 border-l-2 border-primary/20">
-                    <h3 class="text-2xl font-serif font-bold mb-4">Arrival</h3>
+                    <h2 class="text-3xl font-serif font-bold mb-4">Arrival</h2>
                     <p class="text-on-surface/70 leading-relaxed font-light">
                         You will see a set of new townhomes on the corner just behind our sign. Continue down High Rock Dr for **½ mile**. Look for our second sign on the right. 
                         <br><br>
@@ -68,7 +68,7 @@ get_header();
             <!-- Image/Visuals -->
             <div class="lg:col-span-7 space-y-8">
                 <div class="relative group overflow-hidden rounded-[40px] shadow-2xl">
-                    <img src="https://easylot.ky/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2024-04-03-at-4.18.16-PM-qmimzwkno6vd19z61gt3fq7ny0erzsg9z9lz9bmnao.jpeg" alt="Directions Reference" class="w-full h-auto object-cover group-hover:scale-105 transition-all duration-1000">
+                    <img src="https://easylot.ky/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2024-04-03-at-4.18.16-PM-qmimzwkno6vd19z61gt3fq7ny0erzsg9z9lz9bmnao.jpeg" alt="Directions to Easy Lot land development in East End Grand Cayman" class="w-full h-auto object-cover group-hover:scale-105 transition-all duration-1000">
                     <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500"></div>
                 </div>
 

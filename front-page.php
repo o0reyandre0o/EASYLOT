@@ -111,7 +111,7 @@
                 <div class="relative min-h-[450px] overflow-hidden">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/northshore.png"
-                        alt="Northshore Estates" />
+                        alt="Aerial view of land for sale at Northshore Estates, Grand Cayman" />
                     <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Grand Cayman</div>
                 </div>
                 <div class="p-12 flex flex-col justify-center">
@@ -145,7 +145,7 @@
                 <div class="relative min-h-[450px] overflow-hidden lg:order-2">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/elena.png"
-                        alt="Elena Estates" />
+                        alt="Investment property for sale at Elena Estates, Little Cayman" />
                     <div class="absolute top-6 right-6 bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Little Cayman</div>
                 </div>
                 <div class="p-12 flex flex-col justify-center lg:order-1">
@@ -179,17 +179,21 @@
                 <div class="relative min-h-[450px] overflow-hidden">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         src="<?php echo get_template_directory_uri(); ?>/assets/images/franksound.png"
-                        alt="Frank Sound Estates" />
+                        alt="Elevated lots for sale at Frank Sound Estates near East-West Arterial" />
                     <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Frank Sound</div>
                 </div>
                 <div class="p-12 flex flex-col justify-center">
                     <h3 class="font-headline text-4xl font-bold mb-6 group-hover:text-primary transition-colors">Frank Sound Estates</h3>
-                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">A stunning location in Frank Sound, strategically positioned right next to the future East-West Arterial Road. Enjoy incredible convenience, just 5 minutes from Clifton Hunter High School and the local Fire Station.</p>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">A stunning location in Frank Sound, strategically positioned right next to the future East-West Arterial Road. <strong>Expected to see high appreciation</strong>, this development is just 5 minutes from Clifton Hunter High School and the local Fire Station.</p>
                     
                     <div class="space-y-4 mb-10">
                         <div class="flex items-center gap-3">
                             <span class="text-xl">📉</span>
                             <span class="font-medium text-sm text-on-surface">Flexible Down Payment (Start from 5%)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📈</span>
+                            <span class="font-medium text-sm text-on-surface">High Investment Appreciation Potential</span>
                         </div>
                         <div class="flex items-center gap-3">
                             <span class="text-xl">🤝</span>

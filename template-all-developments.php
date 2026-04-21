@@ -6,6 +6,40 @@
 get_header();
 ?>
 
+<!-- Schema Markup: Collection of Developments -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Land for Sale in the Cayman Islands: Our Developments",
+  "description": "Explore our premium land developments in Grand Cayman and Little Cayman. Fixed 9% interest rate, guaranteed owner financing, and low density residential lots.",
+  "url": "https://easylot.ky/all-our-developments/",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "High Rock Estates",
+        "url": "https://easylot.ky/project/high-rock-estates/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Elena Estates",
+        "url": "https://easylot.ky/project/little-cayman/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Northshore Estates",
+        "url": "https://easylot.ky/project/rum-point-land/"
+      }
+    ]
+  }
+}
+</script>
+
 <!-- Hero Section -->
 <section class="relative pt-32 pb-16 overflow-hidden bg-primary">
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
@@ -14,7 +48,7 @@ get_header();
     <div class="container mx-auto px-6 relative z-10 text-center">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-white mb-8 leading-[1.1]">
-                All <span class="italic text-white/90">Land Developments</span>
+                Land for Sale in the <span class="italic text-white/90">Cayman Islands</span>
             </h1>
             <p class="text-xl text-white/80 leading-relaxed font-light mb-0">
                 Explore our current selection of properties across Grand Cayman and Little Cayman. 

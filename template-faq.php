@@ -6,6 +6,40 @@
 get_header();
 ?>
 
+<!-- Schema Markup: FAQ Page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can anyone buy land in the Cayman Islands?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! The Cayman Islands has no restrictions on foreign land ownership. There are no annual property taxes, no capital gains taxes, and no inheritance taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Direct Owner Financing work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We act as the bank. You don't need to visit a traditional financial institution. We offer fast approval with minimal paperwork."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the average cost to buy land and build a house in the Cayman Islands?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost varies depending on location and elevation. Easy Lot offers lots starting from low daily payments with 5% down, allowing you to build equity while planning your construction."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Hero Section -->
 <section class="relative pt-32 pb-16 overflow-hidden bg-surface">
     <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
@@ -16,7 +50,7 @@ get_header();
                 Got Questions? 我们有答案
             </div>
             <h1 class="text-5xl md:text-7xl font-serif font-bold tracking-tighter text-on-surface mb-8 leading-[1.1]">
-                Common <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic tracking-normal">Questions</span>
+                FAQ: Buying <span class="bg-gradient-to-r from-primary to-[#ff6b6b] bg-clip-text text-transparent italic tracking-normal">Land in Cayman</span>
             </h1>
             <p class="text-xl text-on-surface/70 leading-relaxed font-light mb-12">
                 Everything you need to know about buying land in the Cayman Islands, owner financing, and building your future with Easy Lot.
@@ -37,10 +71,10 @@ get_header();
 
             <!-- Category: Land Ownership -->
             <div>
-                <h3 class="text-2xl font-serif font-bold text-on-surface mb-8 flex items-center gap-3">
+                <h2 class="text-3xl font-serif font-bold text-on-surface mb-8 flex items-center gap-3">
                     <span class="w-1.5 h-6 bg-primary rounded-full"></span>
                     Land Ownership & Legal
-                </h3>
+                </h2>
                 <div class="space-y-4">
                     <?php 
                     $faqs_legal = [
@@ -74,10 +108,10 @@ get_header();
 
             <!-- Category: Financing -->
             <div>
-                <h3 class="text-2xl font-serif font-bold text-on-surface mb-8 flex items-center gap-3">
+                <h2 class="text-3xl font-serif font-bold text-on-surface mb-8 flex items-center gap-3">
                     <span class="w-1.5 h-6 bg-primary rounded-full"></span>
                     Financing & Payments
-                </h3>
+                </h2>
                 <div class="space-y-4">
                     <?php 
                     $faqs_finance = [
@@ -115,13 +149,17 @@ get_header();
 
             <!-- Category: Infrastructure -->
             <div>
-                <h3 class="text-2xl font-serif font-bold text-on-surface mb-8 flex items-center gap-3">
+                <h2 class="text-3xl font-serif font-bold text-on-surface mb-8 flex items-center gap-3">
                     <span class="w-1.5 h-6 bg-primary rounded-full"></span>
                     Development & Infrastructure
-                </h3>
+                </h2>
                 <div class="space-y-4">
                     <?php 
                     $faqs_infra = [
+                        [
+                            'q' => 'What is the average cost to buy land and build a house in the Cayman Islands?',
+                            'a' => 'The total cost depends on the location and specific build requirements. However, by purchasing land through Easy Lot\'s owner financing, you eliminate bank fees and high upfront costs, making the path to construction much more affordable for local families.'
+                        ],
                         [
                             'q' => 'What utilities are available on the lots?',
                             'a' => 'Most of our developments in Grand Cayman come with access to government-piped water and CUC electrical lines. Specifically, High Rock Estates and Ocean Breeze feature full infrastructure ready for connection.'

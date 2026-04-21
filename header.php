@@ -20,27 +20,60 @@
     <meta name="twitter:title" content="Affordable Land for Sale in Cayman: Owner Financing Program" />
     <meta name="twitter:description" content="Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today." />
     
-    <!-- Schema Markup -->
-    <script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["RealEstateAgent","Organization"],"@id":"https://easylot.ky/#organization","name":"Easy Lot Cayman","url":"https://easylot.ky","logo":{"@type":"ImageObject","@id":"https://easylot.ky/#logo","url":"https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg","contentUrl":"https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg","caption":"Easy Lot","inLanguage":"en-US","width":"365","height":"104"},"openingHours":["Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday 09:00-17:00"],"image":{"@id":"https://easylot.ky/#logo"}},{"@type":"WebSite","@id":"https://easylot.ky/#website","url":"https://easylot.ky","name":"Easy Lot","alternateName":"Easy Lot","publisher":{"@id":"https://easylot.ky/#organization"},"inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":"https://easylot.ky/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg","url":"https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg","width":"200","height":"200","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://easylot.ky/#webpage","url":"https://easylot.ky/","name":"Affordable Land for Sale in Cayman: Owner Financing Program","datePublished":"2023-08-23T11:05:23-05:00","dateModified":"2026-02-02T09:31:17-05:00","about":{"@id":"https://easylot.ky/#organization"},"isPartOf":{"@id":"https://easylot.ky/#website"},"primaryImageOfPage":{"@id":"https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://easylot.ky/author/tommy/","name":"Tommy Sofield","url":"https://easylot.ky/author/tommy/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/3b724fb6477b72d20a75cad9a112eafd6f105c1fdc79cbf141cf8835b50048c1?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/3b724fb6477b72d20a75cad9a112eafd6f105c1fdc79cbf141cf8835b50048c1?s=96&amp;d=mm&amp;r=g","caption":"Tommy Sofield","inLanguage":"en-US"},"sameAs":["https://easylot.ky"],"worksFor":{"@id":"https://easylot.ky/#organization"}},{"@type":"Article","headline":"Affordable Land for Sale in Cayman: Owner Financing Program","keywords":"Land","datePublished":"2023-08-23T11:05:23-05:00","dateModified":"2026-02-02T09:31:17-05:00","author":{"@id":"https://easylot.ky/author/tommy/","name":"Tommy Sofield"},"publisher":{"@id":"https://easylot.ky/#organization"},"description":"Buy land in Grand Cayman & Little Cayman with our Local Owner Financing Program. No banks required, fixed interest rates, and fast approval. Own your lot today.","name":"Affordable Land for Sale in Cayman: Owner Financing Program","@id":"https://easylot.ky/#richSnippet","isPartOf":{"@id":"https://easylot.ky/#webpage"},"image":{"@id":"https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://easylot.ky/#webpage"}}]}</script>
-
-    <!-- Additional Schema -->
+    <!-- Schema Markup Consolidated -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "RealEstateAgent",
+          "@type": "Organization",
           "@id": "https://easylot.ky/#organization",
-          "name": "Easy Lot",
-          "alternateName": "Easy Lot Cayman",
+          "name": "Easy Lot Cayman",
           "url": "https://easylot.ky/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg"
+            "@id": "https://easylot.ky/#logo",
+            "url": "https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg",
+            "contentUrl": "https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg",
+            "caption": "Easy Lot Cayman",
+            "width": "365",
+            "height": "104"
           },
-          "image": "https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg", 
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-345-936-2660",
+            "contactType": "customer service",
+            "areaServed": "KY",
+            "availableLanguage": "en"
+          },
+          "sameAs": [
+            "https://www.facebook.com/easylotky",
+            "https://www.instagram.com/easylotky/",
+            "https://www.youtube.com/@EasyLotKy",
+            "https://www.tiktok.com/@easylot"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://easylot.ky/#website",
+          "url": "https://easylot.ky/",
+          "name": "Easy Lot",
+          "publisher": { "@id": "https://easylot.ky/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://easylot.ky/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "RealEstateAgent",
+          "@id": "https://easylot.ky/#agent",
+          "name": "Easy Lot",
           "description": "Easy Lot makes buying land in the Cayman Islands simple. We provide direct Owner Financing with NO bank involvement needed, flexible down payments, and fixed 9% interest rates.",
           "telephone": "+1-345-936-2660",
+          "url": "https://easylot.ky/",
+          "priceRange": "$$$",
+          "image": "https://easylot.ky/wp-content/uploads/2023/08/HRE-Last-Lots-Remaining-2.jpg",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "207 Sparky Dr. Suite 6",
@@ -51,9 +84,10 @@
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 19.2965, 
+            "latitude": 19.2965,
             "longitude": -81.3609
           },
+          "memberOf": { "@id": "https://easylot.ky/#organization" },
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
@@ -67,15 +101,7 @@
               "opens": "08:00",
               "closes": "13:00"
             }
-          ],
-          "sameAs": [
-            "https://www.facebook.com/easylotky",
-            "https://www.instagram.com/easylotky/",
-            "https://www.youtube.com/@EasyLotKy",
-            "https://www.tiktok.com/@easylot"
-          ],
-          "priceRange": "$$$",
-          "areaServed": ["Grand Cayman", "Little Cayman", "East End", "North Side"]
+          ]
         }
       ]
     }
