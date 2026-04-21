@@ -296,10 +296,10 @@ get_header();
             <div class="mb-10">
                 <div class="flex justify-between items-center mb-6">
                     <label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Purchase Price (KYD)</label>
-                    <div class="font-headline text-3xl font-bold text-on-surface">$<span id="price-val">125,000</span></div>
+                    <div class="font-headline text-3xl font-bold text-on-surface">$<span id="price-val">53,100</span></div>
                 </div>
                 <input class="w-full h-2 bg-surface-container-highest appearance-none rounded-full cursor-pointer accent-primary"
-                    id="price-range" max="250000" min="53100" step="100" type="range" value="75000" />
+                    id="price-range" max="250000" min="53100" step="100" type="range" value="53100" />
                 <div class="flex justify-between mt-2 text-[10px] font-bold text-on-surface-variant/40 uppercase tracking-tighter">
                     <span>$53,100</span>
                     <span>$250k</span>
@@ -309,11 +309,11 @@ get_header();
             <!-- Down Payment -->
             <div class="mb-10">
                 <div class="flex justify-between items-center mb-6">
-                    <label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Down Payment (<span id="down-pct">10</span>%)</label>
-                    <div class="font-headline text-3xl font-bold text-on-surface">$<span id="down-val">12,500</span></div>
+                    <label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Down Payment (<span id="down-pct">5</span>%)</label>
+                    <div class="font-headline text-3xl font-bold text-on-surface">$<span id="down-val">2,655</span></div>
                 </div>
                 <input class="w-full h-2 bg-surface-container-highest appearance-none rounded-full cursor-pointer accent-primary"
-                    id="down-range" max="50" min="5" step="1" type="range" value="10" />
+                    id="down-range" max="50" min="5" step="1" type="range" value="5" />
                 <div class="flex justify-between mt-2 text-[10px] font-bold text-on-surface-variant/40 uppercase tracking-tighter">
                     <span>Min 5%</span>
                     <span>Max 50%</span>
@@ -336,7 +336,7 @@ get_header();
                 <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/[0.02] transition-colors duration-500"></div>
                 <span class="font-label text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-4 block relative z-10">Monthly Investment</span>
                 <div class="text-6xl font-headline font-extrabold text-primary mb-4 relative z-10">
-                    $<span id="monthly-payment">1,425.80</span>
+                    $<span id="monthly-payment">511.66</span>
                 </div>
                 <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/50 backdrop-blur-sm rounded-full text-[10px] font-bold text-primary uppercase tracking-widest relative z-10">
                     <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
