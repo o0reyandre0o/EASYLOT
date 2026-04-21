@@ -74,7 +74,7 @@ get_header();
                 [
                     'title' => 'High Rock Estates',
                     'location' => 'East End, Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/High-Rock-Estates-Easy-Lot.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/High-Rock-Estates.jpg',
                     'status' => 'Available',
                     'tag' => 'Best Seller',
                     'link' => 'https://easylot.ky/project/high-rock-estates/',
@@ -84,7 +84,7 @@ get_header();
                 [
                     'title' => 'Elena Estates',
                     'location' => 'Little Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2024/03/Elena-Estates-Little-Cayman-Easy-Lot.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/elena-estates-little-cayman-sitemap-satellite.jpg',
                     'status' => 'Limited Availability',
                     'tag' => 'Investment Pick',
                     'link' => 'https://easylot.ky/project/little-cayman/',
@@ -114,7 +114,7 @@ get_header();
                 [
                     'title' => 'Frank Sound',
                     'location' => 'Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2023/06/background_hero_high_rock_estates_aerial.jpg',
                     'status' => 'Available',
                     'tag' => 'New Release',
                     'link' => 'https://easylot.ky/project/frank-sound/',
@@ -124,7 +124,7 @@ get_header();
                 [
                     'title' => 'Ocean Breeze East',
                     'location' => 'Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Ocean-Breeze-Easy-Lot.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Ocean-Breeze-Easy-Lot-1.jpg',
                     'status' => 'Sold Out',
                     'tag' => 'Fully Occupied',
                     'link' => 'https://easylot.ky/project/ocean-breeze/',
