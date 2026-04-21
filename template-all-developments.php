@@ -152,22 +152,19 @@ get_header();
 
                     <!-- Content -->
                     <div class="p-8 flex-1 flex flex-col">
-                        <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2"><?php echo $dev['tag']; ?></span>
-                        <h2 class="text-2xl font-serif font-bold text-on-surface mb-2"><?php echo $dev['title']; ?></h2>
-                        <p class="text-on-surface/50 text-sm mb-6 flex items-center gap-2">
-                            <span class="material-symbols-outlined text-sm">location_on</span>
-                            <?php echo $dev['location']; ?>
-                        </p>
-                        
-                        <div class="mt-auto pt-6 border-t border-black/5 flex items-center justify-between gap-4">
+                        <div class="flex justify-between items-start mb-4">
                             <div>
-                                <span class="block text-[10px] uppercase tracking-tighter text-on-surface/40 font-bold mb-1">Pricing</span>
-                                <span class="text-sm font-bold text-on-surface"><?php echo $dev['price']; ?></span>
+                                <span class="text-primary font-bold text-xs uppercase tracking-widest mb-2 block text-left"><?php echo $dev['tag']; ?></span>
+                                <h2 class="text-2xl font-serif font-bold text-on-surface leading-tight text-left"><?php echo $dev['title']; ?></h2>
                             </div>
-                            <a href="<?php echo $dev['link']; ?>" class="w-12 h-12 rounded-2xl bg-white border border-black/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-xl shadow-black/5">
+                            <a href="<?php echo $dev['link']; ?>" class="w-12 h-12 rounded-2xl bg-white border border-black/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-xl shadow-black/5 flex-shrink-0">
                                 <span class="material-symbols-outlined">arrow_forward</span>
                             </a>
                         </div>
+                        <p class="text-on-surface/50 text-sm flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">location_on</span>
+                            <?php echo $dev['location']; ?>
+                        </p>
                     </div>
                 </div>
             <?php endforeach; ?>
