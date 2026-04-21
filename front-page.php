@@ -299,9 +299,9 @@ get_header();
                     <div class="font-headline text-3xl font-bold text-on-surface">$<span id="price-val">125,000</span></div>
                 </div>
                 <input class="w-full h-2 bg-surface-container-highest appearance-none rounded-full cursor-pointer accent-primary"
-                    id="price-range" max="250000" min="30000" step="1000" type="range" value="125000" />
+                    id="price-range" max="250000" min="53100" step="100" type="range" value="75000" />
                 <div class="flex justify-between mt-2 text-[10px] font-bold text-on-surface-variant/40 uppercase tracking-tighter">
-                    <span>$30k</span>
+                    <span>$53,100</span>
                     <span>$250k</span>
                 </div>
             </div>
@@ -323,13 +323,11 @@ get_header();
             <!-- Term Length -->
             <div class="mb-12">
                 <label class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-6 block text-center">Select Loan Term</label>
-                <div class="grid grid-cols-3 gap-4" id="term-selector">
-                    <button class="py-4 px-2 border-2 border-outline-variant rounded-2xl font-bold text-on-surface-variant hover:border-primary transition-all outline-none text-sm"
-                        data-years="5">5 Years</button>
+                <div class="grid grid-cols-2 gap-4" id="term-selector">
                     <button class="py-4 px-2 border-2 border-primary bg-primary rounded-2xl font-bold text-white shadow-xl shadow-primary/20 transition-all outline-none text-sm"
-                        data-years="10">10 Years</button>
-                    <button class="py-4 px-2 border-2 border-outline-variant rounded-2xl font-bold text-on-surface-variant hover:border-primary transition-all outline-none text-sm"
                         data-years="15">15 Years</button>
+                    <button class="py-4 px-2 border-2 border-outline-variant rounded-2xl font-bold text-on-surface-variant hover:border-primary transition-all outline-none text-sm"
+                        data-years="30">30 Years</button>
                 </div>
             </div>
 
@@ -402,7 +400,7 @@ get_header();
         const monthlyDisplay = document.getElementById('monthly-payment');
         const termButtons = document.querySelectorAll('#term-selector button');
 
-        let currentYears = 10;
+        let currentYears = 15;
         const interestRate = 0.09;
 
         function format(num, decimals = 0) {
