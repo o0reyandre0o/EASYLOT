@@ -177,7 +177,7 @@
                         <a href="https://easylot.ky/project/high-rock-estates/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">High Rock Estates</a>
                         <a href="https://easylot.ky/project/little-cayman/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">Elena Estates (Little Cayman)</a>
                         <a href="https://easylot.ky/project/rum-point-land/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">Northshore Estates</a>
-                        <a href="https://easylot.ky/project/ocean-breeze-north/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">Ocean Breeze North</a>
+                        <a href="https://easylot.ky/project/ocean-breeze-north/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">Ocean Breeze North (SOLD OUT)</a>
                         <a href="https://easylot.ky/project/ocean-breeze/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors last:border-0">Ocean Breeze East (SOLD OUT)</a>
                     </div>
                 </div>
@@ -241,8 +241,8 @@
                     <a href="https://easylot.ky/project/high-rock-estates/" class="text-xl font-medium text-on-surface/80">High Rock Estates</a>
                     <a href="https://easylot.ky/project/little-cayman/" class="text-xl font-medium text-on-surface/80">Elena Estates (Little Cayman)</a>
                     <a href="https://easylot.ky/project/rum-point-land/" class="text-xl font-medium text-on-surface/80">Northshore Estates</a>
-                    <a href="https://easylot.ky/project/ocean-breeze-north/" class="text-xl font-medium text-on-surface/80">Ocean Breeze North</a>
-                    <a href="https://easylot.ky/project/ocean-breeze/" class="text-xl font-medium text-on-surface/80">Ocean Breeze East</a>
+                    <a href="https://easylot.ky/project/ocean-breeze-north/" class="text-xl font-medium text-on-surface/80">Ocean Breeze North (SOLD OUT)</a>
+                    <a href="https://easylot.ky/project/ocean-breeze/" class="text-xl font-medium text-on-surface/80">Ocean Breeze East (SOLD OUT)</a>
                 </div>
             </div>
 

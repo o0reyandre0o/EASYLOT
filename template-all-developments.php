@@ -91,11 +91,11 @@ get_header();
                     'title' => 'Northshore Estates',
                     'location' => 'Rum Point, Grand Cayman',
                     'image' => 'https://easylot.ky/wp-content/uploads/2024/07/rum-point-cayman-islands-1.jpg',
-                    'status' => 'Presale',
+                    'status' => 'Sold Out',
                     'tag' => 'Prime Location',
                     'link' => 'https://easylot.ky/project/rum-point-land/',
                     'price' => 'Owner Financing Available',
-                    'sold_percent' => 45
+                    'sold_percent' => 100
                 ],
                 [
                     'title' => 'Ocean Breeze North',
@@ -105,7 +105,7 @@ get_header();
                     'tag' => 'High Elevation',
                     'link' => 'https://easylot.ky/project/ocean-breeze-north/',
                     'price' => 'Fast Approval',
-                    'sold_percent' => 60
+                    'sold_percent' => 100
                 ],
                 [
                     'title' => 'Frank Sound',
