@@ -94,7 +94,7 @@ get_header();
                 [
                     'title' => 'Northshore Estates',
                     'location' => 'Rum Point, Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2024/09/Northshore-Estates-Rum-Point-Land-Sitemap-Satellite.jpg',
+                    'image' => 'https://easylot.ky/wp-content/uploads/2024/07/rum-point-cayman-islands-1.jpg',
                     'status' => 'Presale',
                     'tag' => 'Prime Location',
                     'link' => 'https://easylot.ky/project/rum-point-land/',
