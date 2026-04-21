@@ -1,10 +1,55 @@
-<?php
+<?php 
 /**
  * Template Name: Directions Modern
  */
-
-get_header();
+$seo_title = "Visit Easy Lot Cayman | Directions to Our Developments";
+$seo_description = "Get precise directions to our land developments in Grand Cayman and Little Cayman. Located near landmarks like Health City for easy access.";
+$seo_image = "https://easylot.ky/wp-content/uploads/2023/06/background_hero_high_rock_estates_aerial.jpg";
+get_header(); 
 ?>
+
+<!-- Schema Markup: LocalBusiness & Directions -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Easy Lot Cayman",
+      "image": "https://easylot.ky/wp-content/uploads/2023/08/logo-easy-lot.svg",
+      "@id": "https://easylot.ky/#organization",
+      "url": "https://easylot.ky/",
+      "telephone": "+1 345-936-2660",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "High Rock",
+        "addressLocality": "East End",
+        "addressRegion": "Grand Cayman",
+        "addressCountry": "KY"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.3000,
+        "longitude": -81.1000
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to find Easy Lot Developments",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Head toward Health City in East End."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Follow the signs for Easy Lot just 1 minute past Health City."
+        }
+      ]
+    }
+  ]
+}
+</script>
 
 <!-- Hero Section -->
 <section class="relative pt-32 pb-16 overflow-hidden bg-surface">

@@ -1,10 +1,28 @@
-<?php
+<?php 
 /**
  * Template Name: Team Modern
  */
-
-get_header();
+$seo_title = "Meet the Easy Lot Team | Cayman Land Experts";
+$seo_description = "Discover the team behind Easy Lot Cayman. Experts in real estate, accessible financing, and helping families secure their future in the islands.";
+$seo_image = "https://easylot.ky/wp-content/uploads/2023/08/Tommy-Sofield.jpg";
+get_header(); 
 ?>
+
+<!-- Schema Markup: Team & Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tommy Sofield",
+  "jobTitle": "Director",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Easy Lot Cayman",
+    "@id": "https://easylot.ky/#organization"
+  },
+  "image": "https://easylot.ky/wp-content/uploads/2023/08/Tommy-Sofield.jpg"
+}
+</script>
 
 <!-- Hero Section -->
 <section class="relative pt-32 pb-20 overflow-hidden bg-surface">

@@ -1,9 +1,11 @@
-<?php
+<?php 
 /**
  * Template Name: FAQ Modern
  */
-
-get_header();
+$seo_title = "Financing FAQ | Buying Land in Cayman Islands Helper";
+$seo_description = "Everything you need to know about buying land in the Cayman Islands, owner financing details, building requirements, and property ownership.";
+$seo_image = "https://easylot.ky/wp-content/uploads/2023/08/logo-easy-lot.svg";
+get_header(); 
 ?>
 
 <!-- Schema Markup: FAQ Page -->
