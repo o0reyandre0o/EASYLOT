@@ -107,16 +107,7 @@ get_header();
                     'price' => 'Fast Approval',
                     'sold_percent' => 100
                 ],
-                [
-                    'title' => 'Frank Sound',
-                    'location' => 'Grand Cayman',
-                    'image' => 'https://easylot.ky/wp-content/uploads/2023/06/background_hero_high_rock_estates_aerial.jpg',
-                    'status' => 'Available',
-                    'tag' => 'New Release',
-                    'link' => 'https://easylot.ky/project/frank-sound/',
-                    'price' => 'Minimal Paperwork',
-                    'sold_percent' => 88
-                ],
+
                 [
                     'title' => 'Ocean Breeze East',
                     'location' => 'Grand Cayman',

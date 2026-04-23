@@ -173,7 +173,7 @@ get_header();
                 </div>
             </div>
 
-            <!-- Listing 3: Frank Sound Estates -->
+            <!-- Listing 3: Frank Sound Estates
             <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
                 <div class="relative min-h-[450px] overflow-hidden">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -210,6 +210,7 @@ get_header();
                     </a>
                 </div>
             </div>
+            -->
         </div>
     </div>
 </section>
