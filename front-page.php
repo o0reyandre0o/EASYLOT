@@ -5,6 +5,62 @@ $seo_image = "https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.
 get_header(); 
 ?>
 
+<!-- Breadcrumb Schema for SEO/AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://easylot.ky/"
+  }]
+}
+</script>
+
+<!-- FAQ Schema for SEO/AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need a credit check to buy land with Easy Lot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Our financing is based on your down payment and ability to pay, not your credit score. We make it easy for everyone to own land in the Cayman Islands."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can foreigners buy land in the Cayman Islands?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! The Cayman Islands has no restrictions on foreign land ownership. There are no annual property taxes, no capital gains taxes, and no inheritance taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Direct Owner Financing work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We act as the bank. You don't need to visit a traditional financial institution. We offer fast approval (24-48 hours) with minimal paperwork and a fixed 9% interest rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a deadline to build on my lot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. At Easy Lot, we believe in flexibility. Once you purchase your land, you can hold it as an investment for as long as you like without any obligation to build."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Hero Section -->
 <section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface">
     <!-- Background Image -->
@@ -18,7 +74,7 @@ get_header();
     <div class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-20 pt-20 pb-12">
         <div class="max-w-4xl">
             <h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
-                Buy Land in <br/>Cayman: <span class="text-[#FB3122]">Local<br/>Owner Financing</span>
+                Cheap Land for Sale in <br/>Cayman: <span class="text-[#FB3122]">Owner<br/>Financing</span>
             </h1>
             
             <!-- Checklist -->
@@ -38,7 +94,9 @@ get_header();
             </div>
             
             <!-- CTA -->
-            <a href="#calculator" class="inline-flex items-center gap-3 bg-[#bc0002] text-white px-8 py-4 rounded-xl text-lg font-bold editorial-shadow hover:scale-[1.02] active:scale-95 transition-all">
+            <a href="#calculator" 
+               onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'cta_click', 'cta_location': 'hero', 'cta_text': 'Explore Available Lots'});"
+               class="inline-flex items-center gap-3 bg-[#bc0002] text-white px-8 py-4 rounded-xl text-lg font-bold editorial-shadow hover:scale-[1.02] active:scale-95 transition-all">
                 Explore Available Lots
                 <span class="material-symbols-outlined">arrow_forward</span>
             </a>
@@ -485,6 +543,8 @@ get_header();
                 this.classList.add('bg-primary', 'text-white', 'shadow-lg', 'shadow-primary/20', 'border-primary');
 
                 currentYears = parseInt(this.dataset.years);
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({'event': 'calculator_term_change', 'term_years': currentYears});
                 calculate();
             });
         });
