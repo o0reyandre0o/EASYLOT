@@ -81,7 +81,7 @@ get_header();
                     'title' => 'Elena Estates',
                     'location' => 'Little Cayman',
                     'image' => 'https://easylot.ky/wp-content/uploads/2023/08/elena-estates-little-cayman-sitemap-satellite.jpg',
-                    'status' => 'Limited Availability',
+                    'status' => 'NEW LISTING',
                     'tag' => 'Investment Pick',
                     'link' => 'https://easylot.ky/project/little-cayman/',
                     'price' => '5% Down Payment',
