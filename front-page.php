@@ -73,7 +73,7 @@ get_header();
     
     <div class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-20 pt-32 md:pt-20 pb-12 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
         <div class="w-full">
-            <h1 class="font-headline text-[40px] md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
+            <h1 class="font-headline text-[44px] md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
                 Cheap Land for <br/>Sale in Cayman:<br/><span class="text-[#FB3122]">Owner Financing</span>
             </h1>
             
