@@ -51,14 +51,21 @@
                     </div>
                 </div>
 
-                <!-- Support Column -->
+                <!-- Office & Support Column -->
                 <div>
+                    <h5 class="font-sans text-xs font-bold text-[#bc0002] uppercase tracking-widest mb-6">Our Office</h5>
+                    <div class="text-[#55633f] font-sans text-sm font-medium tracking-wide leading-relaxed mb-8">
+                        207 Sparky Dr. Suite 6<br/>
+                        George Town<br/>
+                        Cayman Islands
+                    </div>
+
                     <h5 class="font-sans text-xs font-bold text-[#bc0002] uppercase tracking-widest mb-6">Support</h5>
                     <div class="flex flex-col gap-4">
                         <a class="text-[#55633f] font-sans text-sm font-medium tracking-wide uppercase hover:text-[#bc0002] transition-all" href="tel:+13459362660">Call Us: (345) 936-2660</a>
                         <div class="mt-4 space-y-1">
-                            <p class="text-[#55633f] font-sans text-[10px] font-medium tracking-wide opacity-50 uppercase">© <?php echo date('Y'); ?> Easy Lot Cayman.</p>
-                            <p class="text-[#55633f] font-sans text-xs font-bold tracking-wide">Created by <a href="https://toctoc.ky/" class="text-[#bc0002] hover:underline">Toc Toc Marketing</a></p>
+                            <p class="text-[#55633f] font-sans text-[10px] font-medium tracking-wide opacity-50 uppercase">© <?php echo date('Y'); ?> EASYLOT CAYMAN ISLANDS.</p>
+                            <p class="text-[#55633f] font-sans text-xs font-bold tracking-wide">Website & Content created by <a href="https://toctoc.ky/" class="text-[#bc0002] hover:underline">Toc Toc Marketing</a></p>
                         </div>
                     </div>
                 </div>

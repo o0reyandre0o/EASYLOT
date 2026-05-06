@@ -324,8 +324,8 @@
         </div>
         
         <div class="p-8 bg-surface border-t border-black/5 text-center space-y-2">
-            <p class="text-sm text-on-surface/50 font-medium">© <?php echo date('Y'); ?> Easy Lot Cayman</p>
-            <p class="text-xs text-on-surface/30">Created by <a href="https://toctoc.ky/" class="font-bold hover:text-primary transition-colors">Toc Toc Marketing</a></p>
+            <p class="text-sm text-on-surface/50 font-medium">© <?php echo date('Y'); ?> EASYLOT CAYMAN ISLANDS</p>
+            <p class="text-xs text-on-surface-variant">Website & Content created by <a href="https://toctoc.ky/" class="font-bold hover:text-primary transition-colors">Toc Toc Marketing</a></p>
         </div>
     </div>
 
