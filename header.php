@@ -167,18 +167,76 @@
                     <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full <?php if(is_front_page()) echo 'w-full'; ?>"></span>
                 </a>
 
-                <!-- Our Developments Dropdown -->
+                <!-- Our Developments Mega Menu -->
                 <div class="relative group">
                     <button class="flex items-center gap-1 text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300">
                         Our Developments
                         <span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:rotate-180">expand_more</span>
                     </button>
-                    <div class="absolute top-full left-0 mt-2 w-[280px] bg-white rounded-xl shadow-xl shadow-black/5 border border-black/5 py-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
-                        <a href="https://easylot.ky/project/high-rock-estates/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">High Rock Estates</a>
-                        <a href="https://easylot.ky/project/little-cayman/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">Elena Estates (Little Cayman)</a>
-                        <a href="https://easylot.ky/project/rum-point-land/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">Northshore Estates</a>
-                        <a href="https://easylot.ky/project/ocean-breeze-north/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">Ocean Breeze North (SOLD OUT)</a>
-                        <a href="https://easylot.ky/project/ocean-breeze/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors last:border-0">Ocean Breeze East (SOLD OUT)</a>
+                    <!-- Mega Menu Container -->
+                    <div class="absolute top-full -left-20 md:-left-40 mt-2 w-[90vw] max-w-[850px] bg-white rounded-[2rem] shadow-2xl shadow-black/10 border border-black/5 p-8 opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-500 z-50">
+                        <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+                            <!-- Left Column: Quick List -->
+                            <div class="md:col-span-5 border-r border-black/5 pr-10">
+                                <span class="block font-serif text-xs uppercase tracking-[0.2em] text-primary font-bold mb-6">All Locations</span>
+                                <div class="space-y-6">
+                                    <a href="https://easylot.ky/project/little-cayman/" class="group/item flex items-start gap-4 p-2 -m-2 rounded-2xl hover:bg-surface transition-colors">
+                                        <div class="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 bg-surface">
+                                            <img src="https://easylot.ky/wp-content/uploads/2023/08/elena-estates-little-cayman-sitemap-satellite.jpg" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform" alt="Elena Estates">
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-sm text-[#1d1b1a] group-hover/item:text-primary transition-colors">Elena Estates</h4>
+                                            <p class="text-xs text-on-surface-variant line-clamp-1">Serenity in Little Cayman</p>
+                                        </div>
+                                    </a>
+                                    <a href="https://easylot.ky/project/rum-point-land/" class="group/item flex items-start gap-4 p-2 -m-2 rounded-2xl hover:bg-surface transition-colors">
+                                        <div class="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 bg-surface">
+                                            <img src="https://easylot.ky/wp-content/uploads/2024/07/rum-point-cayman-islands-1.jpg" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform" alt="Northshore Estates">
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-sm text-[#1d1b1a] group-hover/item:text-primary transition-colors">Northshore Estates</h4>
+                                            <p class="text-xs text-on-surface-variant line-clamp-1">Rum Point Near-Shore Lots</p>
+                                        </div>
+                                    </a>
+                                    <a href="https://easylot.ky/project/high-rock-estates/" class="group/item flex items-start gap-4 p-2 -m-2 rounded-2xl hover:bg-surface transition-colors">
+                                        <div class="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 bg-surface">
+                                            <img src="https://easylot.ky/wp-content/uploads/2023/08/High-Rock-Estates.jpg" class="w-full h-full object-cover group-hover/item:scale-110 transition-transform" alt="High Rock Estates">
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-sm text-[#1d1b1a] group-hover/item:text-primary transition-colors">High Rock Estates</h4>
+                                            <p class="text-xs text-on-surface-variant line-clamp-1">East End Investment Land</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="<?php echo esc_url(home_url('/all-our-developments/')); ?>" class="inline-flex items-center gap-2 mt-8 text-primary font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
+                                    View All Developments
+                                    <span class="material-symbols-outlined text-sm">east</span>
+                                </a>
+                            </div>
+
+                            <!-- Right Column: Featured Cards -->
+                            <div class="md:col-span-7">
+                                <span class="block font-serif text-xs uppercase tracking-[0.2em] text-primary font-bold mb-6">Featured Properties</span>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <a href="https://easylot.ky/project/little-cayman/" class="group/card block relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm hover:shadow-xl transition-all duration-500">
+                                        <img src="https://easylot.ky/wp-content/uploads/2023/08/elena-estates-little-cayman-sitemap-satellite.jpg" class="absolute inset-0 w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" alt="Elena Estates">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-end">
+                                            <span class="inline-block bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-md mb-2 w-fit">NEW LISTING</span>
+                                            <h4 class="text-white font-bold text-sm mb-1">Elena Estates</h4>
+                                            <p class="text-white/70 text-[10px]">Little Cayman</p>
+                                        </div>
+                                    </a>
+                                    <a href="https://easylot.ky/project/rum-point-land/" class="group/card block relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm hover:shadow-xl transition-all duration-500">
+                                        <img src="https://easylot.ky/wp-content/uploads/2024/07/rum-point-cayman-islands-1.jpg" class="absolute inset-0 w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-700" alt="Northshore Estates">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-4 flex flex-col justify-end">
+                                            <span class="inline-block bg-secondary text-white text-[10px] font-bold px-2 py-1 rounded-md mb-2 w-fit">PREMIUM</span>
+                                            <h4 class="text-white font-bold text-sm mb-1">Northshore Estates</h4>
+                                            <p class="text-white/70 text-[10px]">Grand Cayman</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
