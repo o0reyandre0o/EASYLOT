@@ -71,11 +71,11 @@ get_header();
                     'title' => 'High Rock Estates',
                     'location' => 'East End, Grand Cayman',
                     'image' => 'https://easylot.ky/wp-content/uploads/2023/08/High-Rock-Estates.jpg',
-                    'status' => 'Available',
+                    'status' => 'ONLY THREE AVAILABLE!',
                     'tag' => 'Best Seller',
                     'link' => 'https://easylot.ky/project/high-rock-estates/',
                     'price' => 'From $13/day',
-                    'sold_percent' => 83
+                    'sold_percent' => 98
                 ],
                 [
                     'title' => 'Elena Estates',
