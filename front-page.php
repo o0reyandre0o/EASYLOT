@@ -81,11 +81,7 @@ get_header();
             <div class="flex flex-col gap-4 mb-10">
                 <div class="flex items-center gap-3">
                     <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
-                    <span class="text-on-surface font-bold">NO BANKS REQUIRED</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
-                    <span class="text-on-surface font-bold">Fast Approval</span>
+                    <span class="text-on-surface font-bold">NO BANKS (Fast Approval)</span>
                 </div>
                 <div class="flex items-center gap-3">
                     <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
