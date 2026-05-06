@@ -71,10 +71,10 @@ get_header();
         <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
     </div>
     
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-20 pt-20 pb-12">
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-20 pt-20 pb-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="max-w-4xl">
-            <h1 class="font-headline text-5xl md:text-8xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
-                Cheap Land for Sale in <br/>Cayman: <span class="text-[#FB3122]">Owner<br/>Financing</span>
+            <h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
+                Cheap Land for <br/>Sale in Cayman:<br/><span class="text-[#FB3122]">Owner Financing</span>
             </h1>
             
             <!-- Checklist -->
@@ -100,6 +100,14 @@ get_header();
                 Explore Available Lots
                 <span class="material-symbols-outlined">arrow_forward</span>
             </a>
+        </div>
+
+        <!-- Video Hero -->
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-square bg-black group/video">
+            <video class="w-full h-full object-cover opacity-90 group-hover/video:opacity-100 transition-opacity duration-500" autoplay loop muted playsinline>
+                <source src="https://easylot.ky/wp-content/uploads/2026/05/Little-Cayman-Video-Squared-Smartest-Investment.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
         </div>
     </div>
 </section>
@@ -163,49 +171,16 @@ get_header();
         </div>
 
         <div class="space-y-12">
-            <!-- Listing 1: Northshore Estates -->
+            <!-- Listing 1: Elena Estates -->
             <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
                 <div class="relative min-h-[450px] overflow-hidden">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        src="https://easylot.ky/wp-content/uploads/2024/07/rum-point-cayman-islands-1.jpg"
-                        alt="Aerial view of land for sale at Northshore Estates, Grand Cayman" />
-                    <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Grand Cayman</div>
-                </div>
-                <div class="p-12 flex flex-col justify-center">
-                    <h3 class="font-headline text-4xl font-bold mb-6 group-hover:text-primary transition-colors">Northshore Estates</h3>
-                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Enjoy elevated terrain offering natural ocean breezes, located very close to the beach and just 5 minutes from the iconic Rum Point. The perfect spot for your future coastal retreat.</p>
-                    
-                    <div class="space-y-4 mb-10">
-                        <div class="flex items-center gap-3">
-                            <span class="text-xl">📉</span>
-                            <span class="font-medium text-sm text-on-surface">Flexible Down Payment (Start from 5%)</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-xl">🤝</span>
-                            <span class="font-medium text-sm text-on-surface">Owner Financing Available (No Bank)</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-xl">📝</span>
-                            <span class="font-medium text-sm text-on-surface">Minimum Paperwork (Fast Approval)</span>
-                        </div>
-                    </div>
-                    
-                    <a href="https://easylot.ky/project/rum-point-land/" class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
-                        Explore Availability
-                        <span class="material-symbols-outlined">explore</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Listing 2: Elena Estates -->
-            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
-                <div class="relative min-h-[450px] overflow-hidden lg:order-2">
-                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         src="https://easylot.ky/wp-content/uploads/2023/08/elena-estates-little-cayman-sitemap-satellite.jpg"
                         alt="Investment property for sale at Elena Estates, Little Cayman" />
-                    <div class="absolute top-6 right-6 bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Little Cayman</div>
+                    <div class="absolute top-6 left-6 bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Little Cayman</div>
                 </div>
-                <div class="p-12 flex flex-col justify-center lg:order-1">
+                <div class="p-12 flex flex-col justify-center">
+                    <div class="bg-[#FB3122] text-white px-3 py-1 rounded-md text-xs font-bold w-fit mb-4 uppercase tracking-wider">NEW LISTING</div>
                     <h3 class="font-headline text-4xl font-bold mb-6 group-hover:text-primary transition-colors">Elena Estates (Little Cayman)</h3>
                     <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Discover near-shore parcels in the most peaceful of the Three Sisters. Experience true island living at its finest, perfectly situated just 5 minutes from the future port of Little Cayman.</p>
                     
@@ -225,6 +200,40 @@ get_header();
                     </div>
                     
                     <a href="https://easylot.ky/project/little-cayman/" class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
+                        Explore Availability
+                        <span class="material-symbols-outlined">explore</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Listing 2: Northshore Estates -->
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative min-h-[450px] overflow-hidden lg:order-2">
+                    <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        src="https://easylot.ky/wp-content/uploads/2024/07/rum-point-cayman-islands-1.jpg"
+                        alt="Aerial view of land for sale at Northshore Estates, Grand Cayman" />
+                    <div class="absolute top-6 right-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Grand Cayman</div>
+                </div>
+                <div class="p-12 flex flex-col justify-center lg:order-1">
+                    <h3 class="font-headline text-4xl font-bold mb-6 group-hover:text-primary transition-colors">Northshore Estates</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Enjoy elevated terrain offering natural ocean breezes, located very close to the beach and just 5 minutes from the iconic Rum Point. The perfect spot for your future coastal retreat.</p>
+                    
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📉</span>
+                            <span class="font-medium text-sm text-on-surface">Flexible Down Payment (Start from 5%)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">🤝</span>
+                            <span class="font-medium text-sm text-on-surface">Owner Financing Available (No Bank)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xl">📝</span>
+                            <span class="font-medium text-sm text-on-surface">Minimum Paperwork (Fast Approval)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://easylot.ky/project/rum-point-land/" class="bg-on-surface text-surface py-4 px-8 rounded-xl font-bold flex items-center justify-center gap-3 hover:bg-primary transition-all duration-300 w-fit">
                         Explore Availability
                         <span class="material-symbols-outlined">explore</span>
                     </a>
