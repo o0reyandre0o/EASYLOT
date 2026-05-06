@@ -101,7 +101,7 @@ get_header();
                     'title' => 'Ocean Breeze North',
                     'location' => 'East End, Grand Cayman',
                     'image' => 'https://easylot.ky/wp-content/uploads/2023/08/Ocean-Breeze-North-Easy-Lot.jpg',
-                    'status' => 'Available',
+                    'status' => 'Sold Out',
                     'tag' => 'High Elevation',
                     'link' => 'https://easylot.ky/project/ocean-breeze-north/',
                     'price' => 'Fast Approval',

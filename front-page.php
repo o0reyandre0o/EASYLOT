@@ -100,10 +100,9 @@ get_header();
 
         <!-- Video Hero -->
         <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-square bg-black group/video max-w-md mx-auto lg:mr-0">
-            <video class="w-full h-full object-cover opacity-90 group-hover/video:opacity-100 transition-opacity duration-500" autoplay loop muted playsinline>
+            <video class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700" autoplay loop muted playsinline>
                 <source src="https://easylot.ky/wp-content/uploads/2026/05/Little-Cayman-Video-Squared-Smartest-Investment.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
         </div>
     </div>
 </section>
