@@ -151,7 +151,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCWF3CG4"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <nav class="fixed top-0 w-full z-[9999] bg-[#fff8f5]/80 backdrop-blur-md border-b border-black/5 glass-nav">
+    <nav class="fixed top-0 left-0 w-full z-[2147483647] bg-[#fff8f5] backdrop-blur-md border-b border-black/5 glass-nav" style="display: flex !important; visibility: visible !important;">
         <div class="max-w-7xl mx-auto px-8 md:px-20 py-4 flex justify-between items-center">
             <div class="font-serif text-2xl font-bold tracking-tighter text-[#1d1b1a]">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="block h-10">
@@ -330,7 +330,19 @@
     </div>
 
     <script>
+        console.log('EASYLOT Theme Header Loaded');
         document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.glass-nav');
+            if (nav) {
+                console.log('Menu found, forcing visibility');
+                nav.style.setProperty('display', 'flex', 'important');
+                nav.style.setProperty('visibility', 'visible', 'important');
+                nav.style.setProperty('opacity', '1', 'important');
+                nav.style.setProperty('z-index', '2147483647', 'important');
+            } else {
+                console.error('Menu NOT found in DOM');
+            }
+            
             const toggle = document.getElementById('mobile-menu-toggle');
             const close = document.getElementById('mobile-menu-close');
             const menu = document.getElementById('mobile-menu');
@@ -350,12 +362,14 @@
             }
 
             // Close on link click
-            menu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('translate-x-full');
-                    document.body.classList.remove('overflow-hidden');
+            if (menu) {
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('translate-x-full');
+                        document.body.classList.remove('overflow-hidden');
+                    });
                 });
-            });
+            }
         });
     </script>
 
