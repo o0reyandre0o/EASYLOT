@@ -131,3 +131,14 @@ function easylot_scripts() {
     " );
 }
 add_action( 'wp_enqueue_scripts', 'easylot_scripts' );
+
+/**
+ * Force Theme Header Visibility
+ * This prevents Elementor Pro / PRO Elements from overriding the theme's header location.
+ */
+add_filter( 'elementor/theme/should_do_location', function( $should_do, $location ) {
+    if ( 'header' === $location ) {
+        return false;
+    }
+    return $should_do;
+}, 10, 2 );
