@@ -152,8 +152,38 @@ function easylot_render_main_menu() {
     if ($rendered) return;
     $rendered = true;
     ?>
+    <style>
+        /* Force reset for Elementor's aggressive button and layout styling */
+        .glass-nav button, 
+        .glass-nav [role="button"] {
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            text-transform: none !important;
+            width: auto !important;
+            height: auto !important;
+            display: flex !important;
+            align-items: center !important;
+            cursor: pointer;
+        }
+        .glass-nav .flex { display: flex !important; }
+        .glass-nav .hidden { display: none !important; }
+        @media (min-width: 768px) {
+            .glass-nav .md\:flex { display: flex !important; }
+            .glass-nav .md\:hidden { display: none !important; }
+        }
+        .glass-nav .justify-between { justify-content: space-between !important; }
+        .glass-nav .items-center { align-items: center !important; }
+        .glass-nav .absolute { position: absolute !important; }
+        .glass-nav .relative { position: relative !important; }
+        .glass-nav .invisible { visibility: hidden !important; }
+        .glass-nav .group:hover .group-hover\:visible { visibility: visible !important; }
+        .glass-nav .group:hover .group-hover\:opacity-100 { opacity: 1 !important; }
+    </style>
     <nav class="fixed top-0 left-0 w-full z-[2147483647] bg-[#fff8f5] backdrop-blur-md border-b border-black/5 glass-nav" style="display: flex !important; visibility: visible !important;">
-        <div class="max-w-7xl mx-auto px-8 md:px-20 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-8 md:px-20 py-4 flex justify-between items-center w-full">
             <div class="font-serif text-2xl font-bold tracking-tighter text-[#1d1b1a]">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="block h-10">
                     <div class="w-[140px] h-auto">
@@ -170,10 +200,10 @@ function easylot_render_main_menu() {
 
                 <!-- Our Developments Mega Menu -->
                 <div class="relative group">
-                    <button class="flex items-center gap-1 text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300">
+                    <div role="button" class="flex items-center gap-1 text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300">
                         Our Developments
                         <span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:rotate-180">expand_more</span>
-                    </button>
+                    </div>
                     <!-- Mega Menu Container -->
                     <div class="absolute top-full -left-20 md:-left-40 mt-2 w-[90vw] max-w-[850px] bg-white rounded-[2rem] shadow-2xl shadow-black/10 border border-black/5 p-8 opacity-0 invisible translate-y-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-500 z-50">
                         <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
@@ -243,10 +273,10 @@ function easylot_render_main_menu() {
 
                 <!-- About Us Dropdown -->
                 <div class="relative group">
-                    <button class="flex items-center gap-1 text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300">
+                    <div role="button" class="flex items-center gap-1 text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300">
                         About Us
                         <span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:rotate-180">expand_more</span>
-                    </button>
+                    </div>
                     <div class="absolute top-full left-0 mt-2 w-[220px] bg-white rounded-xl shadow-xl shadow-black/5 border border-black/5 py-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
                         <a href="https://easylot.ky/about-us/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">About Easy Lot</a>
                         <a href="https://easylot.ky/team-members/" class="block px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5 last:border-0">Meet The Team</a>
@@ -271,9 +301,9 @@ function easylot_render_main_menu() {
                 </a>
                 
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 text-on-surface">
+                <div id="mobile-menu-toggle" role="button" class="md:hidden flex items-center justify-center w-10 h-10 text-on-surface">
                     <span class="material-symbols-outlined text-3xl">menu</span>
-                </button>
+                </div>
             </div>
         </div>
     </nav>
