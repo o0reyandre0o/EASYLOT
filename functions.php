@@ -119,6 +119,15 @@ function easylot_scripts() {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        /* Force Theme Menu Visibility with Elementor */
+        .glass-nav {
+            display: flex !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        body.elementor-page .glass-nav {
+            display: flex !important;
+        }
     " );
 }
 add_action( 'wp_enqueue_scripts', 'easylot_scripts' );

@@ -151,7 +151,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCWF3CG4"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <nav class="fixed top-0 w-full z-50 bg-[#fff8f5]/80 backdrop-blur-md border-b border-black/5 glass-nav">
+    <nav class="fixed top-0 w-full z-[9999] bg-[#fff8f5]/80 backdrop-blur-md border-b border-black/5 glass-nav">
         <div class="max-w-7xl mx-auto px-8 md:px-20 py-4 flex justify-between items-center">
             <div class="font-serif text-2xl font-bold tracking-tighter text-[#1d1b1a]">
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="block h-10">
@@ -278,7 +278,7 @@
     </nav>
 
     <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col">
+    <div id="mobile-menu" class="fixed inset-0 z-[10000] bg-white translate-x-full transition-transform duration-500 ease-in-out md:hidden flex flex-col">
         <div class="flex justify-between items-center px-8 py-4 border-b border-black/5">
             <div class="h-8">
                 <img alt="Easy Lot Logo" class="h-8 w-auto object-contain" src="https://easylot.ky/wp-content/uploads/2023/08/Easy-Lot-Logo-1-1.svg"/>
