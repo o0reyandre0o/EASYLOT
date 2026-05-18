@@ -56,7 +56,7 @@ get_header();
                     <h2 class="text-3xl font-serif font-bold mb-1">Tommy Sofield</h2>
                     <p class="text-white/70 mb-4 font-light tracking-wide uppercase text-sm">Director & Project Manager</p>
                     <div class="h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 overflow-hidden transition-all duration-500">
-                        <p class="text-sm leading-relaxed text-white/80 font-light mb-4 text-pretty">Drives strategic oversight and ensures every facet of development aligns with perfection. <br><br><span class="italic text-primary font-semibold">Fun Fact: Don't eat yellow snow.</span></p>
+                        <p class="text-sm leading-relaxed text-white/80 font-light mb-4 text-pretty">Drives strategic oversight and ensures every facet of development aligns with perfection.</p>
                     </div>
                 </div>
             </div>

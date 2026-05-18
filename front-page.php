@@ -74,7 +74,7 @@ get_header();
     <div class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-20 pt-32 md:pt-20 pb-12 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
         <div class="w-full">
             <h1 class="font-headline text-[44px] md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
-                Cheap Land for <br/>Sale in Cayman:<br/><span class="text-[#FB3122]">Owner Financing</span>
+                Affordable Land for <br/>Sale in Cayman:<br/><span class="text-[#FB3122]">Owner Financing</span>
             </h1>
             
             <!-- Checklist -->
@@ -244,7 +244,7 @@ get_header();
                     <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Grand Cayman</div>
                 </div>
                 <div class="p-12 flex flex-col justify-center">
-                    <div class="bg-[#FB3122] text-white px-3 py-1 rounded-md text-xs font-bold w-fit mb-4 uppercase tracking-wider">ONLY THREE AVAILABLE!</div>
+                    <div class="bg-[#FB3122] text-white px-3 py-1 rounded-md text-xs font-bold w-fit mb-4 uppercase tracking-wider">ALMOST SOLD OUT!</div>
                     <h3 class="font-headline text-4xl font-bold mb-6 group-hover:text-primary transition-colors">High Rock Estates</h3>
                     <p class="text-on-surface-variant text-lg leading-relaxed mb-8">Secure your piece of the East End. High-elevation parcels offering full infrastructure and prime investment potential in one of Cayman's most desirable growth areas.</p>
                     

@@ -3,7 +3,7 @@
  * Template Name: All Developments Modern
  */
 $seo_title = "Land for Sale in the Cayman Islands | Easy Lot Developments";
-$seo_description = "Explore our premium selection of properties across Grand Cayman and Little Cayman. Beachfront lots, high-elevation terrains, and investment plots available.";
+$seo_description = "Browse land for sale in Grand Cayman & Little Cayman — lots from KYD $50,900 with direct owner financing. No bank required. Check real-time availability and pricing.";
 $seo_image = "https://easylot.ky/wp-content/uploads/2024/07/rum-point-cayman-islands-1.jpg";
 get_header(); 
 ?>
