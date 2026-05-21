@@ -3,7 +3,33 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    
+
+    <!-- Anti-FOUC: hide page until Tailwind CDN processes all utility classes -->
+    <style id="anti-fouc">html{opacity:0!important;}html.tw-ready{opacity:1!important;transition:opacity .2s ease;}</style>
+    <noscript><style>html{opacity:1!important;}</style></noscript>
+    <script>
+        (function(){
+            var revealed = false;
+            function reveal(){
+                if(revealed) return;
+                revealed = true;
+                document.documentElement.classList.add('tw-ready');
+            }
+            // Primary trigger: after Tailwind processes the DOM
+            if(document.readyState === 'loading'){
+                document.addEventListener('DOMContentLoaded', function(){
+                    requestAnimationFrame(function(){
+                        requestAnimationFrame(reveal);
+                    });
+                });
+            } else {
+                requestAnimationFrame(reveal);
+            }
+            // Safety net: never leave the page hidden more than 1.5s
+            setTimeout(reveal, 1500);
+        })();
+    </script>
+
     <!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
     <?php
     $site_name = get_bloginfo('name');
@@ -142,10 +168,6 @@
     }
     </script>
     
-    <!-- Anti-FOUC: hide until Tailwind CDN processes all classes -->
-    <style>html{opacity:0;}</style>
-    <noscript><style>html{opacity:1!important;}</style></noscript>
-
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('bg-surface text-on-surface font-body selection:bg-primary/20'); ?>>
