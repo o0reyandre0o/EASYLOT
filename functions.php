@@ -406,4 +406,5 @@ function easylot_render_main_menu() {
     <?php
 }
 add_action('wp_body_open', 'easylot_render_main_menu', 5);
-add_action('get_header', 'easylot_render_main_menu', 5); // Fallback for templates without wp_body_open
+// NOTE: Removed get_header fallback — it was outputting the menu BEFORE <!DOCTYPE html>,
+// causing the browser to enter quirks mode and re-render the entire page (the FOUC).
