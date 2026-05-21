@@ -102,6 +102,18 @@ function easylot_scripts() {
     }";
     wp_add_inline_script( 'tailwind-cdn', $tailwind_config );
 
+    // Reveal page after Tailwind CDN processes all utility classes (anti-FOUC)
+    wp_add_inline_script( 'tailwind-cdn', '
+        document.addEventListener("DOMContentLoaded", function() {
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    document.documentElement.style.transition = "opacity 0.15s ease";
+                    document.documentElement.style.opacity = "1";
+                });
+            });
+        });
+    ', 'after' );
+
     // Custom CSS for Stitch Effects
     wp_add_inline_style( 'easylot-fonts', "
         .material-symbols-outlined {
