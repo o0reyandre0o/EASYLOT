@@ -142,6 +142,10 @@
     }
     </script>
     
+    <!-- Anti-FOUC: hide until Tailwind CDN processes all classes -->
+    <style>html{opacity:0;}</style>
+    <noscript><style>html{opacity:1!important;}</style></noscript>
+
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('bg-surface text-on-surface font-body selection:bg-primary/20'); ?>>
