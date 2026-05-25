@@ -467,19 +467,34 @@ function easylot_get_lot_meta( $post_id ) {
         }
     }
 
-    // Infer development from lot code prefix
-    if ( empty( $data['development'] ) && ! empty( $data['code'] ) ) {
-        if ( stripos( $data['code'], 'HRE' ) === 0 ) {
-            $data['development'] = 'High Rock Estates, East End';
-        } elseif ( stripos( $data['code'], 'OBE' ) === 0 || stripos( $data['code'], 'OBN' ) === 0 ) {
-            $data['development'] = 'Ocean Breeze, Grand Cayman';
-        } elseif ( stripos( $data['code'], 'NSE' ) === 0 || stripos( $data['code'], 'NS' ) === 0 ) {
-            $data['development'] = 'Northshore Estates, Rum Point';
-        } elseif ( stripos( $data['code'], 'ELE' ) === 0 || stripos( $data['code'], 'EE' ) === 0 ) {
-            $data['development'] = 'Elena Estates, Little Cayman';
-        } else {
-            $data['development'] = 'Cayman Islands';
+    // If development came back as a numeric post ID, resolve it to a title
+    if ( ! empty( $data['development'] ) && is_numeric( $data['development'] ) ) {
+        $parent_title = get_the_title( (int) $data['development'] );
+        $data['development'] = $parent_title ? $parent_title : '';
+    }
+
+    // Always prefer the lot-code-prefix mapping for known developments,
+    // because the plugin's meta field often stores an ID or generic slug
+    // that isn't a marketing-friendly name.
+    if ( ! empty( $data['code'] ) ) {
+        $code_upper = strtoupper( $data['code'] );
+        $mapped = '';
+        if ( strpos( $code_upper, 'HRE' ) === 0 ) {
+            $mapped = 'High Rock Estates, East End Grand Cayman';
+        } elseif ( strpos( $code_upper, 'OBE' ) === 0 || strpos( $code_upper, 'OBN' ) === 0 ) {
+            $mapped = 'Ocean Breeze, Grand Cayman';
+        } elseif ( strpos( $code_upper, 'NSE' ) === 0 || strpos( $code_upper, 'NS-' ) === 0 || strpos( $code_upper, 'RPL' ) === 0 ) {
+            $mapped = 'Northshore Estates, Rum Point Grand Cayman';
+        } elseif ( strpos( $code_upper, 'ELE' ) === 0 || strpos( $code_upper, 'EE-' ) === 0 ) {
+            $mapped = 'Elena Estates, Little Cayman';
         }
+        if ( ! empty( $mapped ) ) {
+            $data['development'] = $mapped;
+        }
+    }
+
+    if ( empty( $data['development'] ) ) {
+        $data['development'] = 'Cayman Islands';
     }
 
     return $data;
@@ -595,13 +610,23 @@ add_action( 'wp_head', function() {
 }, 1 );
 
 /**
- * Add noindex to lot pages that are sold out (status = sold / unavailable).
- * Prevents thin/sold pages from polluting the index.
+ * Add noindex to lot pages that are sold out OR duplicates ("-2", "-3", etc.).
+ * Prevents thin/sold/duplicate pages from polluting the index.
  */
 add_filter( 'wp_robots', function( $robots ) {
     if ( ! easylot_is_lot_page() ) {
         return $robots;
     }
+
+    $post = get_post( get_the_ID() );
+
+    // Detect WordPress-generated duplicate slug (slug-2, slug-3, etc.)
+    if ( $post && preg_match( '/-(\d+)$/', $post->post_name, $m ) && intval( $m[1] ) >= 2 ) {
+        $robots['noindex']  = true;
+        $robots['nofollow'] = false;
+        return $robots;
+    }
+
     $d = easylot_get_lot_meta( get_the_ID() );
     $status = strtolower( (string) $d['status'] );
     if ( in_array( $status, array( 'sold', 'sold out', 'unavailable', 'reserved' ), true ) ) {
@@ -610,3 +635,103 @@ add_filter( 'wp_robots', function( $robots ) {
     }
     return $robots;
 } );
+
+/**
+ * Canonical override: point duplicate lot pages (slug-2, slug-3, ...) at the
+ * canonical original (slug without the numeric suffix), if it exists.
+ */
+add_filter( 'get_canonical_url', function( $canonical, $post ) {
+    if ( ! $post || ! in_array( $post->post_type, array( 'lot', 'btt_lot', 'lots', 'unit' ), true ) ) {
+        return $canonical;
+    }
+    if ( preg_match( '/^(.+)-(\d+)$/', $post->post_name, $m ) && intval( $m[2] ) >= 2 ) {
+        $base_slug = $m[1];
+        $original  = get_page_by_path( $base_slug, OBJECT, $post->post_type );
+        if ( $original && $original->ID !== $post->ID ) {
+            return get_permalink( $original );
+        }
+    }
+    return $canonical;
+}, 20, 2 );
+
+add_filter( 'rank_math/frontend/canonical', function( $canonical ) {
+    if ( ! easylot_is_lot_page() ) {
+        return $canonical;
+    }
+    $post = get_post( get_the_ID() );
+    if ( $post && preg_match( '/^(.+)-(\d+)$/', $post->post_name, $m ) && intval( $m[2] ) >= 2 ) {
+        $base_slug = $m[1];
+        $original  = get_page_by_path( $base_slug, OBJECT, $post->post_type );
+        if ( $original && $original->ID !== $post->ID ) {
+            return get_permalink( $original );
+        }
+    }
+    return $canonical;
+}, 20 );
+
+/**
+ * ============================================================
+ *  EASY LOT — Mobile performance improvements
+ * ============================================================
+ *  Targets: 13s mobile load time → goal under 5s.
+ *  Strategies:
+ *   1. Native lazy-loading on all content images
+ *   2. Defer non-critical third-party scripts (Pixel, Brevo, etc.)
+ *   3. Preconnect to critical CDN origins
+ * ============================================================
+ */
+
+// 1. Force lazy-loading on all content/post images that don't already opt out.
+add_filter( 'wp_get_attachment_image_attributes', function( $attr ) {
+    if ( empty( $attr['loading'] ) ) {
+        $attr['loading'] = 'lazy';
+    }
+    if ( empty( $attr['decoding'] ) ) {
+        $attr['decoding'] = 'async';
+    }
+    return $attr;
+}, 10, 1 );
+
+// 2. Defer non-critical scripts. Keep jQuery, Tailwind CDN, and Elementor scripts blocking.
+add_filter( 'script_loader_tag', function( $tag, $handle ) {
+    if ( is_admin() ) {
+        return $tag;
+    }
+
+    // List of non-critical scripts we can safely defer
+    $defer_handles = array(
+        'sib-front-js',           // Brevo
+        'lightbox-script',
+        'filters',
+        'tagify',
+        'tagify-polyfills',
+    );
+
+    if ( in_array( $handle, $defer_handles, true ) && strpos( $tag, ' defer' ) === false ) {
+        $tag = str_replace( ' src=', ' defer src=', $tag );
+    }
+    return $tag;
+}, 10, 2 );
+
+// 3. Preconnect/dns-prefetch to critical third-party origins for faster first paint.
+add_action( 'wp_head', function() {
+    ?>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <?php
+}, 1 );
+
+// 4. Preload the hero image only on the front page (above-the-fold optimization).
+add_action( 'wp_head', function() {
+    if ( ! is_front_page() ) {
+        return;
+    }
+    ?>
+    <link rel="preload" as="image" href="https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg" fetchpriority="high">
+    <?php
+}, 1 );
+
