@@ -408,3 +408,205 @@ function easylot_render_main_menu() {
 add_action('wp_body_open', 'easylot_render_main_menu', 5);
 // NOTE: Removed get_header fallback — it was outputting the menu BEFORE <!DOCTYPE html>,
 // causing the browser to enter quirks mode and re-render the entire page (the FOUC).
+
+
+/**
+ * ============================================================
+ *  EASY LOT — Dynamic SEO for individual lot pages
+ * ============================================================
+ *  Fixes:
+ *   - 244 duplicate <title> tags
+ *   - 667 missing meta descriptions
+ *   - 679 short <title> tags
+ *  By generating unique, keyword-rich SEO metadata for every lot
+ *  using whatever meta data the BTT Lot Manager plugin exposes.
+ * ============================================================
+ */
+
+/**
+ * Try to pull lot data from various possible meta key names that
+ * the BTT Lot Manager plugin (or similar CPTs) might use.
+ */
+function easylot_get_lot_meta( $post_id ) {
+    $data = array(
+        'code'        => '',
+        'price'       => '',
+        'size'        => '',
+        'development' => '',
+        'status'      => '',
+        'monthly'     => '',
+        'down'        => '',
+    );
+
+    // Try common meta-key variants used by lot-management plugins
+    $key_map = array(
+        'code'        => array( 'lot_code', 'lot_number', 'code', '_lot_code', 'btt_lot_code', 'unit_code' ),
+        'price'       => array( 'lot_price', 'price', '_price', 'btt_price', 'sale_price', 'list_price' ),
+        'size'        => array( 'lot_size', 'size', 'sqft', 'square_feet', 'acres', 'btt_size' ),
+        'development' => array( 'development', 'project', 'community', 'btt_development', 'parent_project' ),
+        'status'      => array( 'lot_status', 'status', 'availability', 'btt_status' ),
+        'monthly'     => array( 'monthly_payment', 'monthly', 'btt_monthly' ),
+        'down'        => array( 'down_payment', 'downpayment', 'btt_down' ),
+    );
+
+    foreach ( $key_map as $field => $keys ) {
+        foreach ( $keys as $key ) {
+            $value = get_post_meta( $post_id, $key, true );
+            if ( ! empty( $value ) ) {
+                $data[ $field ] = $value;
+                break;
+            }
+        }
+    }
+
+    // Fallback: use post title to extract lot code if not found
+    if ( empty( $data['code'] ) ) {
+        $title = get_the_title( $post_id );
+        if ( preg_match( '/([A-Z]{2,4}[-\s]?\d+)/i', $title, $m ) ) {
+            $data['code'] = strtoupper( str_replace( ' ', '-', $m[1] ) );
+        }
+    }
+
+    // Infer development from lot code prefix
+    if ( empty( $data['development'] ) && ! empty( $data['code'] ) ) {
+        if ( stripos( $data['code'], 'HRE' ) === 0 ) {
+            $data['development'] = 'High Rock Estates, East End';
+        } elseif ( stripos( $data['code'], 'OBE' ) === 0 || stripos( $data['code'], 'OBN' ) === 0 ) {
+            $data['development'] = 'Ocean Breeze, Grand Cayman';
+        } elseif ( stripos( $data['code'], 'NSE' ) === 0 || stripos( $data['code'], 'NS' ) === 0 ) {
+            $data['development'] = 'Northshore Estates, Rum Point';
+        } elseif ( stripos( $data['code'], 'ELE' ) === 0 || stripos( $data['code'], 'EE' ) === 0 ) {
+            $data['development'] = 'Elena Estates, Little Cayman';
+        } else {
+            $data['development'] = 'Cayman Islands';
+        }
+    }
+
+    return $data;
+}
+
+/**
+ * Detect if we are viewing a single lot page (CPT slug "lot").
+ */
+function easylot_is_lot_page() {
+    if ( ! is_singular() ) {
+        return false;
+    }
+    $post_type = get_post_type();
+    return in_array( $post_type, array( 'lot', 'btt_lot', 'lots', 'unit' ), true );
+}
+
+/**
+ * Build a unique SEO title for a lot page.
+ * Example: "Lot HRE-101 — From $105K, East End Grand Cayman | Easy Lot"
+ */
+function easylot_build_lot_title( $post_id ) {
+    $d    = easylot_get_lot_meta( $post_id );
+    $code = ! empty( $d['code'] ) ? $d['code'] : get_the_title( $post_id );
+
+    $parts = array( 'Lot ' . $code );
+
+    if ( ! empty( $d['price'] ) ) {
+        $price = is_numeric( $d['price'] ) ? '$' . number_format( (float) $d['price'] ) : $d['price'];
+        $parts[] = $price;
+    }
+
+    if ( ! empty( $d['development'] ) ) {
+        $parts[] = $d['development'];
+    }
+
+    return implode( ' | ', $parts ) . ' | Easy Lot Cayman';
+}
+
+/**
+ * Build a unique meta description for a lot page.
+ */
+function easylot_build_lot_description( $post_id ) {
+    $d    = easylot_get_lot_meta( $post_id );
+    $code = ! empty( $d['code'] ) ? $d['code'] : get_the_title( $post_id );
+
+    $sentence = 'Lot ' . $code;
+    if ( ! empty( $d['development'] ) ) {
+        $sentence .= ' in ' . $d['development'];
+    }
+    $sentence .= ' is available with direct owner financing.';
+
+    $details = array();
+    if ( ! empty( $d['price'] ) ) {
+        $price = is_numeric( $d['price'] ) ? 'KYD $' . number_format( (float) $d['price'] ) : $d['price'];
+        $details[] = 'Price from ' . $price;
+    }
+    if ( ! empty( $d['monthly'] ) ) {
+        $monthly = is_numeric( $d['monthly'] ) ? '$' . number_format( (float) $d['monthly'], 2 ) : $d['monthly'];
+        $details[] = 'Monthly from ' . $monthly;
+    }
+    if ( ! empty( $d['size'] ) ) {
+        $details[] = $d['size'];
+    }
+
+    $detail_str = ! empty( $details ) ? implode( ' · ', $details ) . '. ' : '';
+
+    return $sentence . ' ' . $detail_str . 'No bank required, fixed 9% interest. Check availability today.';
+}
+
+/**
+ * Rank Math compatibility: override title and description on lot pages.
+ */
+add_filter( 'rank_math/frontend/title', function( $title ) {
+    if ( easylot_is_lot_page() ) {
+        return easylot_build_lot_title( get_the_ID() );
+    }
+    return $title;
+}, 20 );
+
+add_filter( 'rank_math/frontend/description', function( $desc ) {
+    if ( easylot_is_lot_page() ) {
+        return easylot_build_lot_description( get_the_ID() );
+    }
+    return $desc;
+}, 20 );
+
+/**
+ * WordPress core title override (fallback if Rank Math is disabled).
+ */
+add_filter( 'pre_get_document_title', function( $title ) {
+    if ( easylot_is_lot_page() ) {
+        return easylot_build_lot_title( get_the_ID() );
+    }
+    return $title;
+}, 20 );
+
+/**
+ * Inject a fallback <meta name="description"> if Rank Math is not active.
+ * Only runs on lot pages and only if no description meta already exists.
+ */
+add_action( 'wp_head', function() {
+    if ( ! easylot_is_lot_page() ) {
+        return;
+    }
+
+    // Skip if Rank Math is active — it already handles the meta tag.
+    if ( class_exists( 'RankMath' ) || defined( 'RANK_MATH_VERSION' ) ) {
+        return;
+    }
+
+    $desc = esc_attr( easylot_build_lot_description( get_the_ID() ) );
+    echo "\n" . '<meta name="description" content="' . $desc . '" />' . "\n";
+}, 1 );
+
+/**
+ * Add noindex to lot pages that are sold out (status = sold / unavailable).
+ * Prevents thin/sold pages from polluting the index.
+ */
+add_filter( 'wp_robots', function( $robots ) {
+    if ( ! easylot_is_lot_page() ) {
+        return $robots;
+    }
+    $d = easylot_get_lot_meta( get_the_ID() );
+    $status = strtolower( (string) $d['status'] );
+    if ( in_array( $status, array( 'sold', 'sold out', 'unavailable', 'reserved' ), true ) ) {
+        $robots['noindex']  = true;
+        $robots['nofollow'] = false;
+    }
+    return $robots;
+} );
