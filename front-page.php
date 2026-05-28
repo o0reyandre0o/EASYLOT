@@ -62,49 +62,40 @@ get_header();
 </script>
 
 <!-- Hero Section -->
-<section class="relative min-h-[85vh] flex items-center overflow-hidden bg-surface">
-    <!-- Background Image -->
+<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-black">
+    <!-- Background Video -->
     <div class="absolute inset-0 z-0">
-        <img itemprop="image" class="w-full h-full object-cover"
-             src="https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg"
-             alt="Cayman Islands Aerial View"
-             fetchpriority="high"
-             decoding="async">
-        <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
+        <video class="w-full h-full object-cover" autoplay loop muted playsinline preload="auto"
+               poster="https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg">
+            <source src="https://easylot.ky/wp-content/uploads/2026/05/WhatsApp-Video-2026-05-28-at-4.12.35-PM.mp4" type="video/mp4">
+        </video>
+        <!-- Dark overlay for text readability -->
+        <div class="absolute inset-0 bg-black/50"></div>
     </div>
-    
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-20 pt-32 md:pt-20 pb-12 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-12 items-center">
-        <div class="w-full">
-            <h1 class="font-headline text-[44px] md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8">
-                Affordable Land for <br/>Sale in Cayman:<br/><span class="text-[#FB3122]">Owner Financing</span>
-            </h1>
-            
-            <!-- Checklist -->
-            <div class="flex flex-col gap-4 mb-10">
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
-                    <span class="text-on-surface font-bold">NO BANKS (Fast Approval)</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
-                    <span class="text-on-surface font-bold">Fixed Interest Rates</span>
-                </div>
+
+    <div class="relative z-10 w-full max-w-4xl mx-auto px-8 md:px-20 pt-32 md:pt-24 pb-16 flex flex-col items-center text-center">
+        <h1 class="font-headline text-[44px] md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.95] text-white mb-8 drop-shadow-lg">
+            Affordable Land for Sale in Cayman:<br/><span class="text-[#FB3122]">Owner Financing</span>
+        </h1>
+
+        <!-- Checklist -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-10 justify-center">
+            <div class="flex items-center gap-3 justify-center">
+                <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                <span class="text-white font-bold drop-shadow">NO BANKS (Fast Approval)</span>
             </div>
-            
-            <!-- CTA -->
-            <a href="#calculator" 
-               onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'cta_click', 'cta_location': 'hero', 'cta_text': 'Explore Available Lots'});"
-               class="inline-flex items-center gap-3 bg-[#bc0002] text-white px-8 py-4 rounded-xl text-lg font-bold editorial-shadow hover:scale-[1.02] active:scale-95 transition-all">
-                Explore Available Lots
-                <span class="material-symbols-outlined">arrow_forward</span>
-            </a>
+            <div class="flex items-center gap-3 justify-center">
+                <span class="material-symbols-outlined text-primary font-bold">check_circle</span>
+                <span class="text-white font-bold drop-shadow">Fixed Interest Rates</span>
+            </div>
         </div>
 
-        <!-- Video Hero -->
-        <a href="https://easylot.ky/project/little-cayman/" class="relative rounded-3xl overflow-hidden shadow-2xl aspect-square bg-black group/video max-w-md mx-auto lg:mr-0 block cursor-pointer">
-            <video class="w-full h-full object-cover group-hover/video:scale-105 transition-transform duration-700" autoplay loop muted playsinline>
-                <source src="https://easylot.ky/wp-content/uploads/2026/05/Little-Cayman-Video-Squared-Smartest-Investment.mp4" type="video/mp4">
-            </video>
+        <!-- CTA -->
+        <a href="#calculator"
+           onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'cta_click', 'cta_location': 'hero', 'cta_text': 'Explore Available Lots'});"
+           class="inline-flex items-center gap-3 bg-[#bc0002] text-white px-8 py-4 rounded-xl text-lg font-bold editorial-shadow hover:scale-[1.02] active:scale-95 transition-all">
+            Explore Available Lots
+            <span class="material-symbols-outlined">arrow_forward</span>
         </a>
     </div>
 </section>
