@@ -160,9 +160,9 @@ get_header();
 
         <div class="space-y-12">
             <!-- Listing 1: Elena Estates -->
-            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-center shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
-                <div class="relative overflow-hidden">
-                    <img class="w-full h-auto block group-hover:scale-[1.03] transition-transform duration-700"
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative overflow-hidden min-h-[400px]">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.05] transition-transform duration-700"
                         src="https://easylot.ky/wp-content/uploads/2023/08/elena-estates-little-cayman-sitemap-satellite.jpg"
                         alt="Investment property for sale at Elena Estates, Little Cayman" />
                     <div class="absolute top-6 left-6 bg-secondary text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Little Cayman</div>
@@ -195,9 +195,9 @@ get_header();
             </div>
 
             <!-- Listing 2: Northshore Estates -->
-            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-center shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
-                <div class="relative min-h-[450px] overflow-hidden lg:order-2">
-                    <img class="w-full h-auto block group-hover:scale-[1.03] transition-transform duration-700"
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative overflow-hidden min-h-[400px] lg:order-2">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.05] transition-transform duration-700"
                         src="https://easylot.ky/wp-content/uploads/2024/07/rum-point-cayman-islands-1.jpg"
                         alt="Aerial view of land for sale at Northshore Estates, Grand Cayman" />
                     <div class="absolute top-6 right-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Grand Cayman</div>
@@ -229,9 +229,9 @@ get_header();
             </div>
 
             <!-- Listing 3: High Rock Estates -->
-            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-center shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
-                <div class="relative overflow-hidden">
-                    <img class="w-full h-auto block group-hover:scale-[1.03] transition-transform duration-700"
+            <div class="bg-surface-container-low rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 shadow-sm border border-black/5 hover:border-primary/20 transition-colors group">
+                <div class="relative overflow-hidden min-h-[400px]">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-[1.05] transition-transform duration-700"
                         src="https://easylot.ky/wp-content/uploads/2023/08/High-Rock-Estates.jpg"
                         alt="Investment property for sale at High Rock Estates, Grand Cayman" />
                     <div class="absolute top-6 left-6 bg-[#FB3122] text-white px-4 py-2 rounded-lg font-bold text-sm tracking-widest uppercase shadow-lg z-10">Grand Cayman</div>
