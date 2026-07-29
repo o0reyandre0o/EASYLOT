@@ -38,6 +38,7 @@
                         <a class="text-[#55633f] font-sans text-sm font-medium tracking-wide uppercase hover:text-[#bc0002] transition-all" href="<?php echo esc_url(home_url('/all-our-developments/')); ?>">Land for Sale</a>
                         <a class="text-[#55633f] font-sans text-sm font-medium tracking-wide uppercase hover:text-[#bc0002] transition-all" href="<?php echo esc_url(home_url('/about-us/')); ?>">How it Works</a>
                         <a class="text-[#55633f] font-sans text-sm font-medium tracking-wide uppercase hover:text-[#bc0002] transition-all" href="<?php echo esc_url(home_url('/faq/')); ?>">Financing FAQ</a>
+                        <a class="text-[#55633f] font-sans text-sm font-medium tracking-wide uppercase hover:text-[#bc0002] transition-all" href="<?php echo esc_url(easylot_video_guides_url()); ?>">Video Guides</a>
                     </div>
                 </div>
 

@@ -284,10 +284,29 @@ function easylot_render_main_menu() {
                     </div>
                 </div>
 
-                <a href="https://easylot.ky/faq/" class="text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300 relative group">
-                    FAQs
-                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                <!-- Help Dropdown -->
+                <div class="relative group">
+                    <div role="button" class="flex items-center gap-1 text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300">
+                        Help
+                        <span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:rotate-180">expand_more</span>
+                    </div>
+                    <div class="absolute top-full left-0 mt-2 w-[260px] bg-white rounded-xl shadow-xl shadow-black/5 border border-black/5 py-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+                        <a href="<?php echo esc_url( easylot_video_guides_url() ); ?>" class="flex items-start gap-3 px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors border-b border-black/5">
+                            <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">play_circle</span>
+                            <span>
+                                Video Guides
+                                <span class="block text-xs font-normal text-on-surface-variant">Your questions, answered on video</span>
+                            </span>
+                        </a>
+                        <a href="https://easylot.ky/faq/" class="flex items-start gap-3 px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors">
+                            <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">quiz</span>
+                            <span>
+                                FAQs
+                                <span class="block text-xs font-normal text-on-surface-variant">Read the full written answers</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
 
                 <a href="https://easylot.ky/contact-us/" class="text-[#1d1b1a] font-medium font-serif text-lg tracking-tight hover:text-primary transition-colors duration-300 relative group">
                     Contact
@@ -344,7 +363,20 @@ function easylot_render_main_menu() {
                 </div>
             </div>
 
-            <a href="https://easylot.ky/faq/" class="block font-serif text-3xl font-bold text-on-surface">FAQs</a>
+            <div class="space-y-4">
+                <span class="block font-serif text-sm uppercase tracking-widest text-primary font-bold mb-4">Help</span>
+                <div class="grid gap-4 pl-4 border-l border-primary/10">
+                    <a href="<?php echo esc_url( easylot_video_guides_url() ); ?>" class="text-xl font-medium text-on-surface/80 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[22px] text-primary">play_circle</span>
+                        Video Guides
+                    </a>
+                    <a href="https://easylot.ky/faq/" class="text-xl font-medium text-on-surface/80 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[22px] text-primary">quiz</span>
+                        FAQs
+                    </a>
+                </div>
+            </div>
+
             <a href="https://easylot.ky/contact-us/" class="block font-serif text-3xl font-bold text-on-surface">Contact</a>
             
             <div class="pt-10">
@@ -408,6 +440,364 @@ function easylot_render_main_menu() {
 add_action('wp_body_open', 'easylot_render_main_menu', 5);
 // NOTE: Removed get_header fallback — it was outputting the menu BEFORE <!DOCTYPE html>,
 // causing the browser to enter quirks mode and re-render the entire page (the FOUC).
+
+
+/**
+ * ============================================================
+ *  EASY LOT — VIDEO GUIDES
+ * ============================================================
+ *  Short videos that answer the questions buyers ask us most.
+ *  Used by:
+ *    - front-page.php        (3 featured videos + "View All Videos")
+ *    - template-video-guides.php (the full library, /video-guides/)
+ *
+ *  ------------------------------------------------------------
+ *  HOW TO ADD / SWAP A VIDEO  — this array is the ONLY place to edit
+ *  ------------------------------------------------------------
+ *  1. Upload the video to the Easy Lot YouTube channel.
+ *  2. Copy the ID from the URL: youtube.com/watch?v=THIS_PART_HERE
+ *  3. Add or edit an entry below.
+ *
+ *  Fields:
+ *    'id'       YouTube video ID (11 characters). Required.
+ *    'question' The card title. WRITE IT AS THE QUESTION A BUYER ASKS —
+ *               that is the whole point of this section, and it is what
+ *               Google / ChatGPT match against. Required.
+ *    'answer'   1–2 sentence text answer. Shown under the title and used
+ *               as the video description in the page's schema markup.
+ *    'category' One of the keys in easylot_get_video_categories() below.
+ *    'date'     Video publish date, YYYY-MM-DD. Used by schema markup —
+ *               UPDATE THIS when you swap in a new video, don't leave the
+ *               old one's date behind.
+ *    'featured' true = also appears in the 3-video block on the homepage.
+ *               Keep exactly 3 videos featured so the homepage grid stays even.
+ *
+ *  Thumbnails are pulled from YouTube automatically — nothing to upload.
+ * ============================================================
+ */
+
+function easylot_get_video_categories() {
+    return array(
+        'getting-started' => 'Getting Started',
+        'financing'       => 'Financing & Payments',
+        'process'         => 'After You Apply',
+        'developments'    => 'Our Developments',
+    );
+}
+
+function easylot_get_video_guides( $only_featured = false ) {
+
+    $videos = array(
+
+        // ---- Featured on the homepage ----
+        array(
+            'id'       => 'PF_Vf_jcDhY',
+            'question' => 'How does Owner Financing actually work?',
+            'answer'   => 'We act as the bank, so there is no traditional lender involved. You put down as little as 5% and pay a fixed 9% interest rate over your chosen term.',
+            'category' => 'financing',
+            'date'     => '2023-11-03',
+            'featured' => true,
+        ),
+        array(
+            'id'       => 'hsj9-E2O9Vs',
+            'question' => 'How do I apply for a lot, step by step?',
+            'answer'   => 'A walkthrough of the whole application: picking your lot, choosing your down payment, and sending in the few documents we need to pre-approve you.',
+            'category' => 'getting-started',
+            'date'     => '2023-11-03',
+            'featured' => true,
+        ),
+        array(
+            'id'       => 'KYAlc9VDfnc',
+            'question' => 'What is Easy Lot and who is it for?',
+            'answer'   => 'An introduction to how Easy Lot makes land ownership in the Cayman Islands reachable for families who cannot or would rather not go through a bank.',
+            'category' => 'getting-started',
+            'date'     => '2023-11-03',
+            'featured' => true,
+        ),
+
+        // ---- Library only ----
+        array(
+            'id'       => '74KcjxMyz6I',
+            'question' => 'How do I apply online on easylot.ky?',
+            'answer'   => 'A screen-by-screen tour of the online application form, so you know exactly what to expect before you start.',
+            'category' => 'getting-started',
+            'date'     => '2023-08-29',
+            'featured' => false,
+        ),
+        array(
+            'id'       => 'xsjFDFTRFoI',
+            'question' => 'I got pre-approved — what happens next?',
+            'answer'   => 'What we do on our side after your pre-approval comes through, and what we will need from you to move forward.',
+            'category' => 'process',
+            'date'     => '2023-11-03',
+            'featured' => false,
+        ),
+        array(
+            'id'       => 'yBPezT_1iXI',
+            'question' => 'What are my next steps after final approval?',
+            'answer'   => 'From signed agreement to first payment: the steps that take you from approved buyer to landowner.',
+            'category' => 'process',
+            'date'     => '2023-11-03',
+            'featured' => false,
+        ),
+        array(
+            'id'       => 'iPuM9DjXDUQ',
+            'question' => 'Why does owning your own address matter?',
+            'answer'   => 'Why putting your money into land you own beats paying rent, and what that means for your family long term.',
+            'category' => 'process',
+            'date'     => '2023-11-03',
+            'featured' => false,
+        ),
+        array(
+            'id'       => 'G4HHdOXR8p4',
+            'question' => 'What does High Rock Estates look like?',
+            'answer'   => 'A tour of our East End development in Grand Cayman — the terrain, the location, and what is already in place.',
+            'category' => 'developments',
+            'date'     => '2023-08-24',
+            'featured' => false,
+        ),
+        array(
+            'id'       => 'Sphg650FOfI',
+            'question' => '¿Cómo comprar tierra en Cayman? (en Español)',
+            'answer'   => 'Un recorrido por High Rock Estates y nuestro programa de financiamiento directo, explicado en español.',
+            'category' => 'developments',
+            'date'     => '2023-08-24',
+            'featured' => false,
+        ),
+    );
+
+    if ( $only_featured ) {
+        $videos = array_values( array_filter( $videos, function( $v ) {
+            return ! empty( $v['featured'] );
+        } ) );
+    }
+
+    /**
+     * Filter the video guides list.
+     * Lets a child theme or plugin add videos without touching this file.
+     */
+    return apply_filters( 'easylot_video_guides', $videos, $only_featured );
+}
+
+/**
+ * URL of the full video library page.
+ */
+function easylot_video_guides_url() {
+    return home_url( '/video-guides/' );
+}
+
+/**
+ * Render one video card.
+ *
+ * The card is a "facade": it shows the YouTube thumbnail only. The real
+ * <iframe> is not created until the visitor clicks. That keeps the ~1MB
+ * YouTube player off the initial page load, which matters a lot for our
+ * mobile load time.
+ *
+ * @param array $v    A video from easylot_get_video_guides().
+ * @param array $args 'dark' => bool (card sits on a dark background)
+ *                    'location' => string (for GTM tracking)
+ */
+function easylot_video_card( $v, $args = array() ) {
+
+    $args = wp_parse_args( $args, array(
+        'dark'     => false,
+        'location' => 'video_guides',
+    ) );
+
+    $dark       = (bool) $args['dark'];
+    $categories = easylot_get_video_categories();
+    $cat_label  = isset( $categories[ $v['category'] ] ) ? $categories[ $v['category'] ] : '';
+
+    // Card surface / text colours flip depending on the section background.
+    $card_bg    = $dark ? 'bg-white/[0.04] border-white/10 hover:border-primary/40' : 'bg-surface border-black/5 hover:border-primary/30';
+    $title_col  = $dark ? 'text-white' : 'text-on-surface';
+    $body_col   = $dark ? 'text-white/60' : 'text-on-surface-variant';
+    $chip_col   = $dark ? 'bg-white/10 text-white/70' : 'bg-primary/10 text-primary';
+    ?>
+    <button type="button"
+            class="easylot-video-card group flex w-full flex-col overflow-hidden rounded-3xl border text-left transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl <?php echo esc_attr( $card_bg ); ?>"
+            data-video-id="<?php echo esc_attr( $v['id'] ); ?>"
+            data-video-title="<?php echo esc_attr( $v['question'] ); ?>"
+            data-video-location="<?php echo esc_attr( $args['location'] ); ?>"
+            data-category="<?php echo esc_attr( $v['category'] ); ?>"
+            aria-label="<?php echo esc_attr( sprintf( 'Play video: %s', $v['question'] ) ); ?>">
+
+        <span class="relative block aspect-video w-full overflow-hidden bg-black">
+            <img src="https://i.ytimg.com/vi/<?php echo esc_attr( $v['id'] ); ?>/maxresdefault.jpg"
+                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/<?php echo esc_attr( $v['id'] ); ?>/hqdefault.jpg';"
+                 alt="<?php echo esc_attr( $v['question'] ); ?>"
+                 loading="lazy" decoding="async"
+                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+
+            <span class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></span>
+
+            <!-- Play button -->
+            <span class="absolute inset-0 flex items-center justify-center">
+                <span class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-2xl shadow-black/40 transition-transform duration-300 group-hover:scale-110">
+                    <span class="material-symbols-outlined text-4xl" style="margin-left:2px;">play_arrow</span>
+                </span>
+            </span>
+        </span>
+
+        <span class="flex flex-1 flex-col p-7">
+            <?php if ( $cat_label ) : ?>
+                <span class="mb-4 inline-flex w-fit items-center rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest <?php echo esc_attr( $chip_col ); ?>">
+                    <?php echo esc_html( $cat_label ); ?>
+                </span>
+            <?php endif; ?>
+
+            <span class="mb-3 block font-headline text-lg font-bold leading-snug transition-colors group-hover:text-primary <?php echo esc_attr( $title_col ); ?>">
+                <?php echo esc_html( $v['question'] ); ?>
+            </span>
+
+            <?php if ( ! empty( $v['answer'] ) ) : ?>
+                <span class="block text-sm font-light leading-relaxed <?php echo esc_attr( $body_col ); ?>">
+                    <?php echo esc_html( $v['answer'] ); ?>
+                </span>
+            <?php endif; ?>
+        </span>
+    </button>
+    <?php
+
+    easylot_video_modal_enqueue();
+}
+
+/**
+ * Flag the shared lightbox for output. Called automatically by
+ * easylot_video_card(); the modal itself is printed once in wp_footer.
+ */
+function easylot_video_modal_enqueue() {
+    $GLOBALS['easylot_needs_video_modal'] = true;
+}
+
+/**
+ * The shared video lightbox. Printed in the footer so it sits last in the
+ * DOM and therefore stacks above the fixed nav (which uses the same z-index).
+ */
+function easylot_render_video_modal() {
+
+    if ( empty( $GLOBALS['easylot_needs_video_modal'] ) ) {
+        return;
+    }
+    ?>
+    <div id="easylot-video-modal"
+         class="fixed inset-0 z-[2147483647] hidden items-center justify-center bg-black/90 p-4 backdrop-blur-sm md:p-10"
+         role="dialog" aria-modal="true" aria-label="Video player">
+
+        <button type="button" id="easylot-video-close"
+                class="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary"
+                aria-label="Close video">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <div class="w-full max-w-5xl">
+            <div class="aspect-video w-full overflow-hidden rounded-3xl bg-black shadow-2xl">
+                <div id="easylot-video-frame" class="h-full w-full"></div>
+            </div>
+            <p id="easylot-video-caption" class="mt-6 text-center font-headline text-lg font-bold text-white md:text-xl"></p>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        var modal   = document.getElementById('easylot-video-modal');
+        var frame   = document.getElementById('easylot-video-frame');
+        var caption = document.getElementById('easylot-video-caption');
+        var closeEl = document.getElementById('easylot-video-close');
+        if (!modal || !frame) { return; }
+
+        function openVideo(id, title, location) {
+            // Build the iframe only now — nothing is downloaded before the click.
+            frame.innerHTML = '<iframe class="h-full w-full" width="100%" height="100%"' +
+                ' src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&modestbranding=1"' +
+                ' title="' + (title || 'Easy Lot video').replace(/"/g, '&quot;') + '"' +
+                ' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"' +
+                ' allowfullscreen></iframe>';
+
+            caption.textContent = title || '';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            closeEl.focus();
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'video_play',
+                'video_id': id,
+                'video_title': title || '',
+                'video_location': location || ''
+            });
+        }
+
+        function closeVideo() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            frame.innerHTML = ''; // destroying the iframe is what stops playback
+            caption.textContent = '';
+        }
+
+        document.addEventListener('click', function (e) {
+            var card = e.target.closest ? e.target.closest('.easylot-video-card') : null;
+            if (card) {
+                e.preventDefault();
+                openVideo(card.dataset.videoId, card.dataset.videoTitle, card.dataset.videoLocation);
+            }
+        });
+
+        closeEl.addEventListener('click', closeVideo);
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) { closeVideo(); }
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) { closeVideo(); }
+        });
+    })();
+    </script>
+    <?php
+}
+add_action( 'wp_footer', 'easylot_render_video_modal', 20 );
+
+/**
+ * VideoObject + ItemList schema for a set of videos.
+ * Helps the videos show up as rich results and gives AI engines something
+ * concrete to quote when someone asks these questions.
+ */
+function easylot_video_schema( $videos, $list_name = 'Easy Lot Video Guides' ) {
+
+    if ( empty( $videos ) ) {
+        return;
+    }
+
+    $elements = array();
+
+    foreach ( $videos as $i => $v ) {
+        $elements[] = array(
+            '@type'    => 'ListItem',
+            'position' => $i + 1,
+            'item'     => array(
+                '@type'        => 'VideoObject',
+                'name'         => $v['question'],
+                'description'  => ! empty( $v['answer'] ) ? $v['answer'] : $v['question'],
+                'thumbnailUrl' => 'https://i.ytimg.com/vi/' . $v['id'] . '/maxresdefault.jpg',
+                'uploadDate'   => ! empty( $v['date'] ) ? $v['date'] : '',
+                'contentUrl'   => 'https://www.youtube.com/watch?v=' . $v['id'],
+                'embedUrl'     => 'https://www.youtube.com/embed/' . $v['id'],
+                'publisher'    => array( '@id' => 'https://easylot.ky/#organization' ),
+            ),
+        );
+    }
+
+    $schema = array(
+        '@context'        => 'https://schema.org',
+        '@type'           => 'ItemList',
+        'name'            => $list_name,
+        'itemListElement' => $elements,
+    );
+
+    echo "\n" . '<script type="application/ld+json">' . wp_json_encode( $schema ) . '</script>' . "\n";
+}
 
 
 /**

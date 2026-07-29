@@ -418,6 +418,48 @@ get_header();
     </div>
 </section>
 
+<!-- Video Guides -->
+<?php $featured_videos = easylot_get_video_guides( true ); ?>
+<?php if ( ! empty( $featured_videos ) ) : ?>
+<section class="py-24 px-8 md:px-20 bg-[#1d1b1a] text-surface" id="video-guides">
+    <div class="max-w-7xl mx-auto">
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
+            <div class="max-w-2xl">
+                <span class="font-label text-primary font-bold tracking-[0.2em] text-sm uppercase">Video Guides</span>
+                <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mt-2 mb-6">Your Questions, Answered on Video</h2>
+                <p class="opacity-70 text-lg leading-relaxed font-light">
+                    Buying land raises a lot of questions. We answered the ones we hear most in short videos — no jargon, no sales pitch, just straight answers.
+                </p>
+            </div>
+
+            <a href="<?php echo esc_url( easylot_video_guides_url() ); ?>"
+               onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'cta_click', 'cta_location': 'video_guides_home', 'cta_text': 'View All Videos'});"
+               class="hidden md:inline-flex items-center gap-3 border border-surface/20 text-surface px-8 py-4 rounded-xl font-bold hover:bg-primary hover:border-primary transition-all duration-300 whitespace-nowrap">
+                View All Videos
+                <span class="material-symbols-outlined">east</span>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <?php foreach ( $featured_videos as $video ) : ?>
+                <?php easylot_video_card( $video, array( 'dark' => true, 'location' => 'homepage' ) ); ?>
+            <?php endforeach; ?>
+        </div>
+
+        <!-- Mobile "View More" -->
+        <div class="mt-12 md:hidden">
+            <a href="<?php echo esc_url( easylot_video_guides_url() ); ?>"
+               onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'cta_click', 'cta_location': 'video_guides_home_mobile', 'cta_text': 'View All Videos'});"
+               class="flex w-full items-center justify-center gap-3 bg-primary text-white py-5 rounded-2xl font-bold text-lg shadow-xl shadow-primary/20">
+                View All Videos
+                <span class="material-symbols-outlined">east</span>
+            </a>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+
 <!-- FAQ Section -->
 <section class="py-24 px-8 md:px-20 bg-surface-container" id="faq">
     <div class="max-w-3xl mx-auto">
