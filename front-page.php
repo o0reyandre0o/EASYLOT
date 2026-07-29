@@ -441,7 +441,10 @@ get_header();
             </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <?php /* Fixed 296px columns, centered — the same card size the grid on
+                 /video-guides/ works out to. Left on plain md:grid-cols-3 the
+                 cards stretch to ~405px here and tower over the ones there. */ ?>
+        <div class="grid grid-cols-1 justify-center gap-8 sm:grid-cols-[repeat(2,minmax(0,296px))] md:grid-cols-[repeat(3,minmax(0,296px))]">
             <?php foreach ( $featured_videos as $video ) : ?>
                 <?php easylot_video_card( $video, array( 'dark' => true, 'location' => 'homepage' ) ); ?>
             <?php endforeach; ?>
