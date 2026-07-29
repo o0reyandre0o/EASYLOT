@@ -2,7 +2,7 @@
 /**
  * Easy Lot Theme Functions
  *
- * @version 1.2.1
+ * @version 1.2.2
  *
  * The real version number lives in the style.css header — WordPress reads it
  * from there and shows it under Appearance → Themes. Bump it there, and the
@@ -17,7 +17,7 @@
  */
 if ( ! defined( 'EASYLOT_THEME_VERSION' ) ) {
     $easylot_theme = wp_get_theme();
-    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.2.1' );
+    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.2.2' );
     unset( $easylot_theme );
 }
 
@@ -500,7 +500,9 @@ add_action('wp_body_open', 'easylot_render_main_menu', 5);
  *               self-hosted videos are assumed vertical, YouTube landscape.
  *               Get it wrong and the video shows letterboxed, never cropped.
  *    'featured' true = also appears in the 3-video block on the homepage.
- *               Keep exactly 3 videos featured so the homepage grid stays even.
+ *               Keep exactly 3 videos featured so the homepage grid stays even,
+ *               and keep all three the SAME orientation — a landscape card next
+ *               to two vertical ones makes the row look broken.
  *
  *  Thumbnails need no work: YouTube videos pull theirs from YouTube, and
  *  self-hosted ones show their own first frame.
@@ -520,11 +522,12 @@ function easylot_get_video_guides( $only_featured = false ) {
 
     $uploads = 'https://easylot.ky/wp-content/uploads/2026/07/';
 
-    // Order here = order on /video-guides/. The first three are the ones
-    // that also show on the homepage.
+    // Order here = order on /video-guides/. The three marked 'featured' are the
+    // ones that also show on the homepage — videos 2, 3 and 4, because those
+    // are the first three VERTICAL clips and the homepage row only looks right
+    // when all three cards are the same shape.
     $videos = array(
 
-        // ---- 1–3: also featured on the homepage ----
         array(
             'src'         => $uploads . '1.-How-to-get-pre-approved-2-1.mp4',
             'question'    => 'How do I get pre-approved for a lot?',
@@ -532,7 +535,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'category'    => 'getting-started',
             'date'        => '2026-07-01',
             'orientation' => 'landscape', // the only 16:9 one — everything else is 9:16
-            'featured'    => true,
+            'featured'    => false,       // kept off the homepage: it is the odd shape out
         ),
         array(
             'src'      => $uploads . '2.-About-Direct-Owner-Financing-1-1.mp4',
@@ -551,15 +554,16 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => true,
         ),
 
-        // ---- 4–7: library only ----
         array(
             'src'      => $uploads . '4.-How-to-Apply-with-a-Co-Applicant-2.mp4',
             'question' => 'How do I apply with a co-applicant?',
             'answer'   => 'Buying with a partner, a relative or a friend: how a joint application works and what each applicant needs to provide.',
             'category' => 'getting-started',
             'date'     => '2026-07-01',
-            'featured' => false,
+            'featured' => true,
         ),
+
+        // ---- 5–7: library only ----
         array(
             'src'      => $uploads . '5.-About-AML-Anti-Money-Laundering-Requirements-1.mp4',
             'question' => 'What are the AML (Anti-Money Laundering) requirements?',
