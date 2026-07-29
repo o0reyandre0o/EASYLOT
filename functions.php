@@ -641,6 +641,20 @@ function easylot_video_default_poster() {
 }
 
 /**
+ * 'vertical' or 'landscape' for a video entry.
+ *
+ * Our self-hosted clips are filmed 9:16 for social, so that is the default;
+ * YouTube embeds are 16:9. Either can be overridden per video with the
+ * 'orientation' key.
+ */
+function easylot_video_orientation( $v ) {
+    if ( ! empty( $v['orientation'] ) ) {
+        return 'landscape' === $v['orientation'] ? 'landscape' : 'vertical';
+    }
+    return ! empty( $v['src'] ) ? 'vertical' : 'landscape';
+}
+
+/**
  * Thumbnail URL for a video entry. YouTube videos get theirs from YouTube;
  * self-hosted ones use 'poster' if set, otherwise the site default.
  */
@@ -691,21 +705,33 @@ function easylot_video_card( $v, $args = array() ) {
     $title_col  = $dark ? 'text-white' : 'text-on-surface';
     $body_col   = $dark ? 'text-white/60' : 'text-on-surface-variant';
     $chip_col   = $dark ? 'bg-white/10 text-white/70' : 'bg-primary/10 text-primary';
+
+    // Every card frame is 9:16 because that is how almost all our clips are
+    // filmed. A vertical clip fills it exactly; a landscape one is letterboxed
+    // with object-contain so it is never cropped.
+    $is_vertical = 'vertical' === easylot_video_orientation( $v );
+    $fit         = $is_vertical ? 'object-cover' : 'object-contain';
+
+    // The card is a <div role="button">, NOT a <button>. Elementor's global
+    // button styles paint every real <button> with the primary colour and win
+    // over our classes — same reason the nav uses role="button" (see the reset
+    // near the top of this file).
     ?>
-    <button type="button"
-            class="easylot-video-card group flex w-full flex-col overflow-hidden rounded-3xl border text-left transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl <?php echo esc_attr( $card_bg ); ?>"
+    <div role="button" tabindex="0"
+            class="easylot-video-card group flex w-full cursor-pointer flex-col overflow-hidden rounded-3xl border text-left transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl <?php echo esc_attr( $card_bg ); ?>"
             data-video-id="<?php echo esc_attr( $yt_id ); ?>"
             data-video-src="<?php echo esc_url( $src ); ?>"
             data-video-title="<?php echo esc_attr( $v['question'] ); ?>"
             data-video-location="<?php echo esc_attr( $args['location'] ); ?>"
+            data-video-orientation="<?php echo $is_vertical ? 'vertical' : 'landscape'; ?>"
             data-category="<?php echo esc_attr( isset( $v['category'] ) ? $v['category'] : '' ); ?>"
             aria-label="<?php echo esc_attr( sprintf( 'Play video: %s', $v['question'] ) ); ?>">
 
-        <span class="relative block aspect-video w-full overflow-hidden bg-black">
+        <span class="relative block aspect-[9/16] w-full overflow-hidden bg-[#141312]">
             <?php if ( $src && ! $poster ) : ?>
                 <?php /* Self-hosted: the browser draws the frame at 0.5s as the thumbnail.
                          preload="metadata" means only the first few KB are downloaded. */ ?>
-                <video class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                <video class="easylot-video-thumb h-full w-full <?php echo esc_attr( $fit ); ?> transition-transform duration-700 group-hover:scale-105"
                        src="<?php echo esc_url( $src ); ?>#t=0.5"
                        preload="metadata" muted playsinline disablepictureinpicture
                        tabindex="-1" aria-hidden="true" style="pointer-events:none;"></video>
@@ -714,7 +740,7 @@ function easylot_video_card( $v, $args = array() ) {
                      <?php if ( $yt_id && ! $poster ) : ?>onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/<?php echo esc_attr( $yt_id ); ?>/hqdefault.jpg';"<?php endif; ?>
                      alt="<?php echo esc_attr( $v['question'] ); ?>"
                      loading="lazy" decoding="async"
-                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                     class="easylot-video-thumb h-full w-full <?php echo esc_attr( $fit ); ?> transition-transform duration-700 group-hover:scale-105" />
             <?php endif; ?>
 
             <span class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></span>
@@ -744,7 +770,7 @@ function easylot_video_card( $v, $args = array() ) {
                 </span>
             <?php endif; ?>
         </span>
-    </button>
+    </div>
     <?php
 
     easylot_video_modal_enqueue();
@@ -778,8 +804,8 @@ function easylot_render_video_modal() {
             <span class="material-symbols-outlined text-3xl">close</span>
         </button>
 
-        <div class="w-full max-w-5xl">
-            <div class="aspect-video w-full overflow-hidden rounded-3xl bg-black shadow-2xl">
+        <div class="flex w-full max-w-5xl flex-col items-center">
+            <div id="easylot-video-stage" class="w-full overflow-hidden rounded-3xl bg-black shadow-2xl" style="aspect-ratio:16/9;">
                 <div id="easylot-video-frame" class="h-full w-full"></div>
             </div>
             <p id="easylot-video-caption" class="mt-6 text-center font-headline text-lg font-bold text-white md:text-xl"></p>
