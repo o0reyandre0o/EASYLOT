@@ -65,21 +65,26 @@ foreach ( $videos as $v ) {
     <div class="container mx-auto px-6">
 
         <!-- Category filter -->
+        <?php /* role="button" divs, not <button> — Elementor's global button styles
+                 paint every real <button> with the primary colour and win over
+                 bg-surface, which is how these pills ended up red-on-red. */ ?>
         <div class="mb-14 flex flex-wrap justify-center gap-3" id="video-filters">
-            <button type="button" data-filter="all"
-                    class="video-filter is-active rounded-full border border-black/5 bg-primary px-6 py-3 text-sm font-bold text-white transition-all">
+            <div role="button" tabindex="0" data-filter="all"
+                    class="video-filter is-active cursor-pointer select-none rounded-full border border-black/5 bg-primary px-6 py-3 text-sm font-bold text-white transition-all">
                 All Videos
-            </button>
+            </div>
             <?php foreach ( $used_categories as $slug => $label ) : ?>
-                <button type="button" data-filter="<?php echo esc_attr( $slug ); ?>"
-                        class="video-filter rounded-full border border-black/5 bg-surface px-6 py-3 text-sm font-bold text-on-surface/70 transition-all hover:border-primary/30 hover:text-primary">
+                <div role="button" tabindex="0" data-filter="<?php echo esc_attr( $slug ); ?>"
+                        class="video-filter cursor-pointer select-none rounded-full border border-black/5 bg-surface px-6 py-3 text-sm font-bold text-on-surface/70 transition-all hover:border-primary/30 hover:text-primary">
                     <?php echo esc_html( $label ); ?>
-                </button>
+                </div>
             <?php endforeach; ?>
         </div>
 
         <!-- Grid -->
-        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" id="video-grid">
+        <?php /* 4 columns on wide screens: the cards are 9:16, so 3 across would
+                 make each one enormous. */ ?>
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" id="video-grid">
             <?php foreach ( $videos as $v ) : ?>
                 <?php easylot_video_card( $v, array( 'dark' => false, 'location' => 'video_guides_page' ) ); ?>
             <?php endforeach; ?>
@@ -154,6 +159,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var inactiveClasses = ['bg-surface', 'text-on-surface/70'];
 
     filters.forEach(function (btn) {
+
+        // role="button" divs need Enter / Space wired up by hand.
+        btn.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                e.preventDefault();
+                btn.click();
+            }
+        });
+
         btn.addEventListener('click', function () {
 
             filters.forEach(function (b) {

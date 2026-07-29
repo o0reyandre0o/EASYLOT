@@ -816,16 +816,44 @@ function easylot_render_video_modal() {
     (function () {
         var modal   = document.getElementById('easylot-video-modal');
         var frame   = document.getElementById('easylot-video-frame');
+        var stage   = document.getElementById('easylot-video-stage');
         var caption = document.getElementById('easylot-video-caption');
         var closeEl = document.getElementById('easylot-video-close');
         if (!modal || !frame) { return; }
 
-        function openVideo(id, src, title, location) {
+        /**
+         * Size the player to the video instead of forcing everything into 16:9.
+         * A 9:16 clip gets a tall, narrow stage; a 16:9 one gets the wide stage.
+         * Capped at 78vh so the caption and close button stay on screen.
+         */
+        function fitStage(ratio) {
+            if (!stage) { return; }
+            stage.style.aspectRatio = ratio;
+            if (ratio < 1) {                    // vertical
+                stage.style.height    = '78vh';
+                stage.style.width     = 'auto';
+                stage.style.maxWidth  = '100%';
+            } else {                            // landscape
+                stage.style.height    = 'auto';
+                stage.style.width     = '100%';
+                stage.style.maxHeight = '78vh';
+            }
+        }
+
+        function openVideo(id, src, title, location, orientation) {
+            fitStage(orientation === 'vertical' ? 9 / 16 : 16 / 9);
+
             // The player is built only now — nothing is downloaded before the click.
             if (src) {
                 var video = document.createElement('video');
-                video.className = 'h-full w-full';
+                video.className = 'h-full w-full object-contain';
                 video.src = src;
+                // Trust the file over the data attribute, in case they disagree.
+                video.addEventListener('loadedmetadata', function () {
+                    if (video.videoWidth && video.videoHeight) {
+                        fitStage(video.videoWidth / video.videoHeight);
+                    }
+                });
                 video.controls = true;
                 video.autoplay = true;
                 video.playsInline = true;
@@ -870,11 +898,33 @@ function easylot_render_video_modal() {
             caption.textContent = '';
         }
 
+        function playCard(card) {
+            openVideo(
+                card.dataset.videoId,
+                card.dataset.videoSrc,
+                card.dataset.videoTitle,
+                card.dataset.videoLocation,
+                card.dataset.videoOrientation
+            );
+        }
+
         document.addEventListener('click', function (e) {
             var card = e.target.closest ? e.target.closest('.easylot-video-card') : null;
             if (card) {
                 e.preventDefault();
-                openVideo(card.dataset.videoId, card.dataset.videoSrc, card.dataset.videoTitle, card.dataset.videoLocation);
+                playCard(card);
+            }
+        });
+
+        // The cards are role="button" divs, so Enter / Space need wiring up
+        // by hand — a real <button> would do this for free, but Elementor's
+        // global button styles make <button> unusable here.
+        document.addEventListener('keydown', function (e) {
+            if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') { return; }
+            var card = e.target.closest ? e.target.closest('.easylot-video-card') : null;
+            if (card) {
+                e.preventDefault();
+                playCard(card);
             }
         });
 
