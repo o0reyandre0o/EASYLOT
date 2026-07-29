@@ -1,7 +1,25 @@
 <?php
 /**
  * Easy Lot Theme Functions
+ *
+ * @version 1.1.0
+ *
+ * The real version number lives in the style.css header — WordPress reads it
+ * from there and shows it under Appearance → Themes. Bump it there, and the
+ * EASYLOT_THEME_VERSION constant below picks it up automatically, so the two
+ * files can never drift apart. Keep the @version line above in sync by hand.
  */
+
+/**
+ * Theme version, read straight from the style.css header.
+ * Use this for the ?ver= on any asset the theme enqueues, so a version bump
+ * is enough to bust visitors' browser caches.
+ */
+if ( ! defined( 'EASYLOT_THEME_VERSION' ) ) {
+    $easylot_theme = wp_get_theme();
+    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.1.0' );
+    unset( $easylot_theme );
+}
 
 if ( ! function_exists( 'easylot_setup' ) ) :
     function easylot_setup() {
