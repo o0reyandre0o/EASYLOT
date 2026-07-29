@@ -454,12 +454,17 @@ add_action('wp_body_open', 'easylot_render_main_menu', 5);
  *  ------------------------------------------------------------
  *  HOW TO ADD / SWAP A VIDEO  — this array is the ONLY place to edit
  *  ------------------------------------------------------------
- *  1. Upload the video to the Easy Lot YouTube channel.
- *  2. Copy the ID from the URL: youtube.com/watch?v=THIS_PART_HERE
- *  3. Add or edit an entry below.
+ *  Two kinds of video are supported. Give an entry EITHER a 'src'
+ *  (self-hosted MP4, this is what we use now) OR an 'id' (YouTube).
+ *
+ *  Self-hosted:  upload the MP4 in Media Library, copy the file URL
+ *                into 'src'. Order in this array = order on the page.
+ *  YouTube:      copy the ID from youtube.com/watch?v=THIS_PART_HERE
+ *                into 'id'.
  *
  *  Fields:
- *    'id'       YouTube video ID (11 characters). Required.
+ *    'src'      Full URL of an MP4 in our Media Library. Use this OR 'id'.
+ *    'id'       YouTube video ID (11 characters). Use this OR 'src'.
  *    'question' The card title. WRITE IT AS THE QUESTION A BUYER ASKS —
  *               that is the whole point of this section, and it is what
  *               Google / ChatGPT match against. Required.
@@ -469,10 +474,13 @@ add_action('wp_body_open', 'easylot_render_main_menu', 5);
  *    'date'     Video publish date, YYYY-MM-DD. Used by schema markup —
  *               UPDATE THIS when you swap in a new video, don't leave the
  *               old one's date behind.
+ *    'poster'   Optional thumbnail image URL. Only for self-hosted videos,
+ *               and only if you don't like the frame the browser picks.
  *    'featured' true = also appears in the 3-video block on the homepage.
  *               Keep exactly 3 videos featured so the homepage grid stays even.
  *
- *  Thumbnails are pulled from YouTube automatically — nothing to upload.
+ *  Thumbnails need no work: YouTube videos pull theirs from YouTube, and
+ *  self-hosted ones show their own first frame.
  * ============================================================
  */
 
@@ -487,81 +495,69 @@ function easylot_get_video_categories() {
 
 function easylot_get_video_guides( $only_featured = false ) {
 
+    $uploads = 'https://easylot.ky/wp-content/uploads/2026/07/';
+
+    // Order here = order on /video-guides/. The first three are the ones
+    // that also show on the homepage.
     $videos = array(
 
-        // ---- Featured on the homepage ----
+        // ---- 1–3: also featured on the homepage ----
         array(
-            'id'       => 'PF_Vf_jcDhY',
-            'question' => 'How does Owner Financing actually work?',
-            'answer'   => 'We act as the bank, so there is no traditional lender involved. You put down as little as 5% and pay a fixed 9% interest rate over your chosen term.',
+            'src'      => $uploads . '1.-How-to-get-pre-approved-2-1.mp4',
+            'question' => 'How do I get pre-approved for a lot?',
+            'answer'   => 'The first step with Easy Lot: what pre-approval means, what we look at, and how quickly you can get an answer before you commit to anything.',
+            'category' => 'getting-started',
+            'date'     => '2026-07-01',
+            'featured' => true,
+        ),
+        array(
+            'src'      => $uploads . '2.-About-Direct-Owner-Financing-1-1.mp4',
+            'question' => 'How does Direct Owner Financing work?',
+            'answer'   => 'We act as the bank, so there is no traditional lender involved. You put money down, we finance the rest, and you pay us directly.',
             'category' => 'financing',
-            'date'     => '2023-11-03',
+            'date'     => '2026-07-01',
             'featured' => true,
         ),
         array(
-            'id'       => 'hsj9-E2O9Vs',
-            'question' => 'How do I apply for a lot, step by step?',
-            'answer'   => 'A walkthrough of the whole application: picking your lot, choosing your down payment, and sending in the few documents we need to pre-approve you.',
+            'src'      => $uploads . '3.-About-the-Minimum-Requirements-1-1.mp4',
+            'question' => 'What are the minimum requirements to qualify?',
+            'answer'   => 'The short list of what you need to apply — income, documents and down payment — so you know before you start whether you qualify.',
             'category' => 'getting-started',
-            'date'     => '2023-11-03',
-            'featured' => true,
-        ),
-        array(
-            'id'       => 'KYAlc9VDfnc',
-            'question' => 'What is Easy Lot and who is it for?',
-            'answer'   => 'An introduction to how Easy Lot makes land ownership in the Cayman Islands reachable for families who cannot or would rather not go through a bank.',
-            'category' => 'getting-started',
-            'date'     => '2023-11-03',
+            'date'     => '2026-07-01',
             'featured' => true,
         ),
 
-        // ---- Library only ----
+        // ---- 4–7: library only ----
         array(
-            'id'       => '74KcjxMyz6I',
-            'question' => 'How do I apply online on easylot.ky?',
-            'answer'   => 'A screen-by-screen tour of the online application form, so you know exactly what to expect before you start.',
+            'src'      => $uploads . '4.-How-to-Apply-with-a-Co-Applicant-2.mp4',
+            'question' => 'How do I apply with a co-applicant?',
+            'answer'   => 'Buying with a partner, a relative or a friend: how a joint application works and what each applicant needs to provide.',
             'category' => 'getting-started',
-            'date'     => '2023-08-29',
+            'date'     => '2026-07-01',
             'featured' => false,
         ),
         array(
-            'id'       => 'xsjFDFTRFoI',
-            'question' => 'I got pre-approved — what happens next?',
-            'answer'   => 'What we do on our side after your pre-approval comes through, and what we will need from you to move forward.',
+            'src'      => $uploads . '5.-About-AML-Anti-Money-Laundering-Requirements-1.mp4',
+            'question' => 'What are the AML (Anti-Money Laundering) requirements?',
+            'answer'   => 'Every land purchase in the Cayman Islands has to meet AML rules. Here is what we are required to verify and which documents that means for you.',
             'category' => 'process',
-            'date'     => '2023-11-03',
+            'date'     => '2026-07-01',
             'featured' => false,
         ),
         array(
-            'id'       => 'yBPezT_1iXI',
-            'question' => 'What are my next steps after final approval?',
-            'answer'   => 'From signed agreement to first payment: the steps that take you from approved buyer to landowner.',
+            'src'      => $uploads . '6_What_Happens_After_Pre_Approval_The_Closing_Process_1.mp4',
+            'question' => 'What happens after pre-approval — the closing process?',
+            'answer'   => 'From pre-approval to keys in hand: the closing steps, who is involved, and what you sign along the way.',
             'category' => 'process',
-            'date'     => '2023-11-03',
+            'date'     => '2026-07-01',
             'featured' => false,
         ),
         array(
-            'id'       => 'iPuM9DjXDUQ',
-            'question' => 'Why does owning your own address matter?',
-            'answer'   => 'Why putting your money into land you own beats paying rent, and what that means for your family long term.',
-            'category' => 'process',
-            'date'     => '2023-11-03',
-            'featured' => false,
-        ),
-        array(
-            'id'       => 'G4HHdOXR8p4',
-            'question' => 'What does High Rock Estates look like?',
-            'answer'   => 'A tour of our East End development in Grand Cayman — the terrain, the location, and what is already in place.',
-            'category' => 'developments',
-            'date'     => '2023-08-24',
-            'featured' => false,
-        ),
-        array(
-            'id'       => 'Sphg650FOfI',
-            'question' => '¿Cómo comprar tierra en Cayman? (en Español)',
-            'answer'   => 'Un recorrido por High Rock Estates y nuestro programa de financiamiento directo, explicado en español.',
-            'category' => 'developments',
-            'date'     => '2023-08-24',
+            'src'      => $uploads . '7.-How-to-Choose-a-Lot-Interactive-Map-Tutorial-1.mp4',
+            'question' => 'How do I choose a lot on the interactive map?',
+            'answer'   => 'A tutorial of our interactive map: how to browse available lots, compare sizes and prices, and pick the one that fits you.',
+            'category' => 'getting-started',
+            'date'     => '2026-07-01',
             'featured' => false,
         ),
     );
@@ -587,12 +583,35 @@ function easylot_video_guides_url() {
 }
 
 /**
+ * Fallback thumbnail for a self-hosted video that has no 'poster'.
+ * Used by the schema markup, which requires a thumbnailUrl.
+ */
+function easylot_video_default_poster() {
+    return 'https://easylot.ky/wp-content/uploads/2023/08/Grand-Cayman-Aerial.jpg';
+}
+
+/**
+ * Thumbnail URL for a video entry. YouTube videos get theirs from YouTube;
+ * self-hosted ones use 'poster' if set, otherwise the site default.
+ */
+function easylot_video_thumbnail( $v ) {
+    if ( ! empty( $v['poster'] ) ) {
+        return $v['poster'];
+    }
+    if ( ! empty( $v['id'] ) ) {
+        return 'https://i.ytimg.com/vi/' . $v['id'] . '/maxresdefault.jpg';
+    }
+    return easylot_video_default_poster();
+}
+
+/**
  * Render one video card.
  *
- * The card is a "facade": it shows the YouTube thumbnail only. The real
- * <iframe> is not created until the visitor clicks. That keeps the ~1MB
- * YouTube player off the initial page load, which matters a lot for our
- * mobile load time.
+ * The card is a "facade": it never loads a player up front.
+ *  - YouTube videos show the YouTube thumbnail; the <iframe> is only built
+ *    when the visitor clicks, keeping the ~1MB player off the page load.
+ *  - Self-hosted videos show their own first frame (preload="metadata"
+ *    + a #t= fragment), so only a few KB of the file is fetched.
  *
  * @param array $v    A video from easylot_get_video_guides().
  * @param array $args 'dark' => bool (card sits on a dark background)
@@ -607,7 +626,15 @@ function easylot_video_card( $v, $args = array() ) {
 
     $dark       = (bool) $args['dark'];
     $categories = easylot_get_video_categories();
-    $cat_label  = isset( $categories[ $v['category'] ] ) ? $categories[ $v['category'] ] : '';
+    $cat_label  = isset( $v['category'], $categories[ $v['category'] ] ) ? $categories[ $v['category'] ] : '';
+
+    $src    = ! empty( $v['src'] ) ? $v['src'] : '';
+    $yt_id  = ! empty( $v['id'] )  ? $v['id']  : '';
+    $poster = ! empty( $v['poster'] ) ? $v['poster'] : '';
+
+    if ( ! $src && ! $yt_id ) {
+        return; // nothing to play
+    }
 
     // Card surface / text colours flip depending on the section background.
     $card_bg    = $dark ? 'bg-white/[0.04] border-white/10 hover:border-primary/40' : 'bg-surface border-black/5 hover:border-primary/30';
@@ -617,18 +644,28 @@ function easylot_video_card( $v, $args = array() ) {
     ?>
     <button type="button"
             class="easylot-video-card group flex w-full flex-col overflow-hidden rounded-3xl border text-left transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl <?php echo esc_attr( $card_bg ); ?>"
-            data-video-id="<?php echo esc_attr( $v['id'] ); ?>"
+            data-video-id="<?php echo esc_attr( $yt_id ); ?>"
+            data-video-src="<?php echo esc_url( $src ); ?>"
             data-video-title="<?php echo esc_attr( $v['question'] ); ?>"
             data-video-location="<?php echo esc_attr( $args['location'] ); ?>"
-            data-category="<?php echo esc_attr( $v['category'] ); ?>"
+            data-category="<?php echo esc_attr( isset( $v['category'] ) ? $v['category'] : '' ); ?>"
             aria-label="<?php echo esc_attr( sprintf( 'Play video: %s', $v['question'] ) ); ?>">
 
         <span class="relative block aspect-video w-full overflow-hidden bg-black">
-            <img src="https://i.ytimg.com/vi/<?php echo esc_attr( $v['id'] ); ?>/maxresdefault.jpg"
-                 onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/<?php echo esc_attr( $v['id'] ); ?>/hqdefault.jpg';"
-                 alt="<?php echo esc_attr( $v['question'] ); ?>"
-                 loading="lazy" decoding="async"
-                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <?php if ( $src && ! $poster ) : ?>
+                <?php /* Self-hosted: the browser draws the frame at 0.5s as the thumbnail.
+                         preload="metadata" means only the first few KB are downloaded. */ ?>
+                <video class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                       src="<?php echo esc_url( $src ); ?>#t=0.5"
+                       preload="metadata" muted playsinline disablepictureinpicture
+                       tabindex="-1" aria-hidden="true" style="pointer-events:none;"></video>
+            <?php else : ?>
+                <img src="<?php echo esc_url( easylot_video_thumbnail( $v ) ); ?>"
+                     <?php if ( $yt_id && ! $poster ) : ?>onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/<?php echo esc_attr( $yt_id ); ?>/hqdefault.jpg';"<?php endif; ?>
+                     alt="<?php echo esc_attr( $v['question'] ); ?>"
+                     loading="lazy" decoding="async"
+                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <?php endif; ?>
 
             <span class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></span>
 
@@ -707,13 +744,28 @@ function easylot_render_video_modal() {
         var closeEl = document.getElementById('easylot-video-close');
         if (!modal || !frame) { return; }
 
-        function openVideo(id, title, location) {
-            // Build the iframe only now — nothing is downloaded before the click.
-            frame.innerHTML = '<iframe class="h-full w-full" width="100%" height="100%"' +
-                ' src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&modestbranding=1"' +
-                ' title="' + (title || 'Easy Lot video').replace(/"/g, '&quot;') + '"' +
-                ' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"' +
-                ' allowfullscreen></iframe>';
+        function openVideo(id, src, title, location) {
+            // The player is built only now — nothing is downloaded before the click.
+            if (src) {
+                var video = document.createElement('video');
+                video.className = 'h-full w-full';
+                video.src = src;
+                video.controls = true;
+                video.autoplay = true;
+                video.playsInline = true;
+                video.setAttribute('controlslist', 'nodownload');
+                video.setAttribute('title', title || 'Easy Lot video');
+                frame.innerHTML = '';
+                frame.appendChild(video);
+                var playing = video.play();
+                if (playing && playing.catch) { playing.catch(function () {}); }
+            } else {
+                frame.innerHTML = '<iframe class="h-full w-full" width="100%" height="100%"' +
+                    ' src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0&modestbranding=1"' +
+                    ' title="' + (title || 'Easy Lot video').replace(/"/g, '&quot;') + '"' +
+                    ' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"' +
+                    ' allowfullscreen></iframe>';
+            }
 
             caption.textContent = title || '';
             modal.classList.remove('hidden');
@@ -724,7 +776,7 @@ function easylot_render_video_modal() {
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'video_play',
-                'video_id': id,
+                'video_id': id || src || '',
                 'video_title': title || '',
                 'video_location': location || ''
             });
@@ -734,7 +786,11 @@ function easylot_render_video_modal() {
             modal.classList.add('hidden');
             modal.classList.remove('flex');
             document.body.classList.remove('overflow-hidden');
-            frame.innerHTML = ''; // destroying the iframe is what stops playback
+
+            // Pause first so the MP4 stops downloading, then destroy the player.
+            var playing = frame.querySelector('video');
+            if (playing) { playing.pause(); playing.removeAttribute('src'); playing.load(); }
+            frame.innerHTML = '';
             caption.textContent = '';
         }
 
@@ -742,7 +798,7 @@ function easylot_render_video_modal() {
             var card = e.target.closest ? e.target.closest('.easylot-video-card') : null;
             if (card) {
                 e.preventDefault();
-                openVideo(card.dataset.videoId, card.dataset.videoTitle, card.dataset.videoLocation);
+                openVideo(card.dataset.videoId, card.dataset.videoSrc, card.dataset.videoTitle, card.dataset.videoLocation);
             }
         });
 
@@ -772,21 +828,41 @@ function easylot_video_schema( $videos, $list_name = 'Easy Lot Video Guides' ) {
 
     $elements = array();
 
-    foreach ( $videos as $i => $v ) {
+    $position = 0;
+
+    foreach ( $videos as $v ) {
+
+        if ( empty( $v['src'] ) && empty( $v['id'] ) ) {
+            continue;
+        }
+
+        $position++;
+
+        $item = array(
+            '@type'        => 'VideoObject',
+            'name'         => $v['question'],
+            'description'  => ! empty( $v['answer'] ) ? $v['answer'] : $v['question'],
+            'thumbnailUrl' => easylot_video_thumbnail( $v ),
+            'uploadDate'   => ! empty( $v['date'] ) ? $v['date'] : '',
+            'publisher'    => array( '@id' => 'https://easylot.ky/#organization' ),
+        );
+
+        if ( ! empty( $v['src'] ) ) {
+            $item['contentUrl'] = $v['src'];
+        } else {
+            $item['contentUrl'] = 'https://www.youtube.com/watch?v=' . $v['id'];
+            $item['embedUrl']   = 'https://www.youtube.com/embed/' . $v['id'];
+        }
+
         $elements[] = array(
             '@type'    => 'ListItem',
-            'position' => $i + 1,
-            'item'     => array(
-                '@type'        => 'VideoObject',
-                'name'         => $v['question'],
-                'description'  => ! empty( $v['answer'] ) ? $v['answer'] : $v['question'],
-                'thumbnailUrl' => 'https://i.ytimg.com/vi/' . $v['id'] . '/maxresdefault.jpg',
-                'uploadDate'   => ! empty( $v['date'] ) ? $v['date'] : '',
-                'contentUrl'   => 'https://www.youtube.com/watch?v=' . $v['id'],
-                'embedUrl'     => 'https://www.youtube.com/embed/' . $v['id'],
-                'publisher'    => array( '@id' => 'https://easylot.ky/#organization' ),
-            ),
+            'position' => $position,
+            'item'     => $item,
         );
+    }
+
+    if ( empty( $elements ) ) {
+        return;
     }
 
     $schema = array(
