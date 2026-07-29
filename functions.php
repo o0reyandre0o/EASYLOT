@@ -494,6 +494,11 @@ add_action('wp_body_open', 'easylot_render_main_menu', 5);
  *               old one's date behind.
  *    'poster'   Optional thumbnail image URL. Only for self-hosted videos,
  *               and only if you don't like the frame the browser picks.
+ *    'orientation'
+ *               'vertical' (9:16, filmed for social) or 'landscape' (16:9).
+ *               You only need to set this when a video BREAKS the default:
+ *               self-hosted videos are assumed vertical, YouTube landscape.
+ *               Get it wrong and the video shows letterboxed, never cropped.
  *    'featured' true = also appears in the 3-video block on the homepage.
  *               Keep exactly 3 videos featured so the homepage grid stays even.
  *
@@ -521,12 +526,13 @@ function easylot_get_video_guides( $only_featured = false ) {
 
         // ---- 1–3: also featured on the homepage ----
         array(
-            'src'      => $uploads . '1.-How-to-get-pre-approved-2-1.mp4',
-            'question' => 'How do I get pre-approved for a lot?',
-            'answer'   => 'The first step with Easy Lot: what pre-approval means, what we look at, and how quickly you can get an answer before you commit to anything.',
-            'category' => 'getting-started',
-            'date'     => '2026-07-01',
-            'featured' => true,
+            'src'         => $uploads . '1.-How-to-get-pre-approved-2-1.mp4',
+            'question'    => 'How do I get pre-approved for a lot?',
+            'answer'      => 'The first step with Easy Lot: what pre-approval means, what we look at, and how quickly you can get an answer before you commit to anything.',
+            'category'    => 'getting-started',
+            'date'        => '2026-07-01',
+            'orientation' => 'landscape', // the only 16:9 one — everything else is 9:16
+            'featured'    => true,
         ),
         array(
             'src'      => $uploads . '2.-About-Direct-Owner-Financing-1-1.mp4',
