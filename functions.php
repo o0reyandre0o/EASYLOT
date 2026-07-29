@@ -2,7 +2,7 @@
 /**
  * Easy Lot Theme Functions
  *
- * @version 1.2.2
+ * @version 1.2.3
  *
  * The real version number lives in the style.css header — WordPress reads it
  * from there and shows it under Appearance → Themes. Bump it there, and the
@@ -17,7 +17,7 @@
  */
 if ( ! defined( 'EASYLOT_THEME_VERSION' ) ) {
     $easylot_theme = wp_get_theme();
-    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.2.2' );
+    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.2.3' );
     unset( $easylot_theme );
 }
 
@@ -316,7 +316,7 @@ function easylot_render_main_menu() {
                                 <span class="block text-xs font-normal text-on-surface-variant">Your questions, answered on video</span>
                             </span>
                         </a>
-                        <a href="https://easylot.ky/faq/" class="flex items-start gap-3 px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors">
+                        <a href="<?php echo esc_url( easylot_faq_url() ); ?>" class="flex items-start gap-3 px-6 py-3 text-[#1d1b1a] hover:bg-surface hover:text-primary font-medium transition-colors">
                             <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">quiz</span>
                             <span>
                                 FAQs
@@ -388,7 +388,7 @@ function easylot_render_main_menu() {
                         <span class="material-symbols-outlined text-[22px] text-primary">play_circle</span>
                         Video Guides
                     </a>
-                    <a href="https://easylot.ky/faq/" class="text-xl font-medium text-on-surface/80 flex items-center gap-2">
+                    <a href="<?php echo esc_url( easylot_faq_url() ); ?>" class="text-xl font-medium text-on-surface/80 flex items-center gap-2">
                         <span class="material-symbols-outlined text-[22px] text-primary">quiz</span>
                         FAQs
                     </a>
@@ -634,6 +634,33 @@ function easylot_get_video_guides( $only_featured = false ) {
  */
 function easylot_video_guides_url() {
     return home_url( '/video-guides/' );
+}
+
+/**
+ * URL of the FAQ page.
+ *
+ * Every link in the theme used to be hardcoded to /faq/, which 404s — the page
+ * actually lives at /frequently-asked-questions/. Looking it up here means all
+ * the links point at one place, and if the slug is ever shortened to /faq/
+ * this picks that up on its own with nothing else to edit.
+ */
+function easylot_faq_url() {
+    static $url = null;
+
+    if ( null !== $url ) {
+        return $url;
+    }
+
+    foreach ( array( 'faq', 'frequently-asked-questions' ) as $slug ) {
+        $page = get_page_by_path( $slug );
+        if ( $page && 'publish' === $page->post_status ) {
+            $url = get_permalink( $page );
+            return $url;
+        }
+    }
+
+    $url = home_url( '/frequently-asked-questions/' );
+    return $url;
 }
 
 /**

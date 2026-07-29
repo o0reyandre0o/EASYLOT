@@ -109,7 +109,7 @@ foreach ( $videos as $v ) {
                     Every one of these answers — plus a lot more on zoning, utilities, titles and taxes — is written out on our FAQ page.
                 </p>
             </div>
-            <a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"
+            <a href="<?php echo esc_url( easylot_faq_url() ); ?>"
                class="flex w-full items-center justify-center gap-3 rounded-2xl bg-on-surface px-8 py-4 font-bold text-surface transition-all duration-300 hover:bg-primary md:w-auto">
                 Read the FAQs
                 <span class="material-symbols-outlined">east</span>

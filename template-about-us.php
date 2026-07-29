@@ -191,7 +191,7 @@ get_header();
             <a href="https://easylot.ky/all-our-developments/" class="bg-white text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl">
                 Explore Developments
             </a>
-            <a href="https://easylot.ky/faq/" class="bg-primary/20 backdrop-blur-md text-white border border-white/30 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all duration-300">
+            <a href="<?php echo esc_url( easylot_faq_url() ); ?>" class="bg-primary/20 backdrop-blur-md text-white border border-white/30 px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 transition-all duration-300">
                 View FAQs
             </a>
         </div>
