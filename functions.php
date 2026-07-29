@@ -706,11 +706,12 @@ function easylot_video_card( $v, $args = array() ) {
     $body_col   = $dark ? 'text-white/60' : 'text-on-surface-variant';
     $chip_col   = $dark ? 'bg-white/10 text-white/70' : 'bg-primary/10 text-primary';
 
-    // Every card frame is 9:16 because that is how almost all our clips are
-    // filmed. A vertical clip fills it exactly; a landscape one is letterboxed
-    // with object-contain so it is never cropped.
-    $is_vertical = 'vertical' === easylot_video_orientation( $v );
-    $fit         = $is_vertical ? 'object-cover' : 'object-contain';
+    // The frame takes the shape of the video itself — 9:16 for the social cuts,
+    // 16:9 for the landscape ones — so nothing is ever cropped and no black
+    // bars show up. The cards still line up: they are flex columns and the text
+    // block below grows (flex-1), so the grid row evens itself out.
+    $is_vertical  = 'vertical' === easylot_video_orientation( $v );
+    $frame_aspect = $is_vertical ? 'aspect-[9/16]' : 'aspect-video';
 
     // The card is a <div role="button">, NOT a <button>. Elementor's global
     // button styles paint every real <button> with the primary colour and win
@@ -727,11 +728,11 @@ function easylot_video_card( $v, $args = array() ) {
             data-category="<?php echo esc_attr( isset( $v['category'] ) ? $v['category'] : '' ); ?>"
             aria-label="<?php echo esc_attr( sprintf( 'Play video: %s', $v['question'] ) ); ?>">
 
-        <span class="relative block aspect-[9/16] w-full overflow-hidden bg-[#141312]">
+        <span class="easylot-video-frame relative block <?php echo esc_attr( $frame_aspect ); ?> w-full shrink-0 overflow-hidden bg-[#141312]">
             <?php if ( $src && ! $poster ) : ?>
                 <?php /* Self-hosted: the browser draws the frame at 0.5s as the thumbnail.
                          preload="metadata" means only the first few KB are downloaded. */ ?>
-                <video class="easylot-video-thumb h-full w-full <?php echo esc_attr( $fit ); ?> transition-transform duration-700 group-hover:scale-105"
+                <video class="easylot-video-thumb h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                        src="<?php echo esc_url( $src ); ?>#t=0.5"
                        preload="metadata" muted playsinline disablepictureinpicture
                        tabindex="-1" aria-hidden="true" style="pointer-events:none;"></video>
@@ -740,7 +741,7 @@ function easylot_video_card( $v, $args = array() ) {
                      <?php if ( $yt_id && ! $poster ) : ?>onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/<?php echo esc_attr( $yt_id ); ?>/hqdefault.jpg';"<?php endif; ?>
                      alt="<?php echo esc_attr( $v['question'] ); ?>"
                      loading="lazy" decoding="async"
-                     class="easylot-video-thumb h-full w-full <?php echo esc_attr( $fit ); ?> transition-transform duration-700 group-hover:scale-105" />
+                     class="easylot-video-thumb h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <?php endif; ?>
 
             <span class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></span>
@@ -820,6 +821,30 @@ function easylot_render_video_modal() {
         var caption = document.getElementById('easylot-video-caption');
         var closeEl = document.getElementById('easylot-video-close');
         if (!modal || !frame) { return; }
+
+        /**
+         * Make each card frame match its video's real shape.
+         *
+         * PHP already sets 9:16 or 16:9 from the 'orientation' key, but if that
+         * key is ever wrong the card would crop or show black bars. Once the
+         * browser has the file's metadata it knows the true size, so we just
+         * take it from there — a wrong flag can never show up on the page.
+         */
+        function fitCardFrame(thumb) {
+            if (!thumb.videoWidth || !thumb.videoHeight) { return; }
+            var box = thumb.closest('.easylot-video-frame');
+            if (box) { box.style.aspectRatio = thumb.videoWidth + ' / ' + thumb.videoHeight; }
+
+            var card = thumb.closest('.easylot-video-card');
+            if (card) {
+                card.dataset.videoOrientation = thumb.videoHeight > thumb.videoWidth ? 'vertical' : 'landscape';
+            }
+        }
+
+        document.querySelectorAll('.easylot-video-card video.easylot-video-thumb').forEach(function (thumb) {
+            if (thumb.readyState >= 1) { fitCardFrame(thumb); }   // metadata already in
+            thumb.addEventListener('loadedmetadata', function () { fitCardFrame(thumb); });
+        });
 
         /**
          * Size the player to the video instead of forcing everything into 16:9.
