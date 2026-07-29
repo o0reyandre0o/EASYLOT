@@ -95,10 +95,10 @@ get_header();
                     ];
                     foreach ($faqs_legal as $index => $faq): ?>
                         <div class="faq-item border border-black/5 rounded-3xl bg-surface/30 hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-300">
-                            <button class="faq-trigger w-full text-left px-8 py-6 flex items-center justify-between gap-4 group">
+                            <div role="button" tabindex="0" aria-expanded="false" class="faq-trigger w-full cursor-pointer text-left px-8 py-6 flex items-center justify-between gap-4 group">
                                 <h3 class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></h3>
                                 <span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
-                            </button>
+                            </div>
                             <div class="faq-content hidden px-8 pb-8">
                                 <div class="h-px bg-black/5 mb-6"></div>
                                 <p class="text-on-surface/70 leading-relaxed font-light"><?php echo $faq['a']; ?></p>
@@ -136,10 +136,10 @@ get_header();
                     ];
                     foreach ($faqs_finance as $index => $faq): ?>
                         <div class="faq-item border border-black/5 rounded-3xl bg-surface/30 hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-300">
-                            <button class="faq-trigger w-full text-left px-8 py-6 flex items-center justify-between gap-4 group">
+                            <div role="button" tabindex="0" aria-expanded="false" class="faq-trigger w-full cursor-pointer text-left px-8 py-6 flex items-center justify-between gap-4 group">
                                 <h3 class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></h3>
                                 <span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
-                            </button>
+                            </div>
                             <div class="faq-content hidden px-8 pb-8">
                                 <div class="h-px bg-black/5 mb-6"></div>
                                 <p class="text-on-surface/70 leading-relaxed font-light"><?php echo $faq['a']; ?></p>
@@ -173,10 +173,10 @@ get_header();
                     ];
                     foreach ($faqs_infra as $index => $faq): ?>
                         <div class="faq-item border border-black/5 rounded-3xl bg-surface/30 hover:bg-white hover:shadow-xl hover:shadow-black/5 transition-all duration-300">
-                            <button class="faq-trigger w-full text-left px-8 py-6 flex items-center justify-between gap-4 group">
+                            <div role="button" tabindex="0" aria-expanded="false" class="faq-trigger w-full cursor-pointer text-left px-8 py-6 flex items-center justify-between gap-4 group">
                                 <h3 class="text-lg font-bold text-on-surface/80 group-hover:text-primary transition-colors"><?php echo $faq['q']; ?></h3>
                                 <span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
-                            </button>
+                            </div>
                             <div class="faq-content hidden px-8 pb-8">
                                 <div class="h-px bg-black/5 mb-6"></div>
                                 <p class="text-on-surface/70 leading-relaxed font-light"><?php echo $faq['a']; ?></p>
@@ -216,22 +216,35 @@ get_header();
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const triggers = document.querySelectorAll('.faq-trigger');
-    
+
     triggers.forEach(trigger => {
+        // The triggers are role="button" divs, not real <button>s — Elementor's
+        // global button styles paint every <button> with the primary red and beat
+        // our classes, which is what made these unreadable. Downside is that
+        // Enter / Space have to be wired up by hand.
+        trigger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                e.preventDefault();
+                trigger.click();
+            }
+        });
+
         trigger.addEventListener('click', () => {
             const content = trigger.nextElementSibling;
             const icon = trigger.querySelector('.material-symbols-outlined');
-            
+
             // Toggle current
             const isOpen = !content.classList.contains('hidden');
-            
+
             // Close all others
             document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
             document.querySelectorAll('.faq-trigger .material-symbols-outlined').forEach(i => i.style.transform = 'rotate(0deg)');
-            
+            document.querySelectorAll('.faq-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+
             if (!isOpen) {
                 content.classList.remove('hidden');
                 icon.style.transform = 'rotate(180deg)';
+                trigger.setAttribute('aria-expanded', 'true');
             }
         });
     });

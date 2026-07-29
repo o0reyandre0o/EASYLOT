@@ -2,7 +2,7 @@
 /**
  * Easy Lot Theme Functions
  *
- * @version 1.2.3
+ * @version 1.2.4
  *
  * The real version number lives in the style.css header — WordPress reads it
  * from there and shows it under Appearance → Themes. Bump it there, and the
@@ -17,7 +17,7 @@
  */
 if ( ! defined( 'EASYLOT_THEME_VERSION' ) ) {
     $easylot_theme = wp_get_theme();
-    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.2.3' );
+    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.2.4' );
     unset( $easylot_theme );
 }
 
@@ -830,11 +830,14 @@ function easylot_render_video_modal() {
          class="fixed inset-0 z-[2147483647] hidden items-center justify-center bg-black/90 p-4 backdrop-blur-sm md:p-10"
          role="dialog" aria-modal="true" aria-label="Video player">
 
-        <button type="button" id="easylot-video-close"
-                class="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary"
+        <?php /* role="button" div for the same reason as the cards: a real
+                 <button> here comes out solid red from Elementor's styles, so
+                 the hover state was invisible. */ ?>
+        <div role="button" tabindex="0" id="easylot-video-close"
+                class="absolute right-5 top-5 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary"
                 aria-label="Close video">
             <span class="material-symbols-outlined text-3xl">close</span>
-        </button>
+        </div>
 
         <div class="flex w-full max-w-5xl flex-col items-center">
             <div id="easylot-video-stage" class="w-full overflow-hidden rounded-3xl bg-black shadow-2xl" style="aspect-ratio:16/9;">
@@ -985,6 +988,9 @@ function easylot_render_video_modal() {
         });
 
         closeEl.addEventListener('click', closeVideo);
+        closeEl.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); closeVideo(); }
+        });
         modal.addEventListener('click', function (e) {
             if (e.target === modal) { closeVideo(); }
         });
