@@ -578,6 +578,32 @@ function easylot_get_video_guides( $only_featured = false ) {
             'date'     => '2026-07-01',
             'featured' => false,
         ),
+
+        // ---- 8–10: our developments ----
+        array(
+            'src'      => $uploads . '8.-About-Elena-Estates-1.mp4',
+            'question' => 'What is Elena Estates like?',
+            'answer'   => 'A look at Elena Estates: where it is, what the land looks like, and who it suits best.',
+            'category' => 'developments',
+            'date'     => '2026-07-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads . '9.-About-High-Rock-Estates-1.mp4',
+            'question' => 'What is High Rock Estates like?',
+            'answer'   => 'A tour of our East End development in Grand Cayman — the terrain, the location, and what is already in place.',
+            'category' => 'developments',
+            'date'     => '2026-07-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads . '10.-About-Northshore-Estates-1.mp4',
+            'question' => 'What is Northshore Estates like?',
+            'answer'   => 'A look at Northshore Estates: the setting, the lot sizes, and what makes this one different from our other developments.',
+            'category' => 'developments',
+            'date'     => '2026-07-01',
+            'featured' => false,
+        ),
     );
 
     if ( $only_featured ) {
