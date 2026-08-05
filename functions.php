@@ -626,7 +626,7 @@ function easylot_get_video_guides( $only_featured = false ) {
          * kept in the URLs so you can still match them to the source clips.
          */
         array(
-            'src'      => $uploads_aug . '16-The-1-Myth-About-Buying-Cayman-Real-Estate.mp4',
+            'src'      => $uploads_aug . '16-The-1-Myth-About-Buying-Cayman-Real-Estate-web.mp4',
             'question' => 'Do I need a lot of cash to buy land in Cayman?',
             'answer'   => 'The biggest myth about Cayman real estate is that you need hundreds of thousands in cash. With direct owner financing there is no bank — just a small deposit and a few documents.',
             'category' => 'financing',
@@ -634,7 +634,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '17-Think-You-Cant-Afford-Island-Real-Estate_-Think-Again.mp4',
+            'src'      => $uploads_aug . '17-Think-You-Cant-Afford-Island-Real-Estate_-Think-Again-web.mp4',
             'question' => 'Can I really afford island real estate?',
             'answer'   => 'You do not need to be a millionaire to own land here. A deposit as low as 5% and low fixed monthly payments put a lot within reach of a normal budget.',
             'category' => 'financing',
@@ -642,7 +642,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '12-They-Are-Not-Making-Any-More-Cayman-Islands.mp4',
+            'src'      => $uploads_aug . '12-They-Are-Not-Making-Any-More-Cayman-Islands-web.mp4',
             'question' => 'Why is land in the Cayman Islands so limited?',
             'answer'   => 'Nobody is making more land, and Grand Cayman, Little Cayman and Cayman Brac have a finite amount of developable space. As the islands grow, the options left shrink.',
             'category' => 'investment',
@@ -650,7 +650,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '11-The-_Sleep-Well_-Investment.mp4',
+            'src'      => $uploads_aug . '11-The-_Sleep-Well_-Investment-web.mp4',
             'question' => 'Is land a safer investment than the stock market?',
             'answer'   => 'Markets swing daily and savings barely beat inflation. Land is the "sleep well at night" asset — stable, steadily growing, and something you can physically stand on.',
             'category' => 'investment',
@@ -658,7 +658,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '13-Reasons-Land-is-the-Ultimate-Future-Proof-Investment.mp4',
+            'src'      => $uploads_aug . '13-Reasons-Land-is-the-Ultimate-Future-Proof-Investment-web.mp4',
             'question' => 'Why is land a future-proof investment?',
             'answer'   => 'Three reasons: it never degrades, it needs zero maintenance, and it appreciates over time. That combination is hard to find anywhere else.',
             'category' => 'investment',
@@ -666,7 +666,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '18-The-Zero-Headache-Asset.mp4',
+            'src'      => $uploads_aug . '18-The-Zero-Headache-Asset-web.mp4',
             'question' => 'Is land easier to own than a rental property?',
             'answer'   => 'No leaking roofs, no broken air conditioners, no midnight calls from tenants. Raw land just sits there quietly and grows in value.',
             'category' => 'investment',
@@ -674,7 +674,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '15-How-Raw-Land-Becomes-Real-Wealth.mp4',
+            'src'      => $uploads_aug . '15-How-Raw-Land-Becomes-Real-Wealth-web.mp4',
             'question' => 'How does raw land actually build wealth?',
             'answer'   => 'You lock in today\'s price, and as the island grows and infrastructure arrives around you, the land is worth more. You build equity simply by holding it.',
             'category' => 'investment',
@@ -682,7 +682,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '19-3-Things-You-Can-Do-With-Your-Cayman-Land-Today.mp4',
+            'src'      => $uploads_aug . '19-3-Things-You-Can-Do-With-Your-Cayman-Land-Today-web.mp4',
             'question' => 'What can I do with my Cayman land right now?',
             'answer'   => 'Hold it as an investment while it appreciates, start designing your future home, or keep it as a family asset to pass on. The first step is owning it.',
             'category' => 'investment',
@@ -690,7 +690,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '14-The-Ultimate-Generational-Wealth.mp4',
+            'src'      => $uploads_aug . '14-The-Ultimate-Generational-Wealth-web.mp4',
             'question' => 'How do I build generational wealth with land?',
             'answer'   => 'Land is a permanent legacy you can pass to your children and grandchildren — a foundation your family can build on long after you buy it.',
             'category' => 'investment',
@@ -698,7 +698,7 @@ function easylot_get_video_guides( $only_featured = false ) {
             'featured' => false,
         ),
         array(
-            'src'      => $uploads_aug . '20-The-Cost-of-Waiting.mp4',
+            'src'      => $uploads_aug . '20-The-Cost-of-Waiting-web.mp4',
             'question' => 'What does it cost me to wait before buying?',
             'answer'   => 'Waiting is the real expense. The lot you are looking at today costs more tomorrow, and as inventory shrinks across the islands, prices rise with it.',
             'category' => 'investment',
