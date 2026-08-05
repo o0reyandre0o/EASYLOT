@@ -2,7 +2,7 @@
 /**
  * Easy Lot Theme Functions
  *
- * @version 1.2.4
+ * @version 1.3.0
  *
  * The real version number lives in the style.css header — WordPress reads it
  * from there and shows it under Appearance → Themes. Bump it there, and the
@@ -17,7 +17,7 @@
  */
 if ( ! defined( 'EASYLOT_THEME_VERSION' ) ) {
     $easylot_theme = wp_get_theme();
-    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.2.4' );
+    define( 'EASYLOT_THEME_VERSION', $easylot_theme->get( 'Version' ) ? $easylot_theme->get( 'Version' ) : '1.3.0' );
     unset( $easylot_theme );
 }
 
@@ -513,6 +513,7 @@ function easylot_get_video_categories() {
     return array(
         'getting-started' => 'Getting Started',
         'financing'       => 'Financing & Payments',
+        'investment'      => 'Why Land Is a Smart Buy',
         'process'         => 'After You Apply',
         'developments'    => 'Our Developments',
     );
@@ -520,7 +521,8 @@ function easylot_get_video_categories() {
 
 function easylot_get_video_guides( $only_featured = false ) {
 
-    $uploads = 'https://easylot.ky/wp-content/uploads/2026/07/';
+    $uploads     = 'https://easylot.ky/wp-content/uploads/2026/07/'; // batch 1: how it works
+    $uploads_aug = 'https://easylot.ky/wp-content/uploads/2026/08/'; // batch 2: why buy land
 
     // Order here = order on /video-guides/. The three marked 'featured' are the
     // ones that also show on the homepage — videos 2, 3 and 4, because those
@@ -612,6 +614,95 @@ function easylot_get_video_guides( $only_featured = false ) {
             'answer'   => 'A look at Northshore Estates: the setting, the lot sizes, and what makes this one different from our other developments.',
             'category' => 'developments',
             'date'     => '2026-07-01',
+            'featured' => false,
+        ),
+
+        /*
+         * ---- 11–20: why buy land at all ----
+         *
+         * These are ordered as an argument, not by file number: knock down the
+         * "I can't afford it" objection first, then scarcity, then the reasons
+         * to hold land, and close on the cost of waiting. The file numbers are
+         * kept in the URLs so you can still match them to the source clips.
+         */
+        array(
+            'src'      => $uploads_aug . '16-The-1-Myth-About-Buying-Cayman-Real-Estate.mp4',
+            'question' => 'Do I need a lot of cash to buy land in Cayman?',
+            'answer'   => 'The biggest myth about Cayman real estate is that you need hundreds of thousands in cash. With direct owner financing there is no bank — just a small deposit and a few documents.',
+            'category' => 'financing',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '17-Think-You-Cant-Afford-Island-Real-Estate_-Think-Again.mp4',
+            'question' => 'Can I really afford island real estate?',
+            'answer'   => 'You do not need to be a millionaire to own land here. A deposit as low as 5% and low fixed monthly payments put a lot within reach of a normal budget.',
+            'category' => 'financing',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '12-They-Are-Not-Making-Any-More-Cayman-Islands.mp4',
+            'question' => 'Why is land in the Cayman Islands so limited?',
+            'answer'   => 'Nobody is making more land, and Grand Cayman, Little Cayman and Cayman Brac have a finite amount of developable space. As the islands grow, the options left shrink.',
+            'category' => 'investment',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '11-The-_Sleep-Well_-Investment.mp4',
+            'question' => 'Is land a safer investment than the stock market?',
+            'answer'   => 'Markets swing daily and savings barely beat inflation. Land is the "sleep well at night" asset — stable, steadily growing, and something you can physically stand on.',
+            'category' => 'investment',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '13-Reasons-Land-is-the-Ultimate-Future-Proof-Investment.mp4',
+            'question' => 'Why is land a future-proof investment?',
+            'answer'   => 'Three reasons: it never degrades, it needs zero maintenance, and it appreciates over time. That combination is hard to find anywhere else.',
+            'category' => 'investment',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '18-The-Zero-Headache-Asset.mp4',
+            'question' => 'Is land easier to own than a rental property?',
+            'answer'   => 'No leaking roofs, no broken air conditioners, no midnight calls from tenants. Raw land just sits there quietly and grows in value.',
+            'category' => 'investment',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '15-How-Raw-Land-Becomes-Real-Wealth.mp4',
+            'question' => 'How does raw land actually build wealth?',
+            'answer'   => 'You lock in today\'s price, and as the island grows and infrastructure arrives around you, the land is worth more. You build equity simply by holding it.',
+            'category' => 'investment',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '19-3-Things-You-Can-Do-With-Your-Cayman-Land-Today.mp4',
+            'question' => 'What can I do with my Cayman land right now?',
+            'answer'   => 'Hold it as an investment while it appreciates, start designing your future home, or keep it as a family asset to pass on. The first step is owning it.',
+            'category' => 'investment',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '14-The-Ultimate-Generational-Wealth.mp4',
+            'question' => 'How do I build generational wealth with land?',
+            'answer'   => 'Land is a permanent legacy you can pass to your children and grandchildren — a foundation your family can build on long after you buy it.',
+            'category' => 'investment',
+            'date'     => '2026-08-01',
+            'featured' => false,
+        ),
+        array(
+            'src'      => $uploads_aug . '20-The-Cost-of-Waiting.mp4',
+            'question' => 'What does it cost me to wait before buying?',
+            'answer'   => 'Waiting is the real expense. The lot you are looking at today costs more tomorrow, and as inventory shrinks across the islands, prices rise with it.',
+            'category' => 'investment',
+            'date'     => '2026-08-01',
             'featured' => false,
         ),
     );
@@ -762,10 +853,14 @@ function easylot_video_card( $v, $args = array() ) {
         <span class="easylot-video-frame relative block <?php echo esc_attr( $frame_aspect ); ?> w-full shrink-0 overflow-hidden bg-[#141312]">
             <?php if ( $src && ! $poster ) : ?>
                 <?php /* Self-hosted: the browser draws the frame at 0.5s as the thumbnail.
-                         preload="metadata" means only the first few KB are downloaded. */ ?>
+                         preload="none" to start with — the script in the footer
+                         promotes it to "metadata" once the card nears the viewport.
+                         With 20 videos on /video-guides/, loading every thumbnail
+                         up front would fire dozens of requests before the visitor
+                         has scrolled anywhere near them. */ ?>
                 <video class="easylot-video-thumb h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                        src="<?php echo esc_url( $src ); ?>#t=0.5"
-                       preload="metadata" muted playsinline disablepictureinpicture
+                       preload="none" muted playsinline disablepictureinpicture
                        tabindex="-1" aria-hidden="true" style="pointer-events:none;"></video>
             <?php else : ?>
                 <img src="<?php echo esc_url( easylot_video_thumbnail( $v ) ); ?>"
@@ -875,10 +970,38 @@ function easylot_render_video_modal() {
             }
         }
 
-        document.querySelectorAll('.easylot-video-card video.easylot-video-thumb').forEach(function (thumb) {
+        var thumbs = document.querySelectorAll('.easylot-video-card video.easylot-video-thumb');
+
+        thumbs.forEach(function (thumb) {
             if (thumb.readyState >= 1) { fitCardFrame(thumb); }   // metadata already in
             thumb.addEventListener('loadedmetadata', function () { fitCardFrame(thumb); });
         });
+
+        /**
+         * Only fetch a thumbnail's metadata once its card is close to the screen.
+         * The markup ships with preload="none"; this promotes it to "metadata"
+         * on approach, which is what makes a 20-video library cheap to open.
+         */
+        function loadThumb(thumb) {
+            if (thumb.dataset.thumbLoaded) { return; }
+            thumb.dataset.thumbLoaded = '1';
+            thumb.preload = 'metadata';
+            thumb.load();
+        }
+
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) { return; }
+                    loadThumb(entry.target);
+                    io.unobserve(entry.target);
+                });
+            }, { rootMargin: '300px 0px' });   // start a bit before they scroll in
+
+            thumbs.forEach(function (thumb) { io.observe(thumb); });
+        } else {
+            thumbs.forEach(loadThumb);         // old browser: just load them all
+        }
 
         /**
          * Size the player to the video instead of forcing everything into 16:9.
